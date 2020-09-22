@@ -1,5 +1,5 @@
 title: >-
-  Predicting Water Temperature Dynamics of Unmonitored Lakes with Meta Transfer Learning: 1 Lake information for 2,332 lakes
+  Predicting water temperature in the Delaware River Basin: 1 River reach information for 456 river reaches
 
 abstract: >-
   This dataset provides shapefile outlines of the 2,332 lakes that had temperature modeled as part of this study.
@@ -54,4 +54,4 @@ file-format: Shapefile Data Set
 build-environment: >-
   This dataset was generated using open source tools available in the R programming language (R version 4.0.2 (2020-06-22)).
   The computing platform for generating data and metadata was x86_64-w64-mingw32
-  R packages loaded into this environment: packagename, version: 1.1.7;  packagename2, version: 1.4.0
+  R packages loaded into this environment: packagename, version: 1.1.7;  packagename2, version: 1.4.0...
