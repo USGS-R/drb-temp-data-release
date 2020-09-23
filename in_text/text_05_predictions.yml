@@ -1,0 +1,31 @@
+title: >-
+  Predicting water temperature in the Delaware River Basin: 5 model prediction data
+
+abstract: >-
+  Multiple modeling frameworks were used to predict daily temperatures at 456 stream reaches in the Delaware River Basin. Uncalibrated process-based models (PB0)
+  used default configurations (see XX for details) and no parameters were adjusted according to model fit with observations. Deep Learning (DL) models were xx.
+
+cross-cites:
+  -
+    authors: ['XX']
+    title: >-
+      Precipitation Runoff Modeling System (PRMS)
+    pubdate: XX
+    link: XX
+  -
+    authors: ['XX']
+    title: >-
+      Stream Network Temperature Model (SNTemp)
+    pubdate: XX
+    link: XX
+  -
+    authors: ['XX']
+    title: >-
+      River graph convolution network (RGCN) XX
+    pubdate: XX
+    link: XX
+
+build-environment: >-
+  For PB0 predictions we used XX; process-based predictions were generated with the following open source tools XX.
+  For PGDL and DL predictions, the University of Minnesota Supercomputing Institute resources were used. XX
+  
