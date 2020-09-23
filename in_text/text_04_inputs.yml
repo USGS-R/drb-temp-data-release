@@ -24,7 +24,28 @@ cross-cites:
     pubdate: XX
     link: http://dx.doi.org/doi:10.5066/F7542KMD
     
-
+entities:
+  -
+    data-name: distance_matrix.csv
+    data-description: A matrix documentation the upstream (negative numbers) or downstream (positive numbers) distances between river reaches.
+    attributes:
+    -
+      attr-label: from
+      attr-def: >-
+        The segment ID (seg_id_nat) of the starting segment for the distance calculation.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: {seg_id_nat}
+      attr-def: >-
+        Distance (in meters) between the seg_id_nat in the from column to the {seg_id_nat} in the column name. Positive numbers indicate a downstream direction, while positive numbers indicate an upstream direction.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    
 build-environment: Multiple computer systems were used to generate these data, including XX. The open source languages R and Python was used on all systems, as well as XX.
 
 process-date: !expr format(Sys.time(),'%Y%m%d')

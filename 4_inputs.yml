@@ -1,0 +1,32 @@
+target_default: 4_inputs
+
+include:
+
+packages:
+  - dplyr
+  - zip
+  - readr
+
+sources:
+  - src/file_functions.R
+
+targets:
+  4_inputs:
+    depends:
+      - out_data/distance_matrix.csv
+      #- out_data/weather_drivers.zip
+      #- out_data/reach_atrributes.csv
+
+  #weather_drivers:
+   # command: extract_weather_drivers()
+    
+  #out_data/weather_drivers.zip:
+   # command: zip_this(out_file = target_name, in_file = weather_drivers)
+    
+  out_data/distance_matrix.csv:
+    command: get_distance_matrix(out_file = target_name, in_file = '../delaware-model-prep/9_collaborator_data/umn/distance_matrix.rds')
+
+  #out_data/reach_attributes.csv:
+   # command: extract_reach_attributes()
+    
+    
