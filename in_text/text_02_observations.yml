@@ -24,8 +24,7 @@ entities:
       attr-label: seg_id_nat
       attr-def: >-
         River reach identifier from XX, which the site was matched to based on latitude and longitude.
-      attr-defs: >-
-        XX
+      attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: NA
@@ -58,5 +57,46 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
+  -
+    data-name: flow_observations.zip
+    data-description: Flow observation data with sites matched to 456 model river segments in the Delaware River Basin.
+    attributes:
+    -
+      attr-label: seg_id_nat
+      attr-def: >-
+        River reach identifier from XX, which the site was matched to based on latitude and longitude.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: site_id
+      attr-def: >-
+        Site identifier from the data provider.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: date
+      attr-def: Date of temperature measurement
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: flow
+      attr-def: River flow or discharge
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: cubic meters per second
+    -
+      attr-label: source_id
+      attr-def: The source of these data
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
 
-file-format: a single comma-delimited file, compressed into a zip file
+file-format: comma-delimited files, compressed into zip files
