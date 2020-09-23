@@ -1,0 +1,36 @@
+title: >-
+  Predicting water temperature in the Delaware River Basin: 3 model inputs
+
+abstract: >-
+  This dataset includes model inputs including gridded weather data, a stream network distance matrix, and stream reach attributes/metadata.
+  
+cross-cites:
+  -
+    authors: ['XX']
+    title: >-
+      GridMet XX
+    pubdate: XX
+    link: XX
+  -
+    authors: ['XX']
+    title: >-
+      GRanD reservoir database. XX
+    pubdate: XX
+    link: XX
+  -
+    authors: ['XX']
+    title: >-
+      Geospatial Fabric for National Hydrologic Modeling XX
+    pubdate: XX
+    link: http://dx.doi.org/doi:10.5066/F7542KMD
+    
+
+build-environment: Multiple computer systems were used to generate these data, including XX. The open source languages R and Python was used on all systems, as well as XX.
+
+process-date: !expr format(Sys.time(),'%Y%m%d')
+indirect-spatial: U.S.A.
+latitude-res: 0.1
+longitude-res: 0.1
+data-name: weather data, distance matrix, river reach metadata
+
+
