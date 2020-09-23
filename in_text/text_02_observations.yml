@@ -1,0 +1,62 @@
+title: >-
+  Predicting water temperature in the Delaware River Basin: 2 water temperature and flow observations
+
+abstract: >-
+  Observed water temperatures from 1980-2019 were compiled for the Delaware River Basin, US. These data were used
+  as XX. The data are formatted as a single csv (comma separated values) file with attributes corresponding to the unique combination of
+  lake identifier, time, and depth. Data came from a variety of sources, including the National Water Inventory System, 
+  Water Quality Portal, and the NorEaST stream water temperature database.
+
+cross-cites:
+  -
+    authors: XX
+    title: >-
+      XX
+    pubdate: XX
+    link: XX
+
+entities:
+  -
+    data-name: temperature_observations.zip
+    data-description: Temperature observation data with sites matched to 456 model river segments in the Delaware River Basin.
+    attributes:
+    -
+      attr-label: seg_id_nat
+      attr-def: >-
+        River reach identifier from XX, which the site was matched to based on latitude and longitude.
+      attr-defs: >-
+        XX
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: site_id
+      attr-def: >-
+        Site identifier from the data provider.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: date
+      attr-def: Date of temperature measurement
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: temp
+      attr-def: Water temperature
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: degrees C
+    -
+      attr-label: source_id
+      attr-def: The source of these data.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+
+file-format: a single comma-delimited file, compressed into a zip file
