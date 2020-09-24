@@ -5,14 +5,15 @@ title: >-
 abstract: >-
   <p>Daily temperature predictions in the Delaware River Basin (DRB) can inform decision makers who can use cold-water reservoir releases to maintain thermal habitat for sensitive fish and mussel species.
   This data release provides the inputs and outputs for process-guided machine learning methods to improve prediction of water temperature across 456 river reaches in the DRB.
+
   <br/>The data are organized into these items:</p>
   <ol>
-  <li><a href="https://www.sciencebase.gov/catalog/item/XX">River Information</a> - A river reach metadata file and one shapefile of polylines for each 456 river segments in this study</li>
-  <li><a href="https://www.sciencebase.gov/catalog/item/XX">Observations</a> - Water temperature observations for XX of the 456 river reaches used in this study</li>
-  <li><a href="https://www.sciencebase.gov/catalog/item/XX">Model Configurations</a> - Model parameters and metadata used to configure models</li>
-  <li><a href="https://www.sciencebase.gov/catalog/item/XX">Model Inputs</a> - Data used to drive predictive models (distance matrices, river reach metadata, daily meteorology)</li>
-  <li><a href="https://www.sciencebase.gov/catalog/item/XX">Model Predictions</a> - Predictions of water temperature</li>
-  <li><a href="https://www.sciencebase.gov/catalog/item/XX">Model Evaluation</a> - Performance of models</li>
+  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a285d82ce38aaa244912e">River Information</a> - A river reach metadata file and one shapefile of polylines for each 456 river segments in this study</li>
+  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a287382ce38aaa2449131">Observations</a> - Water temperature observations for XX of the 456 river reaches used in this study</li>
+  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a288982ce38aaa2449133">Model Configurations</a> - Model parameters and metadata used to configure models</li>
+  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a289982ce38aaa2449135">Model Inputs</a> - Data used to drive predictive models (distance matrices, river reach metadata, daily meteorology)</li>
+  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a28a782ce38aaa2449137">Model Predictions</a> - Predictions of water temperature</li>
+  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a28ba82ce38aaa2449139">Model Evaluation</a> - Performance of models</li>
   <br/>
   <p>This research was funded by the USGS, XX.</p>
 
