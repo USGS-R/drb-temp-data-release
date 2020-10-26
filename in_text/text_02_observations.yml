@@ -98,5 +98,49 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
+  -
+    data-name: reservoir_releases.csv
+    data-description: Daily reservoir releases from the Pepacton, Neversink, and Cannonsville reservoirs.
+    attributes:
+    -
+      attr-label: date
+      attr-def: >-
+        Date of water release.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: reservoir
+      attr-def: >-
+        Name of reservoir.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: release_type
+      attr-def: >-
+        Type of release, including mandated releases ("Direct"), conservation releases ("Conserv"), or spillway releases ("Spill").
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: release_volume_cfs
+      attr-def: >-
+        Volume of the reservoir release.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: cubic feet per second
+    -
+      attr-label: GRAND_ID
+      attr-def: >-
+        Unique reservoir identifier.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
 
-file-format: comma-delimited files, compressed into zip files
+file-format: comma-delimited files, some compressed into zip files
