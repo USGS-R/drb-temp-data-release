@@ -27,7 +27,7 @@ cross-cites:
 entities:
   -
     data-name: distance_matrix.csv
-    data-description: A matrix documentation the upstream (negative numbers) or downstream (positive numbers) distances between river reaches.
+    data-description: A matrix documenting the upstream (negative numbers) or downstream (positive numbers) distances between river reaches.
     attributes:
     -
       attr-label: from
@@ -42,6 +42,298 @@ entities:
       attr-def: >-
         Distance (in meters) between the seg_id_nat in the from column to the {seg_id_nat} in the column name. Positive numbers indicate a downstream direction, while positive numbers indicate an upstream direction.
       attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: meters
+  -
+    data-name: reservoir_features.csv
+    data-description: Features of the 17 dam and reservoir systems in the Delaware River Basin.
+    attributes:
+    -
+      attr-label: GRAND_ID
+      attr-def: >-
+        Unigue reservoir identifier.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: AREA_SKM
+      attr-def: >-
+        Reservoir surface area. 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: square kilometers
+    -
+      attr-label: RES_NAME
+      attr-def: >-
+        Reservoir name. 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: DAM_NAME
+      attr-def: >-
+        Dam name. 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: ALT_NAME
+      attr-def: >-
+        Alternative reservoir name. 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: RIVER
+      attr-def: >-
+        The river name on which the reservoir and dam is situated. 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: ALT_RIVER
+      attr-def: >-
+        The alternative river name on which the reservoir and dam is situated. 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: YEAR
+      attr-def: >-
+        Year the dam was built. 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: DAM_HGT_M
+      attr-def: >-
+        Height of the dam. 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -
+      attr-label: DAM_LEN_M
+      attr-def: >-
+        The length of the dam (perpedicular to the river). 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -
+      attr-label: DAM_LEN_M
+      attr-def: >-
+        The length of the dam (perpedicular to the river). 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -
+      attr-label: DEPTH_M
+      attr-def: >-
+        Average depth of the reservoir. 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -
+      attr-label: ELEV_MASL
+      attr-def: >-
+        Elevation of reservoir surface in meters above sea level. 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -
+      attr-label: CATCH_SKM
+      attr-def: >-
+        Area of upstream catchment draining into the reservoir. 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: square kilometers
+  -
+    data-name: sntemp_inputs_outputs.zip
+    data-description: PRMS-SNTemp inputs and outputs, including weather driver data, intermediate varibles, and model predictions.
+    attributes:
+    -
+      attr-label: seg_id_nat
+      attr-def: >-
+        Unique river segment identifier from the national geospatial fabric.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: model_idx
+      attr-def: >-
+        Unique river segment identifier from the model cutout.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+      
+    -
+      attr-label: date
+      attr-def: >-
+        Date of the observation or prediction.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: seg_ccov
+      attr-def: >-
+        Area-weighted average cloud cover fraction for each segment from HRUs contributing flow to the segment.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: decimal fraction
+    -
+      attr-label: seg_humid
+      attr-def: >-
+        Area-weighted average relative humidity for each segment from HRUs contributing flow to the segment
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: decimal fraction
+    -
+      attr-label: seg_outflow
+      attr-def: >-
+        Streamflow leaving a segment
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: cubic meters per second
+    -
+      attr-label: seg_rain
+      attr-def: >-
+        Area-weighted average rainfall for each segment from HRUs contributing flow to the segment      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -
+      attr-label: seg_shade
+      attr-def: >-
+        Area-weighted average shade fraction for each segment      
+      data-min: NA
+      data-max: NA
+      data-units: decimal fraction
+    -
+      attr-label: seg_tave_air
+      attr-def: >-
+         Area-weighted average air temperature for each segment from HRUs contributing flow to the segment    
+      data-min: NA
+      data-max: NA
+      data-units: degrees Celsius
+    -
+      attr-label: seg_tave_gw
+      attr-def: >-
+        Groundwater temperature.      
+      data-min: NA
+      data-max: NA
+      data-units: degrees Celsius
+    -
+      attr-label: seg_tave_sroff
+      attr-def: >-
+        Surface runoff temperature.
+      data-min: NA
+      data-max: NA
+      data-units: degrees Celsius
+    -
+      attr-label: seg_tave_ss
+      attr-def: >-
+        Subsurface temperature.
+      data-min: NA
+      data-max: NA
+      data-units: degrees Celsius
+    -
+      attr-label: seg_tave_upstream
+      attr-def: >-
+        Temperature of streamflow entering each segment.
+      data-min: NA
+      data-max: NA
+      data-units: degrees Celsius
+    -
+      attr-label: seg_tave_water
+      attr-def: >-
+        Computed daily mean stream temperature for each segment      data-min: NA
+      data-max: NA
+      data-units: degrees Celsius
+    -
+      attr-label: seg_upstream_inflow
+      attr-def: >-
+        Sum of inflow from upstream segments
+      data-min: NA
+      data-max: NA
+      data-units: cubic meters per second
+    -
+      attr-label: seg_width
+      attr-def: >-
+        Width of each segment.
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -
+      attr-label: seginc_gwflow
+      attr-def: >-
+          Area-weighted average groundwater discharge for each segment from HRUs contributing flow to the segment.   
+      data-min: NA
+      data-max: NA
+      data-units: cubic meters per second
+    -
+      attr-label: seginc_potet
+      attr-def: >-
+        Area-weighted average potential ET for each segment from HRUs contributing flow to the segment.
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -  
+      attr-label: seginc_sroff
+      attr-def: >-
+        Area-weighted average surface runoff for each segment from HRUs contributing flow to the segment.
+      data-min: NA
+      data-max: NA
+      data-units: cubic meters per second
+    -  
+      attr-label: seginc_ssflow
+      attr-def: >-
+        Area-weighted average interflow for each segment from HRUs contributing flow to the segment.
+      data-min: NA
+      data-max: NA
+      data-units: cubic meters per second
+    -  
+      attr-label: seginc_swrad
+      attr-def: >-
+        Area-weighted average solar radiation for each segment from HRUs contributing flow to the segment.
+      data-min: NA
+      data-max: NA
+      data-units: watts per square meter
+    -  
+      attr-label: seg_length
+      attr-def: >-
+        Length of stream segment.
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -  
+      attr-label: seg_slope
+      attr-def: Stream segment slope.
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -  
+      attr-label: seg_elev
+      attr-def: Stream segment average elevation above mean sea level.
       data-min: NA
       data-max: NA
       data-units: meters

@@ -16,8 +16,14 @@ zip_this <- function(out_file, .object){
 }
 
 zip_obs <- function(out_file, in_file){
-  
-  zip_this(out_file, .object = readRDS(in_file))
+  if (grepl('csv', in_file)) {
+    zip_this(out_file, .object = readr::read_csv(in_file))
+    
+  } else if (grepl('rds', in_file)) {
+    zip_this(out_file, .object = readRDS(in_file))
+  } else {
+    message('There is no reader for this filetype. Please modify function zip_obs.')
+  }
   
 }
 
@@ -30,4 +36,9 @@ get_distance_matrix <- function(out_file, in_file) {
     select(from, everything())
   
   readr::write_csv(out, path = out_file) 
+}
+
+get_sntemp_output <- function(out_file, in_file){
+  sntemp <- feather::read_feather(in_file)
+  readr::write_csv(sntemp, out_file)
 }
