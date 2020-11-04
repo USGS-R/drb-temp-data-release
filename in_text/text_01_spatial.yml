@@ -1,0 +1,57 @@
+title: >-
+  Predicting water temperature in the Delaware River Basin: 1 River reach information for 456 river reaches
+
+abstract: >-
+  This dataset provides shapefile outlines of the 2,332 lakes that had temperature modeled as part of this study.
+  The format is a shapefile for all lakes combined (.shp, .shx, .dbf, and .prj files). A csv file of lake metadata is also included.
+  This dataset is part of a larger data release of lake temperature model inputs and outputs for 2,332 lakes in the U.S.
+  (https://doi.org/10.5066/P9I00WFR).
+
+cross-cites:
+
+entities:
+  -
+    data-name: 01_spatial.zip
+    data-description: GIS polylines data for the 456 stream segments included in this study
+    attributes:
+    -
+      attr-label: seg_nat_id
+      attr-def: >-
+        Stream reach identification number for this dataset. This is the ID named XX from the Geospatial Fabric for  National Hydrologic Modeling."
+      attr-defs: >-
+        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      data-min: NA
+      data-max: NA
+      data-units: NA
+  -
+    data-name: stream_metadata.csv
+    data-description: Select metadata for the 456 stream reaches included in this study.
+    attributes:
+    -
+      attr-label: site_id
+      attr-def: >-
+        Stream reach identification number for this dataset. This is the ID named XX from the Geospatial Fabric for  National Hydrologic Modeling."
+      attr-defs: >-
+        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      data-min: NA
+      data-max: NA
+      data-units: NA
+
+    -
+      attr-label: 
+      attr-def: 
+      attr-defs: >-
+        http://nhd.usgs.gov/
+      data-min:
+      data-max:
+      data-units:
+
+data-name: Polylines for river reaches in the study basin
+data-description: Shapefile of study river reaches included in this data release; metadata file for stream segments in this data release
+
+file-format: Shapefile Data Set
+
+build-environment: >-
+  This dataset was generated using open source tools available in the R programming language (R version 4.0.2 (2020-06-22)).
+  The computing platform for generating data and metadata was x86_64-w64-mingw32
+  R packages loaded into this environment: packagename, version: 1.1.7;  packagename2, version: 1.4.0...

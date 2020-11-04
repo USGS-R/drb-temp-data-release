@@ -1,0 +1,68 @@
+authors: ["Samantha K. Oliver, XX"]
+pubdate: 2020
+doi: XX
+abstract: >-
+  Daily temperature predictions in the Delaware River Basin (DRB) can inform decision makers who can use cold-water reservoir releases to maintain thermal habitat for sensitive fish and mussel species.
+  This data release provides the inputs and outputs for process-guided machine learning methods to improve prediction of water temperature across 456 river reaches in the DRB.
+
+# ----associated publication----
+larger-cites:
+  -
+    authors: ["TBD XX"]
+    title: >-
+      TBD XX
+    pubdate: 2020
+
+purpose: Decision support, limnological research, and fish habitat.
+start-date: 19801001
+end-date: 20191231
+
+update: none planned
+themekeywords: ["machine learning", "deep learning", "hybrid modeling", "water","temperature","reservoirs","modeling", "XX"]
+
+usage-rules: >-
+  These data are subject to change and are not citable until reviewed and approved for official publication by the USGS
+
+descgeog: "River reach polylines as defined by the XX."
+data-publisher: U.S. Geological Survey
+
+# ----contacts----
+contact-person: Samantha K. Oliver
+contact-phone: 608-821-3824
+contact-email: soliver@usgs.gov
+contact-position: Hydrologist
+contact-address: "8505 Research Way"
+contact-city: Middleton
+contact-state: WI
+contact-zip: 53562
+
+metadata-person: Samantha K. Oliver
+metadata-position: Hydrologist
+metadata-phone: 608-821-3824
+metadata-fax: 608-821-3817
+metadata-email: soliver@usgs.gov
+metadata-address: "8505 Research Way"
+metadata-city: Middleton
+metadata-state: WI
+metadata-zip: 53562
+metadata-date: !expr format(Sys.time(),'%Y%m%d')
+
+accur-test: No formal attribute accuracy tests were conducted.
+funding-credits: >-
+  This study was funded by the Department of the Interior
+  Northeast Climate Adaptation Science Center, the United States Geological Survey National Climate
+  This research used resources of the Core Science Analytics and Synthesis Advanced Research Computing program at the U.S. Geological Survey.
+
+process-description: >-
+  At the core of the modeling framework is a coupled hydrologic-thermodynamic model that uses inputs of reach-specific properties and local meteorology to estimate flow and water temperature.
+  Our chosen model is the open source, Precipitation Runoff Modeling System (PRMS) with the coupled Stream Network Temperature Model (SNTemp) version XX. PRMS-SNTemp is a ...XX.
+  We used PRMS-SNTemp to simulate stream flow and temperature for the period of record...XX.
+  
+distro-person: Samantha K. Oliver
+liability-statement: >-
+  Unless otherwise stated, all data, metadata and related materials are considered to satisfy the quality standards relative to the purpose for which the data were collected.
+  Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS),
+  no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall
+  the act of distribution constitute any such warranty.
+
+
