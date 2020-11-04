@@ -2,12 +2,15 @@ title: >-
   Predicting water temperature in the Delaware River Basin: 1 River reach information for 456 river reaches
 
 abstract: >-
-  This dataset provides shapefile outlines of the 2,332 lakes that had temperature modeled as part of this study.
-  The format is a shapefile for all lakes combined (.shp, .shx, .dbf, and .prj files). A csv file of lake metadata is also included.
-  This dataset is part of a larger data release of lake temperature model inputs and outputs for 2,332 lakes in the U.S.
-  (https://doi.org/10.5066/P9I00WFR).
+  This dataset provides XX.
 
 cross-cites:
+  -
+    authors: ['Roland Viger', 'XX']
+    title: >-
+      GIS Features of the Geospatial Fabric for National Hydrologic Modeling
+    pubdate: 2014
+    link: http://dx.doi.org/doi:10.5066/F7542KMD
 
 entities:
   -
@@ -53,5 +56,4 @@ file-format: Shapefile Data Set
 
 build-environment: >-
   This dataset was generated using open source tools available in the R programming language (R version 4.0.2 (2020-06-22)).
-  The computing platform for generating data and metadata was x86_64-w64-mingw32
-  R packages loaded into this environment: packagename, version: 1.1.7;  packagename2, version: 1.4.0...
+  The computing platform for generating data and metadata was x86_64-w64-mingw32. XX use meddle::environment_metadata() to complete text.

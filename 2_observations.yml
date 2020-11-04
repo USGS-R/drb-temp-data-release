@@ -20,3 +20,5 @@ targets:
   out_data/flow_observations.zip:
     command: zip_obs(out_file = target_name, in_file = '../delaware-model-prep/2_observations/out/obs_flow_drb.rds')
 
+  out_data/reservoir_releases.csv:
+    command: file.copy(from = '../delaware-model-prep/2_observations/out/reservoir_releases.csv', to = target_name)
