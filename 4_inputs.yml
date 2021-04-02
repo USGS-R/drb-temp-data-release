@@ -9,6 +9,7 @@ packages:
 
 sources:
   - src/file_functions.R
+  - src/fetch_filter_functions.R
 
 targets:
   4_inputs:
@@ -16,6 +17,7 @@ targets:
       - out_data/distance_matrix.csv
       - out_data/sntemp_inputs_outputs.zip
       - out_data/reservoir_features.csv
+      - log/res_meteo_files.yml
   #weather_drivers:
    # command: extract_weather_drivers()
     
@@ -27,7 +29,8 @@ targets:
 
   #out_data/reach_attributes.csv:
    # command: extract_reach_attributes()
-   
+  
+  ##### Transfer of files from delaware-model-prep #####
   out_data/reservoir_features.csv:
     command: file.copy(from = '../delaware-model-prep/9_collaborator_data/umn/reservoir_features.csv', to = target_name)
     
@@ -36,4 +39,13 @@ targets:
     
   out_data/sntemp_inputs_outputs.zip:
     command: zip_obs(out_file = target_name, in_file = 'out_data/sntemp_inputs_outputs.csv')
-    
+  
+  # For now, we're putting meteo files manually into in_data, so all we
+  # do here is confirm that the requisite files exist.
+  # Not quite robust pipelining - if the files in in_data change
+  # but the filenames in nml_list.rds don't,
+  # this target will need to be force-rebuilt
+  log/res_meteo_files.yml:
+    command: fetch_meteo_files(
+      out_yml = target_name,
+      nml_rds = 'out_data/res_nml_list.rds')

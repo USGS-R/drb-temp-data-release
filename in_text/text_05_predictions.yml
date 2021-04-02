@@ -5,6 +5,8 @@ abstract: >-
   Multiple modeling frameworks were used to predict daily temperatures at 456 stream reaches in the Delaware River Basin. Uncalibrated process-based models (PB0)
   used default configurations (see XX for details) and no parameters were adjusted according to model fit with observations. Deep Learning (DL) models were xx.
 
+  Daily stream temperature predictions for inflow and outflow reaches for Cannonsville and Pepacton reservoirs were pulled aside into a separate feather file.
+  
 cross-cites:
   -
     authors: ['XX']
@@ -25,7 +27,21 @@ cross-cites:
     pubdate: XX
     link: XX
 
+entities:
+  -
+    data-name: res_io_sntemp.feather
+    data-description: Predictions of water temperature for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs.
+    attributes:
+    -
+      attr-label: 
+      attr-def: 
+      attr-defs: 
+      data-min: 
+      data-max: 
+      data-units: 
+
 build-environment: >-
   For PB0 predictions we used XX; process-based predictions were generated with the following open source tools XX.
   For PGDL and DL predictions, the University of Minnesota Supercomputing Institute resources were used. XX
   
+file-format: feather files.

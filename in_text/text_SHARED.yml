@@ -1,30 +1,54 @@
-authors: ["Samantha K. Oliver, XX"]
+authors: ["Samantha K. Oliver", "Alison Appling", "Rasha Atshan"]
 pubdate: 2020
 doi: XX
 abstract: >-
   Daily temperature predictions in the Delaware River Basin (DRB) can inform decision makers who can use cold-water reservoir releases to maintain thermal habitat for sensitive fish and mussel species.
   This data release provides the inputs and outputs for process-guided machine learning methods to improve prediction of water temperature across 456 river reaches in the DRB.
 
-# ----associated publication----
+build-environment: Multiple computer systems were used to generate these data, including linux, OSX. The open source languages R and Python were used on all systems.
+
+associated publication----
 larger-cites:
   -
     authors: ["TBD XX"]
     title: >-
       TBD XX
     pubdate: 2020
+  -
+    authors: ["Xiaowei Jia", "others"]
+    title: >-
+      TBD
+    pubdate: 2021
+    
+# ----supporting publications----    
+cross-cites:
+  -
+    authors: ["Jordan S. Read", "Xiaowei Jia", "Jared Willard", "Alison P. Appling", "Jacob A. Zwart","Samantha K. Oliver","Anuj Karpatne","Gretchen J.A. Hansen", "Paul C. Hanson", "William Watkins", "Michael Steinbach","Vipin Kumar"]
+    title: >-
+      Process-guided deep learning predictions of lake water temperature
+    pubdate: 2019
+  -
+    authors: ['Luke A. Winslow','Gretchen J.A. Hansen','Jordan S. Read','Michael Notaro']
+    title: >-
+      Large-scale modeled contemporary and future water temperature estimates for 10,774 Midwestern U.S. Lakes
+    pubdate: 2017
+    link: http://dx.doi.org/10.1038/sdata.2017.53
 
-purpose: Decision support, limnological research, and fish habitat.
+purpose: Decision support, limnological research, fish habitat, reservoir management, and climate science.
 start-date: 19801001
 end-date: 20191231
 
 update: none planned
-themekeywords: ["machine learning", "deep learning", "hybrid modeling", "water","temperature","reservoirs","modeling", "XX"]
+themekeywords: ["machine learning", "deep learning", "hybrid modeling", "water","temperature","reservoirs","modeling","climate change","thermal profiles"]
 
 usage-rules: >-
   These data are subject to change and are not citable until reviewed and approved for official publication by the USGS
 
-descgeog: "River reach polylines as defined by the XX."
+descgeog: "River reach polylines as defined by the XX. Lake polygons as defined by the national hydrography dataset high resolution"
 data-publisher: U.S. Geological Survey
+indirect-spatial: U.S.A.
+latitude-res: 0.00001
+longitude-res: 0.00001
 
 # ----contacts----
 contact-person: Samantha K. Oliver

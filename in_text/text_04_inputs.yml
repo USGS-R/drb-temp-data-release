@@ -14,6 +14,12 @@ cross-cites:
   -
     authors: ['XX']
     title: >-
+      NLDAS XX
+    pubdate: XX
+    link: XX
+  -
+    authors: ['XX']
+    title: >-
       GRanD reservoir database. XX
     pubdate: XX
     link: XX
@@ -337,6 +343,29 @@ entities:
       data-min: NA
       data-max: NA
       data-units: meters
+-
+    data-name: NLDAS_time[0.367700]_x[397]_y[136].csv
+    data-description: NLDAS gridded weather data XXXXXXXX
+    attributes:
+    -
+      attr-label: 
+      attr-def: 
+      attr-defs: 
+      data-min: 
+      data-max: 
+      data-units:
+
+-
+    data-name: NLDAS_time[0.367700]_x[401]_y[136].csv
+    data-description: NLDAS gridded weather data XXXXXXXX
+    attributes:
+    -
+      attr-label: 
+      attr-def: 
+      attr-defs: 
+      data-min: 
+      data-max: 
+      data-units: 
     
 build-environment: Multiple computer systems were used to generate these data, including XX. The open source languages R and Python was used on all systems, as well as XX.
 
@@ -346,4 +375,4 @@ latitude-res: 0.1
 longitude-res: 0.1
 data-name: weather data, distance matrix, river reach metadata
 
-
+file-format: comma-delimited files (some compressed into zip files)

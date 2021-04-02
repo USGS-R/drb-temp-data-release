@@ -6,6 +6,14 @@ abstract: >-
   as XX. The data are formatted as a single csv (comma separated values) file with attributes corresponding to the unique combination of
   lake identifier, time, and depth. Data came from a variety of sources, including the National Water Inventory System, 
   Water Quality Portal, and the NorEaST stream water temperature database.
+  
+  Flow observation data
+  
+  Daily reservoir releases from the Pepacton, Neversink, and Cannonsville reservoirs
+  
+  Daily water temperature observations for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs
+  
+  Daily water temperature and water level observations for the Pepacton and Cannonsville reservoirs
 
 cross-cites:
   -
@@ -142,5 +150,38 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
+  -
+    data-name: res_io_obs.feather
+    data-description: Daily water temperature observations for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs.
+    attributes:
+    -
+      attr-label: 
+      attr-def: 
+      attr-defs: 
+      data-min: 
+      data-max: 
+      data-units: 
+  -
+    data-name: res_temp_obs.rds
+    data-description: Daily water temperature observations for the Pepacton and Cannonsville reservoirs.
+    attributes:
+    -
+      attr-label: 
+      attr-def: 
+      attr-defs: 
+      data-min: 
+      data-max: 
+      data-units: 
+  -
+    data-name: res_level_obs.rds
+    data-description: Daily water level observations for the Pepacton and Cannonsville reservoirs.
+    attributes:
+    -
+      attr-label: 
+      attr-def: 
+      attr-defs: 
+      data-min: 
+      data-max: 
+      data-units: 
 
-file-format: comma-delimited files, some compressed into zip files
+file-format: comma-delimited files (some compressed into zip files), rds files, feather files.
