@@ -337,7 +337,100 @@ entities:
       data-min: NA
       data-max: NA
       data-units: meters
-    
+  -
+    data-name: reach_attributes.csv
+    data-description: Metadata about reaches in the Delaware River Basin, including fields for upstream/downstream segments, segment length, and position relative to reservoirs.
+    attributes:
+    -
+      attr-label: seg_id_nat
+      attr-def: >-
+        The unique segment identifier.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: frac_overlap
+      attr-def: >-
+        The fraction of stream segment length that overlaps with a reservoir.
+      attr-defs: NA indicates no overlap with reservoir.
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: reach_class
+      attr-def: >-
+        Classification of river reaches relative to reservoirs.
+      attr-defs: >-
+        reach = the river reach is > 2 segments away from a reservoir; 
+        upstream of reservoir (2) = reach is two segments above a reservoir; 
+        upstream of reservoir (1) = reach is one segment above a reservoir; 
+        downstream of reservoir (2) = reach is two segments below a reservoir; 
+        downstream of reservoir (1) = reach is one segment below a reservoir; 
+        reservoir_inlet_reach = the reach starting point is above a reservoir and the endpoint is within a reservoir; 
+        reservoir_outlet_reach = the reach starting point is within a reservoir and the endpoint is downstream of a reservoir; 
+        within_reservoir = the reach is fully contained within a reservoir (both start and end points are within a reservoir); 
+        contains_reservoir = a reservoir is fully contained within the reach
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: nearest_GRAND_ID
+      attr-def: >-
+        The unique identifier (GRAND ID) if the nearest reservoir. Only reaches within two reaches of a reservoir are associated with a reservoir, such that reaches with reach_class = reach have an NA in this field.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: subseg_id
+      attr-def: >-
+        An alternative unique reach identifier.XX
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: subseg_seg
+      attr-def: >-
+        An alternative unique reach identifier.XX
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: subseg_length
+      attr-def: >-
+        Length of stream reach.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -
+      attr-label: from_segs
+      attr-def: >-
+        subseg_seg identifier(s) of the upstream segment. NA indicates a headwater stream with no upstream segments.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -
+      attr-label: to_seg
+      attr-def: >-
+        subseg_seg identifier of the downstream segment.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -
+      attr-label: to_seg
+      attr-def: >-
+        subseg_seg identifier of the downstream segment.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: meters
+
 build-environment: Multiple computer systems were used to generate these data, including XX. The open source languages R and Python was used on all systems, as well as XX.
 
 process-date: !expr format(Sys.time(),'%Y%m%d')

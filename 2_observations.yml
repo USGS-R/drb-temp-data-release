@@ -17,8 +17,21 @@ targets:
   out_data/temperature_observations.zip:
     command: zip_obs(out_file = target_name, in_file = '../delaware-model-prep/2_observations/out/obs_temp_drb.rds')
     
+  out_data/temperature_observations_lordville.zip:
+    command: zip_obs(out_file = target_name, in_file = '../delaware-model-prep/9_collaborator_data/umn/obs_temp_subset_lordville.csv')
+    
   out_data/flow_observations.zip:
     command: zip_obs(out_file = target_name, in_file = '../delaware-model-prep/2_observations/out/obs_flow_drb.rds')
-
+  
+  out_data/flow_observations_lordville.zip:
+    command: zip_obs(out_file = target_name, in_file = '../delaware-model-prep/9_collaborator_data/umn/obs_flow_subset_lordville.csv')
+    
   out_data/reservoir_releases.csv:
     command: file.copy(from = '../delaware-model-prep/2_observations/out/reservoir_releases.csv', to = target_name)
+  
+  out_data/reservoir_releases_lordville.csv:
+    command: filter_reservoirs(out_file = target_name, in_dat = 'out_data/reservoir_releases.csv', keep = I(c('Pepacton', 'Cannonsville')))
+    
+  # get GRAND IDs of reservoirs above Lordville
+  res_lordville:
+    command: get_grands(in_file = 'out_data/reservoir_releases_lordville.csv')
