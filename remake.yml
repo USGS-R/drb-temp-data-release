@@ -71,8 +71,12 @@ targets:
   
   02_observations_sb_data:
     command: sb_replace_files(sbid_02_observations,
-      "out_data/temperature_observations.zip", "out_data/flow_observations.zip",
-      "out_data/reservoir_releases.csv")
+      "out_data/temperature_observations.zip",
+      "out_data/temperature_observations_lordville.zip",
+      "out_data/flow_observations.zip",
+      "out_data/flow_observations_lordville.zip",
+      "out_data/reservoir_releases.csv",
+      "out_data/reservoir_releases_lordville.csv")
 
   02_observations_sb_xml:
     command: sb_render_post_xml(sbid_02_observations,
@@ -88,8 +92,13 @@ targets:
   04_inputs_sb_data:
     command: sb_replace_files(sbid_04_inputs,
       "out_data/distance_matrix.csv",
+      "out_data/distance_matrix_lordville.csv",
       "out_data/reservoir_features.csv",
-      "out_data/sntemp_inputs_outputs.zip")
+      "out_data/reservoir_features_lordville.csv",
+      "out_data/sntemp_inputs_outputs.zip",
+      "out_data/sntemp_inputs_outputs_lordville.zip",
+      "out_data/reach_attributes.csv",
+      "out_data/reach_attributes_lordville.csv")
 
   #05_predictions_sb_xml:
    # command: sb_render_post_xml(sbid_05_predictions,
