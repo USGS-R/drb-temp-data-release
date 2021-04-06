@@ -43,8 +43,50 @@ get_sntemp_output <- function(out_file, in_file){
   readr::write_csv(sntemp, out_file)
 }
 
+extract_reach_attributes <- function(res_file, attr_file, out_file) {
+  res <- readRDS(res_file) %>% select(-subseg_seg) %>% rename(reach_class = type_res)
+  attr <- readRDS(attr_file)
+  attr <- attr$edges %>% st_drop_geometry()
 
-##### Reservoir modeling file utils #####
+  out <- left_join(res, select(attr, -subseg_updown, -start_pt, -end_pt, -to_subseg))
+  
+  readr::write_csv(out, out_file)
+  
+}
+
+get_sites <- function(in_dat) {
+  
+  sites <- in_dat$edges %>%
+    filter(!is.na(seg_id_nat))
+  return(unique(sites$seg_id_nat))
+}
+
+filter_reservoirs <- function(in_dat, keep, out_file) {
+  dat <- readr::read_csv(in_dat) %>%
+    filter(reservoir %in% keep)
+  
+  readr::write_csv(dat, out_file)
+}
+
+filter_to_subset <- function(out_file, in_file, segments) {
+  dat <- readr::read_csv(in_file) %>%
+    filter(seg_id_nat %in% segments)
+  
+  readr::write_csv(dat, out_file)
+}
+
+get_grands <- function(in_file) {
+  dat <- readr::read_csv(in_file)
+  return(unique(dat$GRAND_ID))
+}
+
+filter_res_ids <- function(in_file, out_file, res_keep) {
+  dat <- readr::read_csv(in_file) %>%
+    filter(GRAND_ID %in% res_keep)
+  
+  readr::write_csv(dat, out_file)
+}
+
 #' Call gd_get (without any scipiper target builds) on a file in another repo on
 #' this file system, downloading that file from a shared Drive cache into that
 #' other repo

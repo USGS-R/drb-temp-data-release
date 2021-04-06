@@ -6,6 +6,13 @@ abstract: >-
   
 cross-cites:
   -
+    authors: ['Matthew R. Hipsey', 'Louise C. Bruce', 'Casper Boon', 'Brendan Busch', 'Cayelan C. Carey', 'David P. Hamilton', 'Paul C. Hanson', 'Jordan S. Read', 'Eduardo de Sousa', 'Michael Weber', 'Luke A. Winslow']
+    title: >-
+      A General Lake Model (GLM 3.0) for linking with high-frequency sensor data from the Global Lake Ecological Observatory Network (GLEON).
+    pubdate: 2019
+    form: publication
+    link: https://doi.org/10.5194/gmd-12-473-2019
+  -
     authors: ['XX']
     title: >-
       NLDAS XX
@@ -32,8 +39,9 @@ process-date: !expr format(Sys.time(),'%Y%m%d')
 indirect-spatial: U.S.A.
 latitude-res: 0.1
 longitude-res: 0.1
-data-name: 
+data-name: Model configuration details
+data-description: >-
+  Model configurations for running the General Lake Model (Hipsey et al. 2019) version 2 for each lake.
+  The value for "lake_name" in the "morphometry" field is the mapping for "site_id" for the other datasets included in this release.
 
 file-format: rds files.
-
-
