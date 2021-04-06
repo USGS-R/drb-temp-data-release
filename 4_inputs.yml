@@ -16,9 +16,13 @@ targets:
   4_inputs:
     depends:
       - out_data/distance_matrix.csv
-      - out_data/sntemp_inputs_outputs.zip
-      - out_data/reservoir_features.csv
+      - out_data/distance_matrix_lordville.csv
       - out_data/reach_attributes.csv
+      - out_data/reach_attributes_lordville.csv
+      - out_data/reservoir_features.csv
+      - out_data/reservoir_features_lordville.csv
+      - out_data/sntemp_inputs_outputs.zip
+      - out_data/sntemp_inputs_outputs_lordville.zip
       - log/res_meteo_files.yml
       
   #weather_drivers:
