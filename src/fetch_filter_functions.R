@@ -74,7 +74,7 @@ fetch_meteo_files <- function(out_yml, nml_rds) {
     as_promises = TRUE,
     include = c(),
     packages = 'scipiper',
-    sources = c('src/fetch_filter.R'))
+    sources = c('src/fetch_filter_functions.R'))
   
   loop_tasks(task_plan, task_yml, num_tries=1)
   
