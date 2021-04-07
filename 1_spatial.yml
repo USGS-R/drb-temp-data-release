@@ -16,7 +16,6 @@ targets:
   1_spatial:
     depends:
       - out_data/01_spatial_network.zip
-      - out_data/01_river_reach_metadata.csv
       - out_data/01_reservoir_polygons.zip
     
   # not sure what this metadata should be, if anything
@@ -80,4 +79,3 @@ targets:
   out_data/01_reservoir_polygons.zip:
     command: sf_to_zip(zip_filename = target_name, 
       sf_object = reservoir_polygons, layer_name = I('spatial_data'))
-  

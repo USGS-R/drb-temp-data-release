@@ -8,8 +8,8 @@ abstract: >-
 
   <br/>The data are organized into these items:</p>
   <ol>
-  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a285d82ce38aaa244912e">Waterbody Information</a> - A river reach metadata file, one shapefile of polylines for the 456 river segments in this study, a reservoir polygon metadata file, and one shapefile of reservoir polygons for the Pepacton and Cannonsville reservoirs</li>
-  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a287382ce38aaa2449131">Observations</a> - Water temperature observations for XX of the 456 river reaches used in this study. Water temperature observations for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs. Water temperature and water level observations in the Pepacton and Cannonsville reservoirs.</li>
+  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a285d82ce38aaa244912e">Waterbody Information</a> - One shapefile of polylines for the 456 river segments in this study, a reservoir polygon metadata file, and one shapefile of reservoir polygons for the Pepacton and Cannonsville reservoirs</li>
+  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a287382ce38aaa2449131">Observations</a> - Water temperature observations for XX of the 456 river reaches used in this study. Water temperature observations for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs. Water temperature and water level observations in the Pepacton and Cannonsville reservoirs</li>
   <li><a href="https://www.sciencebase.gov/catalog/item/5f6a288982ce38aaa2449133">Model Configurations</a> - Model parameters and metadata used to configure models</li>
   <li><a href="https://www.sciencebase.gov/catalog/item/5f6a289982ce38aaa2449135">Model Inputs</a> - Data used to drive predictive models (distance matrices, river reach metadata, daily meteorology for river reaches and reservoirs)</li>
   <li><a href="https://www.sciencebase.gov/catalog/item/5f6a28a782ce38aaa2449137">Model Predictions</a> - Predictions of water temperature for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs</li>

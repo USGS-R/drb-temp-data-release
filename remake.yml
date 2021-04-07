@@ -76,10 +76,13 @@ targets:
    # command: sb_replace_files(sbid_01_spatial,
     #  "out_data/lake_metadata.csv")
   
-  #####################################################
-  ###### fgdc_metadata.xml <- merge w/ other metadata
-  #####################################################
-  
+  02_observations_sb_xml:
+    command: sb_render_post_xml(sbid_02_observations,
+      "in_text/text_SHARED.yml",
+      "in_text/text_02_observations.yml",
+      river_metadata,
+      reservoir_metadata)
+      
   02_observations_sb_data:
     command: sb_replace_files(sbid_02_observations,
       "out_data/temperature_observations.zip",
@@ -91,13 +94,6 @@ targets:
       "out_data/res_io_obs.feather",
       "out_data/res_temp_obs.rds",
       "out_data/res_level_obs.rds")
-
-  02_observations_sb_xml:
-    command: sb_render_post_xml(sbid_02_observations,
-      "in_text/text_SHARED.yml",
-      "in_text/text_02_observations.yml",
-      river_metadata,
-      reservoir_metadata)
 
   03_config_sb_xml:
     command: sb_render_post_xml(sbid_03_config,

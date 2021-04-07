@@ -1,5 +1,5 @@
 title: >-
-  Predicting water temperature in the Delaware River Basin: 4 model inputs
+  Predicting water temperature in the Delaware River Basin: 4 Model inputs
 
 abstract: >-
   This dataset includes model inputs including gridded weather data, a stream network distance matrix, and stream reach attributes/metadata.
@@ -51,6 +51,17 @@ entities:
       data-min: NA
       data-max: NA
       data-units: meters
+  -
+    data-name: distance_matrix_lordville.csv
+    data-description: A matrix documenting the upstream (negative numbers) or downstream (positive numbers) distances between river reaches.
+    attributes:
+    -
+      attr-label: 
+      attr-def: 
+      attr-defs: 
+      data-min: 
+      data-max: 
+      data-units: 
   -
     data-name: reservoir_features.csv
     data-description: Features of the 17 dam and reservoir systems in the Delaware River Basin.
@@ -167,6 +178,17 @@ entities:
       data-min: NA
       data-max: NA
       data-units: square kilometers
+  -
+    data-name: reservoir_features_lordville.csv
+    data-description: Features of the 2 dam and reservoir systems upstream of Lordville in the Delaware River Basin. XX
+    attributes:
+    -
+      attr-label: 
+      attr-def: 
+      attr-defs: 
+      data-min: 
+      data-max: 
+      data-units: 
   -
     data-name: sntemp_inputs_outputs.zip
     data-description: PRMS-SNTemp inputs and outputs, including weather driver data, intermediate varibles, and model predictions.
@@ -344,6 +366,17 @@ entities:
       data-max: NA
       data-units: meters
   -
+    data-name: sntemp_inputs_outputs_lordville.zip
+    data-description: PRMS-SNTemp inputs and outputs, including weather driver data, intermediate varibles, and model predictions. XX
+    attributes:
+    -
+      attr-label: 
+      attr-def: 
+      attr-defs: 
+      data-min: 
+      data-max: 
+      data-units: 
+  -
     data-name: reach_attributes.csv
     data-description: Metadata about reaches in the Delaware River Basin, including fields for upstream/downstream segments, segment length, and position relative to reservoirs.
     attributes:
@@ -436,7 +469,18 @@ entities:
       data-min: NA
       data-max: NA
       data-units: meters
--
+  -
+    data-name: reach_attributes_lordville.csv
+    data-description: XX
+    attributes:
+    -
+      attr-label: 
+      attr-def: 
+      attr-defs: 
+      data-min: 
+      data-max: 
+      data-units: 
+  -
     data-name: NLDAS_time[0.367700]_x[397]_y[136].csv
     data-description: NLDAS gridded weather data XXXXXXXX
     attributes:
@@ -447,7 +491,7 @@ entities:
       data-min: 
       data-max: 
       data-units:
--
+  -
     data-name: NLDAS_time[0.367700]_x[401]_y[136].csv
     data-description: NLDAS gridded weather data XXXXXXXX
     attributes:

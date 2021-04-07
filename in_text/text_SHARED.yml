@@ -7,7 +7,7 @@ abstract: >-
 
 build-environment: Multiple computer systems were used to generate these data, including linux, OSX. The open source languages R and Python were used on all systems.
 
-associated publication----
+# ----associated publication----
 larger-cites:
   -
     authors: ["TBD XX"]
@@ -44,7 +44,7 @@ themekeywords: ["machine learning", "deep learning", "hybrid modeling", "water",
 usage-rules: >-
   These data are subject to change and are not citable until reviewed and approved for official publication by the USGS
 
-descgeog: "River reach polylines as defined by the XX. Lake polygons as defined by the national hydrography dataset high resolution"
+descgeog: "River reach polylines as defined by the XX. Reservoir polygons as defined by the national hydrography dataset high resolution"
 data-publisher: U.S. Geological Survey
 indirect-spatial: U.S.A.
 latitude-res: 0.00001
