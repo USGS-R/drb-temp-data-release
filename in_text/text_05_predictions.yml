@@ -33,12 +33,55 @@ entities:
     data-description: Predictions of water temperature for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs.
     attributes:
     -
-      attr-label: 
-      attr-def: 
-      attr-defs: 
-      data-min: 
-      data-max: 
-      data-units: 
+      attr-label: res_id
+      attr-def: >-
+        Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
+      attr-defs: >-
+        http://nhd.usgs.gov/
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: seg_id_nat
+      attr-def: >-
+        Stream reach identification number for this dataset. This is the ID named XX from the Geospatial Fabric for  National Hydrologic Modeling."
+      attr-defs: >-
+        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: date
+      attr-def: >-
+        Date of prediction
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: seg_outflow
+      attr-def:  >-
+        Predicted segment outflow.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: cubic meters per second
+    -
+      attr-label: seg_tave_water
+      attr-def: >-
+        Predicted water temperature.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: degrees Celsius
+    -
+      attr-label: direction
+      attr-def: >-
+        Direction of flow relative to reservoir -- inflow or outflow
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
 
 build-environment: >-
   For PB0 predictions we used XX; process-based predictions were generated with the following open source tools XX.

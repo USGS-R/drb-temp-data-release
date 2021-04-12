@@ -30,7 +30,8 @@ entities:
     attributes:
     -
       attr-label: subseg_id
-      attr-def: 
+      attr-def: >-
+        An alternative unique reach identifier.XX
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -39,20 +40,23 @@ entities:
       attr-label: seg_id_nat
       attr-def: >-
         River reach identifier from XX, which the site was matched to based on latitude and longitude.
-      attr-defs: NA
+      attr-defs:  >-
+        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: date
-      attr-def: Date of temperature measurement
+      attr-def: >-
+        Date of temperature measurement
       attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: temp_c
-      attr-def: Water temperature
+      attr-def: >-
+        Water temperature
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -71,7 +75,8 @@ entities:
     attributes:
     -
       attr-label: subseg_id
-      attr-def: 
+      attr-def: >-
+        An alternative unique reach identifier.XX
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -80,20 +85,23 @@ entities:
       attr-label: seg_id_nat
       attr-def: >-
         River reach identifier from XX, which the site was matched to based on latitude and longitude.
-      attr-defs: NA
+      attr-defs:  >-
+        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: date
-      attr-def: Date of temperature measurement
+      attr-def: >-
+        Date of temperature measurement
       attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: temp_c
-      attr-def: Water temperature
+      attr-def: >-
+        Water temperature
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -114,27 +122,31 @@ entities:
       attr-label: seg_id_nat
       attr-def: >-
         River reach identifier from XX, which the site was matched to based on latitude and longitude.
-      attr-defs: NA
+      attr-defs:  >-
+        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: subseg_id
-      attr-def: 
+      attr-def: >-
+        An alternative unique reach identifier.XX
       attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: date
-      attr-def: Date of discharge measurement
+      attr-def: >-
+        Date of discharge measurement
       attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: discharge
-      attr-def: River flow or discharge
+      attr-def: >-
+        River flow or discharge
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -155,27 +167,31 @@ entities:
       attr-label: seg_id_nat
       attr-def: >-
         River reach identifier from XX, which the site was matched to based on latitude and longitude.
-      attr-defs: NA
+      attr-defs:  >-
+        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: subseg_id
-      attr-def: 
+      attr-def: >-
+        An alternative unique reach identifier.XX
       attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: date
-      attr-def: Date of discharge measurement
+      attr-def: >-
+        Date of discharge measurement
       attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: discharge
-      attr-def: River flow or discharge
+      attr-def: >-
+        River flow or discharge
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -282,21 +298,25 @@ entities:
     attributes:
     -
       attr-label: reservoir
-      attr-def: Name of reservoir
+      attr-def: >-
+        Name of reservoir
       attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: date
-      attr-def: Date for which reservoir surface area was estimated using satellite data
-      attr-defs: Surface area was estimated monthly. Data assigned to midpoint of each month.
+      attr-def: >-
+        Date for which reservoir surface area was estimated using satellite data
+      attr-defs: >-
+        Surface area was estimated monthly. Data assigned to midpoint of each month.
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: area_m2
-      attr-def: Estimate of surface area from the ReaLSAT (Reservoir and Lake Surface Area Timeseries) dataset
+      attr-def: >-
+        Estimate of surface area from the ReaLSAT (Reservoir and Lake Surface Area Timeseries) dataset
       attr-defs: 
       data-min: 
       data-max: 
@@ -323,42 +343,48 @@ entities:
       data-units: NA
     -
       attr-label: date
-      attr-def: Date of discharge and temperature observations
+      attr-def: >-
+        Date of discharge and temperature observations
       attr-defs: NA
       data-min: '1934-10-01'
       data-max: '2020-12-17'
       data-units: NA
     -
       attr-label: flow_cms
-      attr-def: Discharge, in cubic meters per second
+      attr-def: >-
+        Discharge, in cubic meters per second
       attr-defs: NA
       data-min: 0.002831685
       data-max: 784.3767
       data-units: cubic meters per second
     -
       attr-label: mean_temp_degC
-      attr-def: Mean daily observed temperature
+      attr-def: >-
+        Mean daily observed temperature
       attr-defs: NA
       data-min: 0.1
       data-max: 27
       data-units: degrees C
     -
       attr-label: min_temp_degC
-      attr-def: Minimum daily observed temperature
+      attr-def: >-
+        Minimum daily observed temperature
       attr-defs: NA
       data-min: 0.1
       data-max: 30.5
       data-units: degrees C
     -
       attr-label: max_temp_degC
-      attr-def: Maximum daily observed temperature
+      attr-def: >-
+        Maximum daily observed temperature
       attr-defs: NA
       data-min: 0.1
       data-max: 30.5
       data-units: degrees C
     -
       attr-label: location
-      attr-def: Location relative to reservoir flow direction -- inflow or outflow.
+      attr-def: >-
+        Location relative to reservoir flow direction -- inflow or outflow.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -385,21 +411,24 @@ entities:
       data-units: NA
     -
       attr-label: date
-      attr-def: Date of temperature observation
+      attr-def: >-
+        Date of temperature observation
       attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: depth
-      attr-def: Depth of temperature observation
+      attr-def: >-
+        Depth of temperature observation
       attr-defs: NA
       data-min: 0.003048
       data-max: 29.92222
       data-units: meters
     -
       attr-label: temp
-      attr-def: Water temperature
+      attr-def: >-
+        Water temperature
       attr-defs: NA
       data-min: 1.2
       data-max: 27.4
@@ -426,14 +455,16 @@ entities:
       data-units: NA
     -
       attr-label: date
-      attr-def: Date of temperature observation
+      attr-def: >-
+        Date of temperature observation
       attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: surface_elevation_m
-      attr-def: Elevation of reservoir surface
+      attr-def: >-
+        Elevation of reservoir surface
       attr-defs: NA
       data-min: 329.184
       data-max: 390.6561

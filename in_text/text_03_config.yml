@@ -15,6 +15,12 @@ cross-cites:
   -
     authors: ['XX']
     title: >-
+      The General Lake Model - Configuration Options
+    pubdate: XX
+    link: https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
+  -
+    authors: ['XX']
+    title: >-
       NLDAS XX
     pubdate: XX
     link: XX
@@ -22,16 +28,124 @@ cross-cites:
 entities:
   -
     data-name: reservoir_nml_list.rds
-    data-description: 
+    data-description: list of reservoir parameters for input to GLM
     attributes:
     -
-      attr-label: 
-      attr-def: 
-      attr-defs: 
-      data-min: 
-      data-max: 
+      attr-label: site-id
+      attr-def:  >-
+        Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: cd
+      attr-def: >-
+        Bulk aerodynamic transfer coefficient for momentum
+      attr-defs: >-
+        https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: longitude
+      attr-def: >-
+        	Longitude, positive East
+      attr-defs:  >-
+        https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
+      data-min: NA
+      data-max: NA
+      data-units: decimal degrees
+    -
+      attr-label: latitude
+      attr-def: >-
+        Latitude, positive North
+      attr-defs:  >-
+        https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
+      data-min: NA
+      data-max: NA
+      data-units: decimal degrees
+    -
+      attr-label: bsn_wid
+      attr-def: >-
+        Width of the lake basin, at crest height
+      attr-defs:  >-
+        https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -
+      attr-label: bsn_len
+      attr-def: >-
+        Length of the lake basin, at crest height
+      attr-defs:  >-
+        https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -
+      attr-label: lake_depth
+      attr-def: >-
+        Initial lake height/depth
+      attr-defs:  >-
+        https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -
+      attr-label: max_layer_thick
+      attr-def: >-
+      	Maximum thickness of a layer
+      attr-defs:  >-
+        https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -
+      attr-label: min_layer_thick
+      attr-def: >-
+        Minimum thickness of a layer
+      attr-defs:  >-
+        https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
+      data-min: NA
+      data-max: NA
+      data-units: meters
+    -
+      attr-label: meteo_fl
+      attr-def: >-
+        Filename of the meterological file
+      attr-defs:  >-
+        https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: Kw
+      attr-def: >-
+        Light extinction coefficient
+      attr-defs:  >-
+        https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
+      data-min: NA
+      data-max: NA
+      data-units: 1/meters
+    -
+      attr-label: A
+      attr-def: >-
+        Comma-separated list of lake areas
+      attr-defs:  >-
+        https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
+      data-min: NA
+      data-max: NA
       data-units: 
     -
+      attr-label: H
+      attr-def: >-
+        Comma-separated list of lake elevations
+      attr-defs:  >-
+        https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
+      data-min: NA
+      data-max: NA
+      data-units: 
     
 build-environment: Multiple computer systems were used to generate these data, including XX. The open source languages R and Python was used on all systems, as well as XX.
 
