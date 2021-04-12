@@ -78,4 +78,4 @@ targets:
     
   out_data/01_reservoir_polygons.zip:
     command: sf_to_zip(zip_filename = target_name, 
-      sf_object = reservoir_polygons, layer_name = I('spatial_data'))
+      sf_object = reservoir_polygons, layer_name = I('study_reservoirs'))

@@ -21,7 +21,7 @@ cross-cites:
     
 entities:
   -
-    data-name: res_nml_list.rds
+    data-name: reservoir_nml_list.rds
     data-description: 
     attributes:
     -

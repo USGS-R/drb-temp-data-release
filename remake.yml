@@ -51,21 +51,20 @@ targets:
   out_xml/00_parent.xml:
     command: render(filename = target_name,
       "in_text/text_SHARED.yml",
-      "in_text/text_00_parent.yml")
+      "in_text/text_00_parent.yml",
+      river_metadata)
 
   00_parent_sb_xml:
     command: sb_render_post_xml(sbid_00_parent,
       "in_text/text_SHARED.yml",
       "in_text/text_00_parent.yml",
-      river_metadata,
-      reservoir_metadata)
+      river_metadata)
 
   01_spatial_sb_xml:
     command: sb_render_post_xml(sbid_01_spatial,
       "in_text/text_SHARED.yml",
       "in_text/text_01_spatial.yml",
-      river_metadata,
-      reservoir_metadata)
+      river_metadata)
 
   01_spatial_sb_shp:
     command: sb_replace_files(sbid_01_spatial,
@@ -80,8 +79,7 @@ targets:
     command: sb_render_post_xml(sbid_02_observations,
       "in_text/text_SHARED.yml",
       "in_text/text_02_observations.yml",
-      river_metadata,
-      reservoir_metadata)
+      river_metadata)
       
   02_observations_sb_data:
     command: sb_replace_files(sbid_02_observations,
@@ -91,24 +89,26 @@ targets:
       "out_data/flow_observations_lordville.zip",
       "out_data/reservoir_releases.csv",
       "out_data/reservoir_releases_lordville.csv",
-      "out_data/res_realsat_monthly_surface_area.csv",
-      "out_data/res_io_obs.feather",
-      "out_data/res_temp_obs.rds",
-      "out_data/res_level_obs.rds")
+      "out_data/reservoir_realsat_monthly_surface_area.csv",
+      "out_data/reservoir_io_obs.feather",
+      "out_data/reservoir_temp_obs.rds",
+      "out_data/reservoir_level_obs.rds")
 
   03_config_sb_xml:
     command: sb_render_post_xml(sbid_03_config,
       "in_text/text_SHARED.yml",
-      "in_text/text_03_config.yml")
+      "in_text/text_03_config.yml",
+      reservoir_metadata)
   
   03_config_sb_data:
     command: sb_replace_files(sbid_03_config,
-      "out_data/res_nml_list.rds")
+      "out_data/reservoir_nml_list.rds")
 
   04_inputs_sb_xml:
     command: sb_render_post_xml(sbid_04_inputs,
       "in_text/text_SHARED.yml",
-      "in_text/text_04_inputs.yml")
+      "in_text/text_04_inputs.yml",
+      river_metadata)
 
   04_inputs_sb_data:
     command: sb_replace_files(sbid_04_inputs,
@@ -120,13 +120,13 @@ targets:
       "out_data/sntemp_inputs_outputs_lordville.zip",
       "out_data/reach_attributes.csv",
       "out_data/reach_attributes_lordville.csv",
-      "out_data/res_interpolated_daily_diversions.csv")
+      "out_data/reservoir_interpolated_daily_diversions.csv")
       
   04_inputs_sb_meteo:
     command: sb_replace_files(sbid_04_inputs,
       "in_data/NLDAS_time[0.367700]_x[397]_y[136].csv",
       "in_data/NLDAS_time[0.367700]_x[401]_y[136].csv",
-      file_hash = 'log/res_meteo_files.yml')
+      file_hash = 'log/reservoir_meteo_files.yml')
 
   05_predictions_sb_xml:
     command: sb_render_post_xml(sbid_05_predictions,
@@ -136,7 +136,7 @@ targets:
 
   05_predictions_sb_sntemp:
     command: sb_replace_files(sbid_05_predictions,
-      "out_data/res_io_sntemp.feather")
+      "out_data/reservoir_io_sntemp.feather")
 
   #05_predictions_sb_sntemp:
    # command: sb_replace_files(sbid_05_predictions,

@@ -69,7 +69,7 @@ entities:
     -
       attr-label: GRAND_ID
       attr-def: >-
-        Unigue reservoir identifier.
+        Unique reservoir identifier.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -481,7 +481,7 @@ entities:
       data-max: 
       data-units: 
   -
-    data-name: res_interpolated_daily_diversions.csv
+    data-name: reservoir_interpolated_daily_diversions.csv
     data-description:
     attributes:
     -

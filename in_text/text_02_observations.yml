@@ -184,7 +184,7 @@ entities:
       data-max: 
       data-units: 
   -
-    data-name: res_realsat_monthly_surface_area.csv
+    data-name: reservoir_realsat_monthly_surface_area.csv
     data-description:
     attributes:
     -
@@ -195,7 +195,7 @@ entities:
       data-max: 
       data-units: 
   -
-    data-name: res_io_obs.feather
+    data-name: reservoir_io_obs.feather
     data-description: Daily water temperature observations for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs.
     attributes:
     -
@@ -206,7 +206,7 @@ entities:
       data-max: 
       data-units: 
   -
-    data-name: res_temp_obs.rds
+    data-name: reservoir_temp_obs.rds
     data-description: Daily water temperature observations for the Pepacton and Cannonsville reservoirs.
     attributes:
     -
@@ -217,7 +217,7 @@ entities:
       data-max: 
       data-units: 
   -
-    data-name: res_level_obs.rds
+    data-name: reservoir_level_obs.rds
     data-description: Daily water level observations for the Pepacton and Cannonsville reservoirs.
     attributes:
     -

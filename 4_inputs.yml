@@ -23,8 +23,8 @@ targets:
       - out_data/reservoir_features_lordville.csv
       - out_data/sntemp_inputs_outputs.zip
       - out_data/sntemp_inputs_outputs_lordville.zip
-      - out_data/res_interpolated_daily_diversions.csv
-      - log/res_meteo_files.yml
+      - out_data/reservoir_interpolated_daily_diversions.csv
+      - log/reservoir_meteo_files.yml
       
   #weather_drivers:
    # command: extract_weather_drivers()
@@ -67,7 +67,7 @@ targets:
   out_data/sntemp_inputs_outputs_lordville.zip:
     command: zip_obs(out_file = target_name, in_file = 'out_data/sntemp_inputs_outputs_lordville.csv')
   
-  out_data/res_interpolated_daily_diversions.csv:
+  out_data/reservoir_interpolated_daily_diversions.csv:
     command: file.copy(from = '../delaware-model-prep/2_observations/out/interpolated_daily_diversions.csv', to = target_name)
   
   # For now, we're putting meteo files manually into in_data, so all we
@@ -75,7 +75,7 @@ targets:
   # Not quite robust pipelining - if the files in in_data change
   # but the filenames in nml_list.rds don't,
   # this target will need to be force-rebuilt
-  log/res_meteo_files.yml:
+  log/reservoir_meteo_files.yml:
     command: fetch_meteo_files(
       out_yml = target_name,
-      nml_rds = 'out_data/res_nml_list.rds')
+      nml_rds = 'out_data/reservoir_nml_list.rds')

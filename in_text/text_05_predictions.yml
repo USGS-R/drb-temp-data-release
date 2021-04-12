@@ -29,7 +29,7 @@ cross-cites:
 
 entities:
   -
-    data-name: res_io_sntemp.feather
+    data-name: reservoir_io_sntemp.feather
     data-description: Predictions of water temperature for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs.
     attributes:
     -
