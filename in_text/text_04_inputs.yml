@@ -481,6 +481,17 @@ entities:
       data-max: 
       data-units: 
   -
+    data-name: res_interpolated_daily_diversions.csv
+    data-description:
+    attributes:
+    -
+      attr-label: 
+      attr-def: 
+      attr-defs: 
+      data-min: 
+      data-max: 
+      data-units:
+  -
     data-name: NLDAS_time[0.367700]_x[397]_y[136].csv
     data-description: NLDAS gridded weather data XXXXXXXX
     attributes:

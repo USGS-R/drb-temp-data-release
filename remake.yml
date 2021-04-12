@@ -91,6 +91,7 @@ targets:
       "out_data/flow_observations_lordville.zip",
       "out_data/reservoir_releases.csv",
       "out_data/reservoir_releases_lordville.csv",
+      "out_data/res_realsat_monthly_surface_area.csv",
       "out_data/res_io_obs.feather",
       "out_data/res_temp_obs.rds",
       "out_data/res_level_obs.rds")
@@ -118,7 +119,8 @@ targets:
       "out_data/sntemp_inputs_outputs.zip",
       "out_data/sntemp_inputs_outputs_lordville.zip",
       "out_data/reach_attributes.csv",
-      "out_data/reach_attributes_lordville.csv")
+      "out_data/reach_attributes_lordville.csv",
+      "out_data/res_interpolated_daily_diversions.csv")
       
   04_inputs_sb_meteo:
     command: sb_replace_files(sbid_04_inputs,

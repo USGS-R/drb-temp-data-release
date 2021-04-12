@@ -16,6 +16,7 @@ targets:
       - out_data/flow_observations_lordville.zip
       - out_data/reservoir_releases.csv
       - out_data/reservoir_releases_lordville.csv
+      - out_data/res_realsat_monthly_surface_area.csv
       - out_data/res_io_obs.feather
       - out_data/res_temp_obs.rds
       - out_data/res_level_obs.rds
@@ -43,7 +44,10 @@ targets:
   # get GRAND IDs of reservoirs above Lordville
   res_lordville:
     command: get_grands(in_file = 'out_data/reservoir_releases_lordville.csv')
-
+    
+  out_data/res_realsat_monthly_surface_area.csv:
+    command: file.copy(from = '../delaware-model-prep/2_observations/out/realsat_monthly_surface_area.csv', to = target_name)
+  
   out_data/res_io_obs.feather:
     command: copy_filter_feather(
       out_feather = target_name,

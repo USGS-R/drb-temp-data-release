@@ -184,6 +184,17 @@ entities:
       data-max: 
       data-units: 
   -
+    data-name: res_realsat_monthly_surface_area.csv
+    data-description:
+    attributes:
+    -
+      attr-label: 
+      attr-def: 
+      attr-defs: 
+      data-min: 
+      data-max: 
+      data-units: 
+  -
     data-name: res_io_obs.feather
     data-description: Daily water temperature observations for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs.
     attributes:
