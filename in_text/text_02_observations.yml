@@ -4,7 +4,7 @@ title: >-
 abstract: >-
   Observed water temperatures from 1980-2019 were compiled for the Delaware River Basin, US. These data were used
   as XX. The data are formatted as a single csv (comma separated values) file with attributes corresponding to the unique combination of
-  lake identifier, time, and depth. Data came from a variety of sources, including the National Water Inventory System, 
+  reservoir identifier, time, and depth. Data came from a variety of sources, including the National Water Inventory System, 
   Water Quality Portal, and the NorEaST stream water temperature database.
   
   Flow observation data
@@ -17,11 +17,11 @@ abstract: >-
 
 cross-cites:
   -
-    authors: XX
+    authors: ['Ankush Khandelwal', 'Rahul Ghosh', 'Zhihao Wei', 'Huangying Kuang', 'Hilary Dugan', 'Paul Hanson', 'Anuj Karpatne', 'Vipin Kumar']
     title: >-
-      XX
-    pubdate: XX
-    link: XX
+      ReaLSAT: A new Reservoir and Lake Surface Area Timeseries Dataset created using machine learning and satellite imagery
+    pubdate: 2020
+    link: https://hdl.handle.net/11299/216044
 
 entities:
   -
@@ -29,17 +29,16 @@ entities:
     data-description: Temperature observation data with sites matched to 456 model river segments in the Delaware River Basin.
     attributes:
     -
-      attr-label: seg_id_nat
-      attr-def: >-
-        River reach identifier from XX, which the site was matched to based on latitude and longitude.
+      attr-label: subseg_id
+      attr-def: 
       attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: NA
     -
-      attr-label: site_id
+      attr-label: seg_id_nat
       attr-def: >-
-        Site identifier from the data provider.
+        River reach identifier from XX, which the site was matched to based on latitude and longitude.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -52,30 +51,61 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: temp
+      attr-label: temp_c
       attr-def: Water temperature
       attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: degrees C
     -
-      attr-label: source_id
-      attr-def: The source of these data.
+      attr-label: site_id
+      attr-def: >-
+        Site identifier from the data provider.
       attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: NA
   -
     data-name: temperature_observations_lordville.zip
-    data-description: XX
+    data-description: Temperature observation data with sites matched to 36 model river segments in the Delaware River Basin.
     attributes:
     -
-      attr-label: 
+      attr-label: subseg_id
       attr-def: 
-      attr-defs: 
-      data-min: 
-      data-max: 
-      data-units: 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: seg_id_nat
+      attr-def: >-
+        River reach identifier from XX, which the site was matched to based on latitude and longitude.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: date
+      attr-def: Date of temperature measurement
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: temp_c
+      attr-def: Water temperature
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: degrees C
+    -
+      attr-label: site_id
+      attr-def: >-
+        Site identifier from the data provider.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
   -
     data-name: flow_observations.zip
     data-description: Flow observation data with sites matched to 456 model river segments in the Delaware River Basin.
@@ -89,6 +119,27 @@ entities:
       data-max: NA
       data-units: NA
     -
+      attr-label: subseg_id
+      attr-def: 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: date
+      attr-def: Date of discharge measurement
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: discharge
+      attr-def: River flow or discharge
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: cubic meters per second
+    -
       attr-label: site_id
       attr-def: >-
         Site identifier from the data provider.
@@ -96,38 +147,47 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
+  -
+    data-name: flow_observations_lordville.zip
+    data-description: Flow observation data with sites matched to 32 model river segments in the Delaware River Basin.
+    attributes:
     -
-      attr-label: date
-      attr-def: Date of temperature measurement
+      attr-label: seg_id_nat
+      attr-def: >-
+        River reach identifier from XX, which the site was matched to based on latitude and longitude.
       attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: NA
     -
-      attr-label: flow
+      attr-label: subseg_id
+      attr-def: 
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: date
+      attr-def: Date of discharge measurement
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: discharge
       attr-def: River flow or discharge
       attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: cubic meters per second
     -
-      attr-label: source_id
-      attr-def: The source of these data
+      attr-label: site_id
+      attr-def: >-
+        Site identifier from the data provider.
       attr-defs: NA
       data-min: NA
       data-max: NA
-      data-units: NA
-  -
-    data-name: flow_observations_lordville.zip
-    data-description: XX
-    attributes:
-    -
-      attr-label: 
-      attr-def: 
-      attr-defs: 
-      data-min: 
-      data-max: 
-      data-units: 
+      data-units: NA 
   -
     data-name: reservoir_releases.csv
     data-description: Daily reservoir releases from the Pepacton, Neversink, and Cannonsville reservoirs.
@@ -157,13 +217,13 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: release_volume_cfs
+      attr-label: release_volume_cms
       attr-def: >-
         Volume of the reservoir release.
       attr-defs: NA
       data-min: NA
       data-max: NA
-      data-units: cubic feet per second
+      data-units: cubic meters second
     -
       attr-label: GRAND_ID
       attr-def: >-
@@ -174,58 +234,209 @@ entities:
       data-units: NA
   -
     data-name: reservoir_releases_lordville.csv
-    data-description: XX
+    data-description: Daily reservoir releases from the Pepacton and Cannonsville reservoirs.
     attributes:
     -
-      attr-label: 
-      attr-def: 
-      attr-defs: 
-      data-min: 
-      data-max: 
-      data-units: 
+      attr-label: date
+      attr-def: >-
+        Date of water release.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: reservoir
+      attr-def: >-
+        Name of reservoir.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: release_type
+      attr-def: >-
+        Type of release, including mandated releases ("Direct"), conservation releases ("Conserv"), or spillway releases ("Spill").
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: release_volume_cms
+      attr-def: >-
+        Volume of the reservoir release.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: cubic meters second
+    -
+      attr-label: GRAND_ID
+      attr-def: >-
+        Unique reservoir identifier.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
   -
     data-name: reservoir_realsat_monthly_surface_area.csv
-    data-description:
+    data-description: Estimates of reservoir surface area from 1984-2015 from the ReaLSAT (Reservoir and Lake Surface Area Timeseries) dataset (Khandelwal et. al, 2020). The dataset was generated using machine learning and Earth Observation satellite imagery. 
     attributes:
     -
-      attr-label: 
-      attr-def: 
+      attr-label: reservoir
+      attr-def: Name of reservoir
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: date
+      attr-def: Date for which reservoir surface area was estimated using satellite data
+      attr-defs: Surface area was estimated monthly. Data assigned to midpoint of each month.
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: area_m2
+      attr-def: Estimate of surface area from the ReaLSAT (Reservoir and Lake Surface Area Timeseries) dataset
       attr-defs: 
       data-min: 
       data-max: 
-      data-units: 
+      data-units:
   -
     data-name: reservoir_io_obs.feather
     data-description: Daily water temperature observations for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs.
     attributes:
     -
-      attr-label: 
-      attr-def: 
-      attr-defs: 
-      data-min: 
-      data-max: 
-      data-units: 
+      attr-label: res_id
+      attr-def: >-
+        reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: site_id
+      attr-def: >-
+        Site identifier from the data provider.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: date
+      attr-def: Date of discharge and temperature observations
+      attr-defs: NA
+      data-min: '1934-10-01'
+      data-max: '2020-12-17'
+      data-units: NA
+    -
+      attr-label: flow_cms
+      attr-def: Discharge, in cubic meters per second
+      attr-defs: NA
+      data-min: 0.002831685
+      data-max: 784.3767
+      data-units: cubic meters per second
+    -
+      attr-label: mean_temp_degC
+      attr-def: Mean daily observed temperature
+      attr-defs: NA
+      data-min: 0.1
+      data-max: 27
+      data-units: degrees C
+    -
+      attr-label: min_temp_degC
+      attr-def: Minimum daily observed temperature
+      attr-defs: NA
+      data-min: 0.1
+      data-max: 30.5
+      data-units: degrees C
+    -
+      attr-label: max_temp_degC
+      attr-def: Maximum daily observed temperature
+      attr-defs: NA
+      data-min: 0.1
+      data-max: 30.5
+      data-units: degrees C
+    -
+      attr-label: location
+      attr-def: Location relative to reservoir flow direction -- inflow or outflow.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
   -
     data-name: reservoir_temp_obs.rds
     data-description: Daily water temperature observations for the Pepacton and Cannonsville reservoirs.
     attributes:
     -
-      attr-label: 
-      attr-def: 
-      attr-defs: 
-      data-min: 
-      data-max: 
-      data-units: 
+      attr-label: site_id
+      attr-def: >-
+        Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: source_id
+      attr-def: >-
+        Site identifier from the data provider.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: date
+      attr-def: Date of temperature observation
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: depth
+      attr-def: Depth of temperature observation
+      attr-defs: NA
+      data-min: 0.003048
+      data-max: 29.92222
+      data-units: meters
+    -
+      attr-label: temp
+      attr-def: Water temperature
+      attr-defs: NA
+      data-min: 1.2
+      data-max: 27.4
+      data-units: degrees C
   -
     data-name: reservoir_level_obs.rds
     data-description: Daily water level observations for the Pepacton and Cannonsville reservoirs.
     attributes:
     -
-      attr-label: 
-      attr-def: 
-      attr-defs: 
-      data-min: 
-      data-max: 
-      data-units: 
+      attr-label: site_id
+      attr-def: >-
+        Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: source_id
+      attr-def: >-
+        Site identifier from the data provider.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: date
+      attr-def: Date of temperature observation
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: surface_elevation_m
+      attr-def: Elevation of reservoir surface
+      attr-defs: NA
+      data-min: 329.184
+      data-max: 390.6561
+      data-units: meters
 
 file-format: comma-delimited files (some compressed into zip files), rds files, feather files.

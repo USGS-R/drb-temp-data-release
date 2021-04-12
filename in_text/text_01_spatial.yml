@@ -18,6 +18,69 @@ entities:
     data-description: GIS polylines data for the 456 stream segments included in this study
     attributes:
     -
+      attr-label: subseg_id
+      attr-def:
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: subseg_seg
+      attr-def:
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: subseg_updown
+      attr-def:
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: subset_length
+      attr-def:
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: start_pt
+      attr-def:
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: end_pt
+      attr-def:
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: from_segs
+      attr-def:
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: to_seg
+      attr-def:
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: to_subseg
+      attr-def:
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
       attr-label: seg_nat_id
       attr-def: >-
         Stream reach identification number for this dataset. This is the ID named XX from the Geospatial Fabric for  National Hydrologic Modeling."
@@ -31,9 +94,11 @@ entities:
     data-description: GIS polygon data for the Pepacton and Cannonsville reservoirs
     attributes:
     -
-      attr-label: 
-      attr-def: 
-      attr-defs: 
+      attr-label: site_id
+      attr-def: >-
+        Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
+      attr-defs: >-
+        http://nhd.usgs.gov/
       data-min: NA
       data-max: NA
       data-units: NA
