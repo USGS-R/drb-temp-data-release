@@ -659,6 +659,7 @@ entities:
   -
     data-name: sntemp_inputs_outputs_lordville.zip
     data-description: PRMS-SNTemp inputs and outputs, including weather driver data, intermediate varibles, and model predictions for a subset of 56 segments.
+    attributes:
     -
       attr-label: seg_id_nat
       attr-def: >-

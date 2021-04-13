@@ -50,7 +50,7 @@ entities:
     -
       attr-label: longitude
       attr-def: >-
-        	Longitude, positive East
+        Longitude, positive East
       attr-defs:  >-
         https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
       data-min: NA
@@ -95,7 +95,7 @@ entities:
     -
       attr-label: max_layer_thick
       attr-def: >-
-      	Maximum thickness of a layer
+        Maximum thickness of a layer
       attr-defs:  >-
         https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
       data-min: NA

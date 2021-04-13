@@ -15,7 +15,9 @@ sources:
 targets:
   1_spatial:
     depends:
+      - river_metadata
       - out_data/01_spatial_network.zip
+      - reservoir_metadata
       - out_data/01_reservoir_polygons.zip
     
   # not sure what this metadata should be, if anything
