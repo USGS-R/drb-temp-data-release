@@ -1,8 +1,8 @@
 title: >-
-  Predicting water temperature in the Delaware River Basin: 1 River reach information for 456 river reaches
+  Predicting water temperature in the Delaware River Basin: 1 Waterbody information for 456 river reaches and 2 reservoirs
 
 abstract: >-
-  This dataset provides XX.
+  This dataset provides one shapefile of polylines for the 456 river segments in this study, a reservoir polygon metadata file, and one shapefile of reservoir polygons for the Pepacton and Cannonsville reservoirs.
 
 cross-cites:
   -
@@ -14,11 +14,80 @@ cross-cites:
 
 entities:
   -
-    data-name: 01_spatial.zip
+    data-name: 01_spatial_network.zip
     data-description: GIS polylines data for the 456 stream segments included in this study
     attributes:
     -
-      attr-label: seg_nat_id
+      attr-label: subseg_id
+      attr-def: >-
+        An alternative unique reach identifier.XX
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: subseg_seg
+      attr-def: >-
+        An alternative unique reach identifier.XX
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: subseg_updown
+      attr-def:
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: subset_length
+      attr-def: >-
+        Length of stream reach.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: start_pt
+      attr-def:
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: end_pt
+      attr-def:
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: from_segs
+      attr-def: >-
+        seg identifier(s) of the upstream segment. NA indicates a headwater stream with no upstream segments.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: to_seg
+      attr-def: >-
+        seg identifier of the downstream segment.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: to_subseg
+      attr-def: >-
+        subseg_seg identifier of the downstream segment.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: seg_id_nat
       attr-def: >-
         Stream reach identification number for this dataset. This is the ID named XX from the Geospatial Fabric for  National Hydrologic Modeling."
       attr-defs: >-
@@ -27,30 +96,18 @@ entities:
       data-max: NA
       data-units: NA
   -
-    data-name: stream_metadata.csv
-    data-description: Select metadata for the 456 stream reaches included in this study.
+    data-name: 01_reservoir_polygons.zip
+    data-description: GIS polygon data for the Pepacton and Cannonsville reservoirs
     attributes:
     -
       attr-label: site_id
       attr-def: >-
-        Stream reach identification number for this dataset. This is the ID named XX from the Geospatial Fabric for  National Hydrologic Modeling."
+        Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
       attr-defs: >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+        http://nhd.usgs.gov/
       data-min: NA
       data-max: NA
       data-units: NA
-
-    -
-      attr-label: 
-      attr-def: 
-      attr-defs: >-
-        http://nhd.usgs.gov/
-      data-min:
-      data-max:
-      data-units:
-
-data-name: Polylines for river reaches in the study basin
-data-description: Shapefile of study river reaches included in this data release; metadata file for stream segments in this data release
 
 file-format: Shapefile Data Set
 

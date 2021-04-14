@@ -1,0 +1,20 @@
+target_default: 5_predictions
+
+include:
+
+packages:
+  - dplyr
+
+sources:
+  - src/fetch_filter_functions.R
+
+targets:
+  5_predictions:
+    depends:
+      - out_data/reservoir_io_sntemp.feather
+
+  out_data/reservoir_io_sntemp.feather:
+    command: copy_filter_feather(
+      out_feather = target_name,
+      in_feather = '../delaware-model-prep/9_collaborator_data/res/res_io_sntemp.feather',
+      site_ids = reservoir_modeling_site_ids)

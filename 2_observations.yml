@@ -11,8 +11,17 @@ targets:
   2_observations:
     depends:
       - out_data/temperature_observations.zip
+      - out_data/temperature_observations_lordville.zip
       - out_data/flow_observations.zip
+      - out_data/flow_observations_lordville.zip
+      - out_data/reservoir_releases.csv
+      - out_data/reservoir_releases_lordville.csv
+      - out_data/reservoir_realsat_monthly_surface_area.csv
+      - out_data/reservoir_io_obs.feather
+      - out_data/reservoir_temp_obs.rds
+      - out_data/reservoir_level_obs.rds
 
+  ##### Transfer of files from delaware-model-prep #####
   # daily flow and temperature data
   out_data/temperature_observations.zip:
     command: zip_obs(out_file = target_name, in_file = '../delaware-model-prep/2_observations/out/obs_temp_drb.rds')
@@ -28,10 +37,34 @@ targets:
     
   out_data/reservoir_releases.csv:
     command: file.copy(from = '../delaware-model-prep/2_observations/out/reservoir_releases.csv', to = target_name)
-  
+
   out_data/reservoir_releases_lordville.csv:
     command: filter_reservoirs(out_file = target_name, in_dat = 'out_data/reservoir_releases.csv', keep = I(c('Pepacton', 'Cannonsville')))
     
   # get GRAND IDs of reservoirs above Lordville
-  res_lordville:
+  reservoir_lordville:
     command: get_grands(in_file = 'out_data/reservoir_releases_lordville.csv')
+    
+  out_data/reservoir_realsat_monthly_surface_area.csv:
+    command: file.copy(from = '../delaware-model-prep/2_observations/out/realsat_monthly_surface_area.csv', to = target_name)
+  
+  out_data/reservoir_io_obs.feather:
+    command: copy_filter_feather(
+      out_feather = target_name,
+      in_feather = '../delaware-model-prep/9_collaborator_data/res/res_io_obs.feather',
+      site_ids = reservoir_modeling_site_ids)
+  
+  ##### Transfer and filtering of files of file from lake-temperature-model-prep #####
+  out_data/reservoir_temp_obs.rds:
+    command: fetch_filter_tibble(
+      out_rds = target_name,
+      in_ind = '../lake-temperature-model-prep/7b_temp_merge/out/drb_daily_reservoir_temps.rds.ind',
+      in_repo = I('../lake-temperature-model-prep/'),
+      site_ids = reservoir_modeling_site_ids)
+    
+  out_data/reservoir_level_obs.rds:
+    command: fetch_filter_tibble(
+      out_rds = target_name,
+      in_ind = '../lake-temperature-model-prep/7a_nwis_munge/out/drb_reservoirs_waterlevels_munged.rds.ind',
+      in_repo = I('../lake-temperature-model-prep/'),
+      site_ids = reservoir_modeling_site_ids)

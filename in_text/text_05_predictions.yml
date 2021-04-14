@@ -1,10 +1,12 @@
 title: >-
-  Predicting water temperature in the Delaware River Basin: 5 model prediction data
+  Predicting water temperature in the Delaware River Basin: 5 Model prediction data
 
 abstract: >-
   Multiple modeling frameworks were used to predict daily temperatures at 456 stream reaches in the Delaware River Basin. Uncalibrated process-based models (PB0)
   used default configurations (see XX for details) and no parameters were adjusted according to model fit with observations. Deep Learning (DL) models were xx.
 
+  Daily stream temperature predictions for inflow and outflow reaches for Cannonsville and Pepacton reservoirs were pulled aside into a separate feather file.
+  
 cross-cites:
   -
     authors: ['XX']
@@ -25,7 +27,64 @@ cross-cites:
     pubdate: XX
     link: XX
 
+entities:
+  -
+    data-name: reservoir_io_sntemp.feather
+    data-description: Predictions of water temperature for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs.
+    attributes:
+    -
+      attr-label: res_id
+      attr-def: >-
+        Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
+      attr-defs: >-
+        http://nhd.usgs.gov/
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: seg_id_nat
+      attr-def: >-
+        Stream reach identification number for this dataset. This is the ID named XX from the Geospatial Fabric for  National Hydrologic Modeling."
+      attr-defs: >-
+        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: date
+      attr-def: >-
+        Date of prediction
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: seg_outflow
+      attr-def:  >-
+        Predicted segment outflow.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: cubic meters per second
+    -
+      attr-label: seg_tave_water
+      attr-def: >-
+        Predicted water temperature.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: degrees Celsius
+    -
+      attr-label: direction
+      attr-def: >-
+        Direction of flow relative to reservoir -- inflow or outflow
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+
 build-environment: >-
   For PB0 predictions we used XX; process-based predictions were generated with the following open source tools XX.
   For PGDL and DL predictions, the University of Minnesota Supercomputing Institute resources were used. XX
   
+file-format: feather files.
