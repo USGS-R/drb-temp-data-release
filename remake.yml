@@ -120,7 +120,7 @@ targets:
       "out_data/sntemp_inputs_outputs_lordville.zip",
       "out_data/reach_attributes.csv",
       "out_data/reach_attributes_lordville.csv",
-      "out_data/reservoir_interpolated_daily_diversions.csv")
+      "out_data/reservoir_interpolated_daily_water_budget_components.csv")
       
   04_inputs_sb_meteo:
     command: sb_replace_files(sbid_04_inputs,
