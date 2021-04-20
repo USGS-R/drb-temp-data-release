@@ -836,7 +836,7 @@ entities:
       data-max: NA
       data-units: meters
   -
-    data-name: interpolated_daily_reservoir_water_budget_components.csv
+    data-name: reservoir_interpolated_daily_water_budget_components.csv
     data-description:
     attributes:
     -
