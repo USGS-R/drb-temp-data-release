@@ -62,9 +62,32 @@ targets:
       in_repo = I('../lake-temperature-model-prep/'),
       site_ids = reservoir_modeling_site_ids)
     
-  out_data/reservoir_level_obs.rds:
+  out_data/reservoir_level_nwis.rds:
     command: fetch_filter_tibble(
       out_rds = target_name,
       in_ind = '../lake-temperature-model-prep/7a_nwis_munge/out/drb_reservoirs_waterlevels_munged.rds.ind',
       in_repo = I('../lake-temperature-model-prep/'),
       site_ids = reservoir_modeling_site_ids)
+      
+  out_data/reservoir_level_nycdep.rds:
+    command: fetch_filter_tibble(
+      out_rds = target_name,
+      in_ind = '../lake-temperature-model-prep/7a_nwis_munge/out/NYC_DEP_reservoir_waterlevels.rds.ind',
+      in_repo = I('../lake-temperature-model-prep/'),
+      site_ids = reservoir_modeling_site_ids)
+      
+  out_data/reservoir_level_usgs_historical.rds:
+    command: fetch_filter_historical(
+      out_rds = target_name,
+      in_ind = '../delaware-model-prep/2_observations/out/interpolated_daily_reservoir_water_budget_components.csv.ind',
+      in_repo = I('../delaware-model-prep/'),
+      xwalk = I(c('Cannonsville' = 'nhdhr_120022743', 'Pepacton' = 'nhdhr_151957878')),
+      site_ids = reservoir_modeling_site_ids)
+      
+  out_data/reservoir_level_obs.rds:
+    command: combine_level_sources(
+      out_rds = target_name,
+      nwis_levels = 'out_data/reservoir_level_nwis.rds',
+      nyc_levels = 'out_data/reservoir_level_nycdep.rds',
+      hist_levels = 'out_data/reservoir_level_usgs_historical.rds')
+      

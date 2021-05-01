@@ -29,6 +29,20 @@ fetch_filter_tibble <- function(out_rds, in_ind, in_repo, site_ids) {
     saveRDS(out_rds)
 }
 
+fetch_filter_historical <- function(out_rds, in_ind, in_repo, xwalk, site_ids) {
+  # pull the data file down to that other repo
+  gd_get_elsewhere(gsub(in_repo, '', in_ind, fixed=TRUE), in_repo)
+
+    # read and filter to just the specified sites
+  as_data_file(in_ind) %>%
+    readr::read_csv(col_types = 'ccnnncnnnnnnnnnc') %>%
+    mutate(site_id = xwalk[reservoir]) %>%
+    filter(site_id %in% !!site_ids) %>%
+    filter(!is.na(res_level_m)) %>%
+    select(site_id, date, res_level_m, data_type) %>%
+    saveRDS(out_rds)
+}
+
 fetch_filter_nml <- function(out_rds, in_ind, in_repo, site_ids) {
   # pull the data file down to that other repo
   gd_get_elsewhere(gsub(in_repo, '', in_ind, fixed=TRUE), in_repo)

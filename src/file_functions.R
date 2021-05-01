@@ -121,3 +121,32 @@ sf_to_zip <- function(zip_filename, sf_object, layer_name){
   zip(file.path(cdir, zip_filename), files = files_to_zip)
   setwd(cdir)
 }
+
+# bring together various water level sources
+combine_level_sources <- function(out_rds, nwis_levels, nyc_levels, hist_levels) {
+  browser()
+  nwis <- readRDS(nwis_levels) %>% 
+  nyc <- readRDS(nyc_levels)
+  hist <- readRDS(hist_levels) %>% 
+    mutate(date = as.Date(date)) %>%
+    rename(surface_elevation_m = res_level_m)
+  
+  out_dat <- bind_rows(nwis, nyc, hist, .id = 'source') %>%
+    group_by(site_id, date) %>%
+    # sources were ordered by priority, so can filter on min source
+    slice_min(source) %>%
+    mutate(data_type = ifelse('monthly' %in% data_type, 'monthly interpolated', 'daily observed')) %>%
+    mutate(source = case_when(source %in% 1 ~ 'nwis',
+                              source %in% 2 ~ 'nyc',
+                              source %in% 3 ~ 'usgs'))
+    
+    
+    
+  
+  ggplot(out_dat, aes(x = date, y = surface_elevation_m)) +
+    geom_point(aes(color = source, shape = data_type), alpha = 0.1) +
+    facet_wrap(~site_id, nrow = 2, scales = 'free') +
+    theme_bw()
+
+  
+  }
