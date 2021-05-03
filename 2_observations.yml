@@ -3,6 +3,7 @@ target_default: 2_observations
 packages:
   - readr
   - zip
+  - zoo
 
 sources:
   - src/file_functions.R
