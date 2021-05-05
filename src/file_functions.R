@@ -121,3 +121,45 @@ sf_to_zip <- function(zip_filename, sf_object, layer_name){
   zip(file.path(cdir, zip_filename), files = files_to_zip)
   setwd(cdir)
 }
+
+# bring together various water level sources
+combine_level_sources <- function(out_rds, nwis_levels, nyc_levels, hist_levels) {
+  nwis <- readRDS(nwis_levels)
+  nyc <- readRDS(nyc_levels)
+  hist <- readRDS(hist_levels) %>% 
+    mutate(date = as.Date(date)) %>%
+    rename(surface_elevation_m = res_level_m) %>%
+    # filtering out monthly interpolated values since we now of NYC-DEP data that covers same period
+    filter(!data_type %in% 'monthly')
+  
+  obs_dat <- bind_rows(nwis, nyc, hist, .id = 'source') %>%
+    group_by(site_id, date) %>%
+    # sources were ordered by priority, so can filter on min source
+    slice_min(source) %>%
+    mutate(data_type = 'daily observed') %>%
+    mutate(source = case_when(source %in% 1 ~ 'nwis',
+                              source %in% 2 ~ 'nyc',
+                              source %in% 3 ~ 'usgs')) %>%
+    arrange(date, site_id)
+  
+  # linearly interpolate from beginning to end of this record
+  # when any day does not have a water level value
+
+  first_res <- data.frame(date = seq(min(obs_dat$date[obs_dat$site_id %in% unique(obs_dat$site_id)[1]]), max(obs_dat$date[obs_dat$site_id %in% unique(obs_dat$site_id)[1]]), by = 1)) %>%
+    full_join(obs_dat[obs_dat$site_id %in% unique(obs_dat$site_id)[1], ], by = "date") %>%
+    mutate(site_id = unique(obs_dat$site_id)[1])
+  
+  second_res <- data.frame(date = seq(min(obs_dat$date[obs_dat$site_id %in% unique(obs_dat$site_id)[2]]), 
+                                      max(obs_dat$date[obs_dat$site_id %in% unique(obs_dat$site_id)[2]]), by = 1)) %>%
+    full_join(obs_dat[obs_dat$site_id %in% unique(obs_dat$site_id)[2],], by = "date") %>%
+    mutate(site_id = unique(obs_dat$site_id)[2])
+  
+  out_dat <- bind_rows(first_res, second_res) %>%
+    arrange(site_id, date) %>%
+    group_by(site_id) %>%
+    mutate(surface_elevation_m = na.approx(surface_elevation_m)) %>%
+    mutate(data_type = ifelse(is.na(data_type), 'daily interpolated', data_type))
+    
+  saveRDS(out_dat, out_rds)
+  
+  }
