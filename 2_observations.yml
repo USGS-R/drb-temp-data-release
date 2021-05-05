@@ -82,8 +82,7 @@ targets:
       out_rds = target_name,
       in_ind = '../delaware-model-prep/2_observations/out/interpolated_daily_reservoir_water_budget_components.csv.ind',
       in_repo = I('../delaware-model-prep/'),
-      xwalk = I(c('Cannonsville' = 'nhdhr_120022743', 'Pepacton' = 'nhdhr_151957878')),
-      site_ids = reservoir_modeling_site_ids)
+      xwalk = I(c('Cannonsville' = 'nhdhr_120022743', 'Pepacton' = 'nhdhr_151957878')))
       
   out_data/reservoir_level_obs.rds:
     command: combine_level_sources(
