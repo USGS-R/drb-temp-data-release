@@ -32,8 +32,8 @@ fetch_filter_tibble <- function(out_rds, in_ind, in_repo, site_ids) {
 fetch_filter_historical <- function(out_rds, in_ind, in_repo, xwalk) {
   # pull the data file down to that other repo
   gd_get_elsewhere(gsub(in_repo, '', in_ind, fixed=TRUE), in_repo)
-  browser()
-    # read and filter to just the specified sites
+
+  # read and filter to just the specified sites
   as_data_file(in_ind) %>%
     readr::read_csv(col_types = 'ccnnncnnnnnnnnnc') %>%
     mutate(site_id = xwalk[reservoir]) %>%
