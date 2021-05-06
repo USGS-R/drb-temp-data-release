@@ -54,9 +54,25 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: temp_c
+      attr-label: mean_temp_c
       attr-def: >-
-        Water temperature
+        Mean daily water temperature
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: degrees C
+    -
+      attr-label: min_temp_c
+      attr-def: >-
+        Minimum daily water temperature
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: degrees C
+    -
+      attr-label: max_temp_c
+      attr-def: >-
+        Maximum daily water temperature
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -99,9 +115,25 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: temp_c
+      attr-label: mean_temp_c
       attr-def: >-
-        Water temperature
+        Mean daily water temperature
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: degrees C
+    -
+      attr-label: min_temp_c
+      attr-def: >-
+        Minimum daily water temperature
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: degrees C
+    -
+      attr-label: max_temp_c
+      attr-def: >-
+        Maximum daily water temperature
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -144,7 +176,7 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: discharge
+      attr-label: discharge_cms
       attr-def: >-
         River flow or discharge
       attr-defs: NA
@@ -189,7 +221,7 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: discharge
+      attr-label: discharge_cms
       attr-def: >-
         River flow or discharge
       attr-defs: NA
@@ -402,6 +434,22 @@ entities:
       data-max: NA
       data-units: NA
     -
+      attr-label: date
+      attr-def: >-
+        Date of temperature observation
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: dateTime
+      attr-def: >-
+        Datetime of temperature observation
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
       attr-label: source_id
       attr-def: >-
         Site identifier from the data provider.
@@ -410,9 +458,9 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: date
+      attr-label: source
       attr-def: >-
-        Date of temperature observation
+        Data provider.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -438,6 +486,22 @@ entities:
     data-description: Daily water level observations for the Pepacton and Cannonsville reservoirs.
     attributes:
     -
+      attr-label: date
+      attr-def: >-
+        Date of temperature observation
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: source
+      attr-def: >-
+        Data provider
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
       attr-label: site_id
       attr-def: >-
         Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
@@ -454,14 +518,6 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: date
-      attr-def: >-
-        Date of temperature observation
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
       attr-label: surface_elevation_m
       attr-def: >-
         Elevation of reservoir surface
@@ -469,5 +525,13 @@ entities:
       data-min: 329.184
       data-max: 390.6561
       data-units: meters
+    -
+      attr-label: data_type
+      attr-def: >-
+        Type of data - observed daily value (daily observed) or linearly interpolated daily value (daily interpolated)
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
 
 file-format: comma-delimited files (some compressed into zip files), rds files, feather files.
