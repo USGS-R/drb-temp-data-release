@@ -29,6 +29,20 @@ fetch_filter_tibble <- function(out_rds, in_ind, in_repo, site_ids) {
     saveRDS(out_rds)
 }
 
+fetch_filter_nycdep <- function(out_rds, in_ind, in_repo, site_ids) {
+  # pull the data file down to that other repo
+  gd_get_elsewhere(gsub(in_repo, '', in_ind, fixed=TRUE), in_repo)
+  
+  # read and filter to just the specified sites
+  nycdep_data <- as_data_file(in_ind) %>%
+    readRDS() %>%
+    filter(site_id %in% !!site_ids)
+  
+  # filter out erroneous Pepacton observation and save as rds
+  nycdep_data <- nycdep_data[!(nycdep_data$site_id=="nhdhr_151957878" & nycdep_data$date=='1999-06-21'),] %>%
+    saveRDS(out_rds)
+}
+
 fetch_filter_historical <- function(out_rds, in_ind, in_repo, xwalk) {
   # pull the data file down to that other repo
   gd_get_elsewhere(gsub(in_repo, '', in_ind, fixed=TRUE), in_repo)
