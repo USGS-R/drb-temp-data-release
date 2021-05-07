@@ -23,7 +23,7 @@ targets:
       - out_data/reservoir_features_lordville.csv
       - out_data/sntemp_inputs_outputs.zip
       - out_data/sntemp_inputs_outputs_lordville.zip
-      - out_data/reservoir_interpolated_daily_reservoir_water_budget_components.csv
+      - out_data/reservoir_interpolated_daily_water_budget_components.csv
       - log/reservoir_meteo_files.yml
       
   #weather_drivers:

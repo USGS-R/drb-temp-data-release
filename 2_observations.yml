@@ -71,7 +71,7 @@ targets:
       site_ids = reservoir_modeling_site_ids)
       
   out_data/reservoir_level_nycdep.rds:
-    command: fetch_filter_tibble(
+    command: fetch_filter_nycdep(
       out_rds = target_name,
       in_ind = '../lake-temperature-model-prep/7a_nwis_munge/out/NYC_DEP_reservoir_waterlevels.rds.ind',
       in_repo = I('../lake-temperature-model-prep/'),
