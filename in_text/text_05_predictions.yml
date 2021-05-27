@@ -2,12 +2,24 @@ title: >-
   Predicting water temperature in the Delaware River Basin: 5 Model prediction data
 
 abstract: >-
-  Multiple modeling frameworks were used to predict daily temperatures at 456 stream reaches in the Delaware River Basin. Uncalibrated process-based models (PB0)
-  used default configurations (see XX for details) and no parameters were adjusted according to model fit with observations. Deep Learning (DL) models were xx.
-
-  Daily stream temperature predictions for inflow and outflow reaches for Cannonsville and Pepacton reservoirs were pulled aside into a separate feather file.
+  PRMS-SNTemp was used to predict daily temperatures at 456 stream reaches in the Delaware River Basin. Daily stream temperature predictions for inflow and outflow reaches for Cannonsville and Pepacton reservoirs were pulled aside into a separate feather file.
+  
+  Reservoir outflow predictions and in-reservoir temperature predictions were generated with calibrated models built using the General Lake Model v3.1.
   
 cross-cites:
+  -
+    authors: ['Matthew R. Hipsey', 'Louise C. Bruce', 'Casper Boon', 'Brendan Busch', 'Cayelan C. Carey', 'David P. Hamilton', 'Paul C. Hanson', 'Jordan S. Read', 'Eduardo de Sousa', 'Michael Weber', 'Luke A. Winslow']
+    title: >-
+      A General Lake Model (GLM 3.0) for linking with high-frequency sensor data from the Global Lake Ecological Observatory Network (GLEON).
+    pubdate: 2019
+    form: publication
+    link: https://doi.org/10.5194/gmd-12-473-2019
+  -
+    authors: ['XX']
+    title: >-
+      The General Lake Model - Configuration Options
+    pubdate: XX
+    link: https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
   -
     authors: ['XX']
     title: >-
@@ -20,17 +32,11 @@ cross-cites:
       Stream Network Temperature Model (SNTemp)
     pubdate: XX
     link: XX
-  -
-    authors: ['XX']
-    title: >-
-      River graph convolution network (RGCN) XX
-    pubdate: XX
-    link: XX
 
 entities:
   -
     data-name: reservoir_io_sntemp.feather
-    data-description: Predictions of water temperature for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs.
+    data-description: PRMS-SNTemp predictions of water temperature for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs.
     attributes:
     -
       attr-label: res_id
@@ -82,9 +88,100 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
+      
+  -
+    data-name: reservoir_downstream_preds.csv
+    data-description: Predictions of outflow and water temperature for outflow reaches of the Pepacton and Cannonsville reservoirs, generated from calibrated reservoir models built with GLM 3.1.
+    attributes:
+    -
+      attr-label: res_id
+      attr-def: >-
+        Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
+      attr-defs: >-
+        http://nhd.usgs.gov/
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: time
+      attr-def: >-
+        Date of prediction
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: temp
+      attr-def: >-
+        Predicted water temperature.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: degrees Celsius
+    -
+      attr-label: flow
+      attr-def:  >-
+        Predicted outflow.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: cubic meters per second
+  -
+    data-name: outlet_depth_preds.csv
+    data-description: In-reservoir predictions of water temperature at the depth of reservoir outlets on all days (regardless of release volumes), generated from calibrated reservoir models built with GLM 3.1.
+    attributes:
+    -
+      attr-label: res_id
+      attr-def: >-
+        Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
+      attr-defs: >-
+        http://nhd.usgs.gov/
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: time
+      attr-def: >-
+        Date of prediction
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: temp
+      attr-def: >-
+        Predicted in-reservoir water temperature at depth of given reservoir outlet.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: degrees Celsius
+    -
+      attr-label: release_type
+      attr-def:  >-
+        Type of reservoir releases that occur using given reservoir outlet.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: reference
+      attr-def:  >-
+        Reference location (surface or bottom) for the given reservoir outlet.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: z_out
+      attr-def:  >-
+        Elevation of given outlet as deviation from the defined reference location.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: meters
 
 build-environment: >-
-  For PB0 predictions we used XX; process-based predictions were generated with the following open source tools XX.
-  For PGDL and DL predictions, the University of Minnesota Supercomputing Institute resources were used. XX
+  Reservoir outflow predictions were generated with calibrated models built using the General Lake Model (Hipsey et al. 2019) version 3.1.
+  Daily stream temperature predictions for inflow and outflow reservoir reaches were generated with PRMS-SNTemp.
   
-file-format: feather files.
+file-format: feather files, comma-delimited files.

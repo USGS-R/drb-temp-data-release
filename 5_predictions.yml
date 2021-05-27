@@ -12,9 +12,17 @@ targets:
   5_predictions:
     depends:
       - out_data/reservoir_io_sntemp.feather
+      - out_data/reservoir_downstream_preds.csv
+      - out_data/reservoir_outlet_depth_preds.csv
 
   out_data/reservoir_io_sntemp.feather:
     command: copy_filter_feather(
       out_feather = target_name,
       in_feather = '../delaware-model-prep/9_collaborator_data/res/res_io_sntemp.feather',
       site_ids = reservoir_modeling_site_ids)
+      
+  out_data/reservoir_downstream_preds.csv:
+    command: file.copy(from = '../res-temperature-process-models/5_extract/out/downstream_preds.csv', to = target_name)
+    
+  out_data/reservoir_outlet_depth_preds.csv:
+    command: file.copy(from = '../res-temperature-process-models/5_extract/out/outlet_depth_preds.csv', to = target_name)
