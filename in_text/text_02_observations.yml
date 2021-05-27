@@ -442,14 +442,6 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: dateTime
-      attr-def: >-
-        Datetime of temperature observation
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
       attr-label: source_id
       attr-def: >-
         Site identifier from the data provider.
