@@ -127,7 +127,7 @@ entities:
       data-max: NA
       data-units: cubic meters per second
   -
-    data-name: outlet_depth_preds.csv
+    data-name: reservoir_outlet_depth_preds.csv
     data-description: In-reservoir predictions of water temperature at the depth of reservoir outlets on all days (regardless of release volumes), generated from calibrated reservoir models built with GLM 3.1.
     attributes:
     -
