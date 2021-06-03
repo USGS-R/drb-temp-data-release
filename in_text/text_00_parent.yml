@@ -4,15 +4,15 @@ title: >-
 
 abstract: >-
   <p>Daily temperature predictions in the Delaware River Basin (DRB) can inform decision makers who can use cold-water reservoir releases to maintain thermal habitat for sensitive fish and mussel species.
-  This data release provides the inputs and outputs for process-guided machine learning methods to improve prediction of water temperature across 456 river reaches and 2 reservoirs in the DRB.
+  This data release provides the inputs and outputs of process-based modeling methods to improve prediction of water temperature across 456 river reaches and 2 reservoirs in the DRB.
 
   <br/>The data are organized into these items:</p>
   <ol>
   <li><a href="https://www.sciencebase.gov/catalog/item/5f6a285d82ce38aaa244912e">Waterbody Information</a> - One shapefile of polylines for the 456 river segments in this study, a reservoir polygon metadata file, and one shapefile of reservoir polygons for the Pepacton and Cannonsville reservoirs</li>
-  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a287382ce38aaa2449131">Observations</a> - Water temperature observations for XX of the 456 river reaches used in this study. Water temperature observations for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs. Water temperature and water level observations in the Pepacton and Cannonsville reservoirs</li>
-  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a288982ce38aaa2449133">Model Configurations</a> - Model parameters and metadata used to configure models</li>
-  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a289982ce38aaa2449135">Model Inputs</a> - Data used to drive predictive models (distance matrices, river reach metadata, daily meteorology for river reaches and reservoirs)</li>
-  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a28a782ce38aaa2449137">Model Predictions</a> - Predictions of water temperature for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs</li>
+  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a287382ce38aaa2449131">Observations</a> - Water temperature and streamflow observations for XX of the 456 river reaches used in this study. Water temperature and streamflow observations for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs. Water temperature, water level, and release observations for the Pepacton and Cannonsville reservoirs.</li>
+  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a288982ce38aaa2449133">Model Configurations</a> - Model parameters and metadata used to configure GLM 3.1 reservoir models</li>
+  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a289982ce38aaa2449135">Model Inputs</a> - Data used to drive predictive models (distance matrices, river reach metadata, daily meteorology for river reaches and reservoirs, observed reservoir diversions and releases)</li>
+  <li><a href="https://www.sciencebase.gov/catalog/item/5f6a28a782ce38aaa2449137">Model Predictions</a> - PRMS-SNTemp predictions of water temperature for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs, GLM3.1 predictions of ourflow and water temperature for reservoir outflow reaches, predictions of in-reservoir water temperatures at the depth of reservoir outlets, and stream temperature predictions from the distance-weighted-average lotic-lentic input network</li>
   <li><a href="https://www.sciencebase.gov/catalog/item/5f6a28ba82ce38aaa2449139">Model Evaluation</a> - Performance of models</li>
   <br/>
   <p>This research was funded by the USGS, XX.</p>
