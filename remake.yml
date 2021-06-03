@@ -138,7 +138,8 @@ targets:
     command: sb_replace_files(sbid_05_predictions,
       "out_data/reservoir_io_sntemp.feather",
       "out_data/reservoir_downstream_preds.csv",
-      "out_data/reservoir_outlet_depth_preds.csv")
+      "out_data/reservoir_outlet_depth_preds.csv",
+      "out_data/dwallin_stream_preds.csv")
 
   #05_predictions_sb_sntemp:
    # command: sb_replace_files(sbid_05_predictions,

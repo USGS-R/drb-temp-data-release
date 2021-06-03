@@ -179,6 +179,35 @@ entities:
       data-min: NA
       data-max: NA
       data-units: meters
+  -
+    data-name: dwallin_stream_preds.csv
+    data-description: Stream temperature predictions from the distance-weighted-average lotic-lentic input network (DWALLIN). Predictions were generated from a combination of lotic (from PRMS-SNTemp) and lentic (GLM) models. We assumed that just below the reservoirs, stream temperature would be driven by lentic processes, and therefore GLM outflow temperature predictions received a weight of 1 and SNTemp predictions received a weight of 0. We also assumed that the reservoir weight would exponentially decay with distance, and an exponential decay function was fit to calculated observed weights when stream temperature observations, SNTemp predictions, and GLM predictions were available below Cannonsville and Pepacton reservoirs. The estimated decay rates were 0.0358 and 0.0403 for Cannonsville and Pepacton, respectively. Predicted weights were then used to calculate stream temperature as temperature = res_weight*GLM_prediction + (1-res_weight)*SNTemp prediction for each stream segment in the network. For segments that weren't impacted by releases from Cannonsville or Pepacton, SNTemp predictions were used.
+    attributes:
+    -
+      attr-label: seg_id_nat
+      attr-def: >-
+        Stream reach identification number for this dataset. This is the ID named XX from the Geospatial Fabric for  National Hydrologic Modeling."
+      attr-defs: >-
+        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: date
+      attr-def: >-
+        Date of prediction
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: dwallin_temp_c
+      attr-def: >-
+        Predicted stream temperature
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: degrees Celsius
 
 build-environment: >-
   Reservoir outflow predictions were generated with calibrated models built using the General Lake Model (Hipsey et al. 2019) version 3.1.

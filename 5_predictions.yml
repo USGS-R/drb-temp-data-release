@@ -14,6 +14,7 @@ targets:
       - out_data/reservoir_io_sntemp.feather
       - out_data/reservoir_downstream_preds.csv
       - out_data/reservoir_outlet_depth_preds.csv
+      - out_data/dwallin_stream_preds.csv
 
   out_data/reservoir_io_sntemp.feather:
     command: copy_filter_feather(
@@ -26,3 +27,6 @@ targets:
     
   out_data/reservoir_outlet_depth_preds.csv:
     command: file.copy(from = '../res-temperature-process-models/5_extract/out/outlet_depth_preds.csv', to = target_name)
+    
+  out_data/dwallin_stream_preds.csv:
+    command: file.copy(from = '../delaware-model-prep/3_predictions/out/dwallin_stream_preds.csv', to = target_name)
