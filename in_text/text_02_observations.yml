@@ -146,6 +146,115 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA 
+    -
+      attr-label: in_time_holdout
+      attr-def: >-
+        Logical, is the date within the test holdout periods?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+    -
+      attr-label: in_space_holdout
+      attr-def: >-
+        Logical, is the site a spatial holdouts?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+    -
+      attr-label: test
+      attr-def: >-
+        Logical, should the observation be used for testing (and withheld from training)?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+  -
+    data-name: temperature_observations_forecast_sites.zip
+    data-description: Temperature observation data with sites matched to 36 model river segments in the Delaware River Basin.
+    attributes:
+    -
+      attr-label: subseg_id
+      attr-def: >-
+        An alternative unique reach identifier.XX
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: seg_id_nat
+      attr-def: >-
+        River reach identifier from XX, which the site was matched to based on latitude and longitude.
+      attr-defs:  >-
+        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: date
+      attr-def: >-
+        Date of temperature measurement
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: mean_temp_c
+      attr-def: >-
+        Mean daily water temperature
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: degrees C
+    -
+      attr-label: min_temp_c
+      attr-def: >-
+        Minimum daily water temperature
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: degrees C
+    -
+      attr-label: max_temp_c
+      attr-def: >-
+        Maximum daily water temperature
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: degrees C
+    -
+      attr-label: site_id
+      attr-def: >-
+        Site identifier from the data provider.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+    -
+      attr-label: in_time_holdout
+      attr-def: >-
+        Logical, is the date within the test holdout periods?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+    -
+      attr-label: in_space_holdout
+      attr-def: >-
+        Logical, is the site a spatial holdouts?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+    -
+      attr-label: test
+      attr-def: >-
+        Logical, should the observation be used for testing (and withheld from training)?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
   -
     data-name: flow_observations.zip
     data-description: Flow observation data with sites matched to 456 model river segments in the Delaware River Basin.
@@ -191,6 +300,30 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
+    -
+      attr-label: in_time_holdout
+      attr-def: >-
+        Logical, is the date within the test holdout periods?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+    -
+      attr-label: in_space_holdout
+      attr-def: >-
+        Logical, is the site a spatial holdouts?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+    -
+      attr-label: test
+      attr-def: >-
+        Logical, should the observation be used for testing (and withheld from training)?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
   -
     data-name: flow_observations_lordville.zip
     data-description: Flow observation data with sites matched to 32 model river segments in the Delaware River Basin.
@@ -232,6 +365,99 @@ entities:
       attr-label: site_id
       attr-def: >-
         Site identifier from the data provider.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+    -
+      attr-label: in_time_holdout
+      attr-def: >-
+        Logical, is the date within the test holdout periods?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+    -
+      attr-label: in_space_holdout
+      attr-def: >-
+        Logical, is the site a spatial holdouts?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+    -
+      attr-label: test
+      attr-def: >-
+        Logical, should the observation be used for testing (and withheld from training)?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+  -
+    data-name: flow_observations_forecast_sites.csv
+    data-description: Flow observation data for 5 sites that will be used in daily forecasts.
+    attributes:
+    -
+      attr-label: seg_id_nat
+      attr-def: >-
+        River reach identifier from XX, which the site was matched to based on latitude and longitude.
+      attr-defs:  >-
+        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: subseg_id
+      attr-def: >-
+        An alternative unique reach identifier.XX
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: date
+      attr-def: >-
+        Date of discharge measurement
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: discharge_cms
+      attr-def: >-
+        River flow or discharge
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: cubic meters per second
+    -
+      attr-label: site_id
+      attr-def: >-
+        Site identifier from the data provider.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+    -
+      attr-label: in_time_holdout
+      attr-def: >-
+        Logical, is the date within the test holdout periods?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+    -
+      attr-label: in_space_holdout
+      attr-def: >-
+        Logical, is the site a spatial holdouts?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+    -
+      attr-label: test
+      attr-def: >-
+        Logical, should the observation be used for testing (and withheld from training)?
       attr-defs: NA
       data-min: NA
       data-max: NA
