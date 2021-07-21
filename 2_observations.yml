@@ -42,11 +42,14 @@ targets:
   out_data/flow_observations_forecast_sites.csv:
     command: file.copy(from = '../delaware-model-prep/2_observations/out/obs_flow_priority_sites.csv', to = target_name)
   
-  out_data/reservoir_releases.csv:
+  out_data/reservoir_releases_total.csv:
+    command: file.copy(from = '../delaware-model-prep/2_observations/out/complete_reservoir_releases.csv', to = target_name)
+
+  out_data/reservoir_releases_by_type.csv:
     command: file.copy(from = '../delaware-model-prep/2_observations/out/reservoir_releases.csv', to = target_name)
 
-  out_data/reservoir_releases_lordville.csv:
-    command: filter_reservoirs(out_file = target_name, in_dat = 'out_data/reservoir_releases.csv', keep = I(c('Pepacton', 'Cannonsville')))
+  out_data/reservoir_releases_by_type_lordville.csv:
+    command: filter_reservoirs(out_file = target_name, in_dat = 'out_data/reservoir_releases_by_type.csv', keep = I(c('Pepacton', 'Cannonsville')))
     
   # get GRAND IDs of reservoirs above Lordville
   reservoir_lordville:

@@ -171,8 +171,11 @@ entities:
       data-max: NA
       data-units: NA 
   -
-    data-name: temperature_observations_forecast_sites.zip
-    data-description: Temperature observation data with sites matched to 36 model river segments in the Delaware River Basin.
+    data-name: temperature_observations_forecast_sites.csv
+    data-description: >-
+      Temperature observation for five priority forecasting sites in the Delaware River Basin. 
+      These sites were first pulled from NWIS, and remaining data gaps in the modeling period
+      were filled if there was data available from other sources (WQP or EcoSHEDS).
     attributes:
     -
       attr-label: subseg_id
@@ -464,7 +467,9 @@ entities:
       data-units: NA 
   -
     data-name: reservoir_releases.csv
-    data-description: Daily reservoir releases from the Pepacton, Neversink, and Cannonsville reservoirs.
+    data-description: >-
+      Daily reservoir releases from the Pepacton, Neversink, and Cannonsville reservoirs.
+      Reservoir release data was provided by the New York City Department of Environmental Protection. 
     attributes:
     -
       attr-label: date
@@ -586,8 +591,8 @@ entities:
     -
       attr-label: res_id
       attr-def: >-
-        reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
-      attr-defs: NA
+        Unique reservoir identification for this dataset, which comes from the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}".
+      attr-defs: nhdhr_120022743 is Cannonsville Reservoir and nhdhr_151957878 is Pepacton Reservoir 
       data-min: NA
       data-max: NA
       data-units: NA
