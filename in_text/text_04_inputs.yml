@@ -20,6 +20,20 @@ cross-cites:
     form: publication
     link: http://dx.doi.org/10.1029/2003JD003823
   -
+    authors: ['Luke A. Winslow','Gretchen J.A. Hansen','Jordan S. Read','Michael Notaro']
+    title: >-
+      Large-scale modeled contemporary and future water temperature estimates for 10,774 Midwestern U.S. Lakes
+    pubdate: 2017
+    form: publication
+    link: http://dx.doi.org/10.1038/sdata.2017.53
+  -
+    authors: ['Matthew R. Hipsey', 'Louise C. Bruce', 'Casper Boon', 'Brendan Busch', 'Cayelan C. Carey', 'David P. Hamilton', 'Paul C. Hanson', 'Jordan S. Read', 'Eduardo de Sousa', 'Michael Weber', 'Luke A. Winslow']
+    title: >-
+      A General Lake Model (GLM 3.0) for linking with high-frequency sensor data from the Global Lake Ecological Observatory Network (GLEON).
+    pubdate: 2019
+    form: publication
+    link: https://doi.org/10.5194/gmd-12-473-2019
+  -
     authors: ['XX']
     title: >-
       GRanD reservoir database. XX
@@ -976,37 +990,40 @@ entities:
       data-max: NA
       data-units: NA
   -
-    data-name: NLDAS_time[0.367700]_x[397]_y[136].csv
-    data-description: NLDAS gridded weather data XXXXXXXX
+    data-name: NLDAS_time[0.367700]_x[{x}]_y[{y}].csv
+    data-description: >-
+      A csv file for each reservoir with input meteorological data. Files are named "NLDAS_time[0.367700]_x{x}_y{y}.csv" where the x and y locations are longitude and latitude indices from NLDAS
+      of the individual meteorological data cell (data are from Mitchell et al. 2004). The filename of the NLDAS file associated with each reservoir is listed in reservoir_nml_{}.json within the 3_config child item.
     attributes:
     -
       attr-label: time
       attr-def: >-
-        Date
-      attr-defs: NA
+        Date of this weather estimate.
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: ShortWave
       attr-def: >-
-        NLDAS shortwave radiation
-      attr-defs: NA
+        Incoming radiant energy with wavelengths between ~300 and ~3000 nm,
+          emitted by the sun and reaching the reservoir surface after passing through the atmosphere, as a daily average.
+      attr-defs: This data release
       data-min: NA
       data-max: NA
-      data-units: XX
+      data-units: W m-2
     -
       attr-label: LongWave
       attr-def: >-
-        NLDAS longwave radiation
-      attr-defs: NA
+        Incoming thermal radiation at wavelengths > 3000 nm directed from the atmosphere to the reservoir surface, as a daily average.
+      attr-defs: This data release
       data-min: NA
       data-max: NA
-      data-units: XX
+      data-units: W m-2
     -
       attr-label: AirTemp
       attr-def: >-
-        NLDAS air temperature
+        Air temperature above the surface of the reservoir, as a daily average.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -1014,103 +1031,36 @@ entities:
     -
       attr-label: RelHum
       attr-def: >-
-        NLDAS relative humidity
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: percentage
+        Relative humidity of the air above the surface of the reservoir, as a daily average.
+      attr-defs: This data release
+      data-min: 0
+      data-max: 100
+      data-units: >-
+          %
     -
       attr-label: Windspeed
       attr-def: >-
-        NLDAS windspeed
-      attr-defs: NA
-      data-min: NA
+        Speed of the wind above the reservoir, calculated to a daily number using the methods described in Winslow et al. 2017.
+      attr-defs: This data release
+      data-min: 0
       data-max: NA
-      data-units: XX
+      data-units: meters per second
     -
       attr-label: Rain
       attr-def: >-
-        NLDAS rainfall amount
-      attr-defs: NA
-      data-min: NA
+        Daily rate of rain reaching the reservoir surface in a day as described in Winslow et al. 2017; rate as determined by Hipsey et al. 2019.
+      attr-defs: This data release
+      data-min: 0
       data-max: NA
-      data-units: XX
+      data-units: This data release
     -
       attr-label: Snow
       attr-def: >-
-        NLDAS snowfall amount
-      attr-defs: NA
-      data-min: NA
+        Daily rate of snow reaching the reservoir surface in a day as described in Winslow et al. 2017.
+      attr-defs: This data release
+      data-min: 0
       data-max: NA
-      data-units: XX
-  -
-    data-name: NLDAS_time[0.367700]_x[401]_y[136].csv
-    data-description: NLDAS gridded weather data XXXXXXXX
-    attributes:
-    -
-      attr-label: time
-      attr-def: >-
-        Date
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: ShortWave
-      attr-def: >-
-        NLDAS shortwave radiation
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: XX
-    -
-      attr-label: LongWave
-      attr-def: >-
-        NLDAS longwave radiation
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: XX
-    -
-      attr-label: AirTemp
-      attr-def: >-
-        NLDAS air temperature
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: degrees Celsius
-    -
-      attr-label: RelHum
-      attr-def: >-
-        NLDAS relative humidity
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: percentage
-    -
-      attr-label: Windspeed
-      attr-def: >-
-        NLDAS windspeed
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: XX
-    -
-      attr-label: Rain
-      attr-def: >-
-        NLDAS rainfall amount
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: XX
-    -
-      attr-label: Snow
-      attr-def: >-
-        NLDAS snowfall amount
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: XX
+      data-units: m day−1
 
 build-environment: Multiple computer systems were used to generate these data, including XX. The open source languages R and Python was used on all systems, as well as XX.
 
