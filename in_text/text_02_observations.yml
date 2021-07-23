@@ -74,32 +74,32 @@ entities:
       attr-def: >-
         Date of temperature measurement
       attr-defs: NA
-      data-min: NA
-      data-max: NA
+      data-min: 2021-04-08
+      data-max: 1908-08-02
       data-units: NA
     -
       attr-label: mean_temp_c
       attr-def: >-
         Mean daily water temperature
       attr-defs: NA
-      data-min: NA
-      data-max: NA
+      data-min: -0.4
+      data-max: 34
       data-units: degrees C
     -
       attr-label: min_temp_c
       attr-def: >-
         Minimum daily water temperature
       attr-defs: NA
-      data-min: NA
-      data-max: NA
+      data-min: -0.4
+      data-max: 34
       data-units: degrees C
     -
       attr-label: max_temp_c
       attr-def: >-
         Maximum daily water temperature
       attr-defs: NA
-      data-min: NA
-      data-max: NA
+      data-min: -0.4
+      data-max: 34.9
       data-units: degrees C
     -
       attr-label: site_id
@@ -163,16 +163,16 @@ entities:
       attr-def: >-
         Date of discharge measurement
       attr-defs: NA
-      data-min: NA
-      data-max: NA
+      data-min: 1884-01-01
+      data-max: 2021-04-23
       data-units: NA
     -
       attr-label: discharge_cms
       attr-def: >-
         River flow or discharge
       attr-defs: NA
-      data-min: NA
-      data-max: NA
+      data-min: -180.3047
+      data-max: 7900.4
       data-units: cubic meters per second
     -
       attr-label: site_id
@@ -221,8 +221,8 @@ entities:
       attr-def: >-
         Date of water release.
       attr-defs: NA
-      data-min: NA
-      data-max: NA
+      data-min: 1982-01-01
+      data-max: 2020-04-22
       data-units: NA
     -
       attr-label: reservoir
@@ -245,8 +245,8 @@ entities:
       attr-def: >-
         Daily volume of the reservoir release.
       attr-defs: NA
-      data-min: NA
-      data-max: NA
+      data-min: 0.0
+      data-max: 760.4536
       data-units: cubic meters per second
     -
       attr-label: GRAND_ID
@@ -271,8 +271,8 @@ entities:
       attr-def: >-
         Date of water release.
       attr-defs: NA
-      data-min: NA
-      data-max: NA
+      data-min: 1982-01-01
+      data-max: 2021-07-09
       data-units: NA
     -
       attr-label: reservoir
@@ -287,8 +287,8 @@ entities:
       attr-def: >-
         Volume of the reservoir release.
       attr-defs: NA
-      data-min: NA
-      data-max: NA
+      data-min: 0.0438125
+      data-max: 762.1622
       data-units: cubic meters second
     -
       attr-label: GRAND_ID
@@ -300,7 +300,10 @@ entities:
       data-units: NA 
   -
     data-name: reservoir_realsat_monthly_surface_area.csv
-    data-description: Estimates of reservoir surface area from 1984-2015 from the ReaLSAT (Reservoir and Lake Surface Area Timeseries) dataset (Khandelwal et. al, 2020). The dataset was generated using machine learning and Earth Observation satellite imagery. 
+    data-description: >-
+      Estimates of reservoir surface area from 1984-2015 from the ReaLSAT (Reservoir and Lake Surface Area Timeseries) dataset (Khandelwal et. al, 2020). 
+      The dataset was generated using machine learning and Earth Observation satellite imagery. 
+    
     attributes:
     -
       attr-label: reservoir
@@ -316,26 +319,29 @@ entities:
         Date for which reservoir surface area was estimated using satellite data
       attr-defs: >-
         Surface area was estimated monthly. Data assigned to midpoint of each month.
-      data-min: NA
-      data-max: NA
+      data-min: 1984-06-15
+      data-max: 2015-12-15
       data-units: NA
     -
       attr-label: area_m2
       attr-def: >-
         Estimate of surface area from the ReaLSAT (Reservoir and Lake Surface Area Timeseries) dataset
-      attr-defs: 
-      data-min: 
-      data-max: 
-      data-units:
+      attr-defs: NA
+      data-min: 6300
+      data-max: 21941100
+      data-units: m2
   -
     data-name: reservoir_io_obs.feather
-    data-description: Daily water temperature observations for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs.
+    data-description: >-
+      Daily water temperature observations for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs.
+    
     attributes:
     -
       attr-label: res_id
       attr-def: >-
         Unique reservoir identification for this dataset, which comes from the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}".
-      attr-defs: nhdhr_120022743 is Cannonsville Reservoir and nhdhr_151957878 is Pepacton Reservoir 
+      attr-defs: >- 
+        nhdhr_120022743 is Cannonsville Reservoir and nhdhr_151957878 is Pepacton Reservoir 
       data-min: NA
       data-max: NA
       data-units: NA
@@ -397,7 +403,9 @@ entities:
       data-units: NA
   -
     data-name: reservoir_temp_obs.rds
-    data-description: Daily water temperature observations for the Pepacton and Cannonsville reservoirs.
+    data-description: >-
+      Daily water temperature observations for the Pepacton and Cannonsville reservoirs.
+    
     attributes:
     -
       attr-label: site_id
@@ -412,8 +420,8 @@ entities:
       attr-def: >-
         Date of temperature observation
       attr-defs: NA
-      data-min: NA
-      data-max: NA
+      data-min: 1992-04-13
+      data-max: 2021-04-19
       data-units: NA
     -
       attr-label: source_id
@@ -428,16 +436,16 @@ entities:
       attr-def: >-
         Data provider.
       attr-defs: NA
-      data-min: NA
-      data-max: NA
+      data-min: 0.1
+      data-max: 50.25
       data-units: NA
     -
       attr-label: depth
       attr-def: >-
         Depth of temperature observation
       attr-defs: NA
-      data-min: 0.003048
-      data-max: 29.92222
+      data-min: 0.01
+      data-max: 50.25
       data-units: meters
     -
       attr-label: temp
@@ -445,11 +453,13 @@ entities:
         Water temperature
       attr-defs: NA
       data-min: 1.2
-      data-max: 27.4
+      data-max: 28.11
       data-units: degrees C
   -
     data-name: reservoir_level_obs.rds
-    data-description: Daily water level observations for the Pepacton and Cannonsville reservoirs.
+    data-description: >-
+      Daily water level observations for the Pepacton and Cannonsville reservoirs.
+    
     attributes:
     -
       attr-label: date
@@ -464,8 +474,8 @@ entities:
       attr-def: >-
         Data provider
       attr-defs: NA
-      data-min: NA
-      data-max: NA
+      data-min: 1992-04-13
+      data-max: 2021-04-18
       data-units: NA
     -
       attr-label: site_id
@@ -488,8 +498,8 @@ entities:
       attr-def: >-
         Elevation of reservoir surface
       attr-defs: NA
-      data-min: 329.184
-      data-max: 390.6561
+      data-min: 324.3255
+      data-max: 391.0523
       data-units: meters
     -
       attr-label: data_type
