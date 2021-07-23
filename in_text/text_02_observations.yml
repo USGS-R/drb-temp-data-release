@@ -74,8 +74,8 @@ entities:
       attr-def: >-
         Date of temperature measurement
       attr-defs: NA
-      data-min: 2021-04-08
-      data-max: 1908-08-02
+      data-min: 1908-08-02
+      data-max: 2021-04-08
       data-units: NA
     -
       attr-label: mean_temp_c
