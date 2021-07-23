@@ -2,18 +2,13 @@ title: >-
   Predicting water temperature in the Delaware River Basin: 2 Water temperature and flow observations
 
 abstract: >-
-  Observed water temperatures from 1980-2019 were compiled for the Delaware River Basin, US. These data were used
-  as XX. The data are formatted as a single csv (comma separated values) file with attributes corresponding to the unique combination of
-  reservoir identifier, time, and depth. Data came from a variety of sources, including the National Water Inventory System, 
-  Water Quality Portal, and the NorEaST stream water temperature database.
-  
-  Flow observation data
-  
-  Daily reservoir releases from the Pepacton, Neversink, and Cannonsville reservoirs
-  
-  Daily water temperature observations for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs
-  
-  Daily water temperature and water level observations for the Pepacton and Cannonsville reservoirs
+  Observations related to water and thermal budgets in the Delaware River Basin. Data from reservoirs in the basin include
+  reservoir characteristics (e.g., bathymetry), daily water levels, daily depth-resolved water temperature observations, 
+  and daily inflows, diversions, and releases. Data from streams in the basin include daily flow and temperature observations.  
+  Data were compiled from a variety of sources to cover the modeling period (1980-2021), including the National Water Inventory System, 
+  Water Quality Portal, EcoSHEDS stream water temperature database, ReaLSAT, and the New York Department of Environmental Conservation.
+  The data are formatted as a single csv (comma separated values) or zipped csv. 
+
 
 cross-cites:
   -
@@ -22,160 +17,40 @@ cross-cites:
       ReaLSAT: A new Reservoir and Lake Surface Area Timeseries Dataset created using machine learning and satellite imagery
     pubdate: 2020
     link: https://hdl.handle.net/11299/216044
+    
+  -
+    authors: ['XX']
+    title: >-
+      NWIS
+    pubdate: XXXX
+    link: XX
+  -
+    authors: ['XX']
+    title: >-
+      Water Quality Portal
+    pubdate: XXXX
+    link: XX
+  -
+    authors: ['XX']
+    title: >-
+      EcoSHEDS
+    pubdate: XXXX
+    link: XX
 
 entities:
   -
-    data-name: temperature_observations.zip
-    data-description: Temperature observation data with sites matched to 456 model river segments in the Delaware River Basin.
-    attributes:
-    -
-      attr-label: subseg_id
-      attr-def: >-
-        An alternative unique reach identifier.XX
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: seg_id_nat
-      attr-def: >-
-        River reach identifier from XX, which the site was matched to based on latitude and longitude.
-      attr-defs:  >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: date
-      attr-def: >-
-        Date of temperature measurement
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: mean_temp_c
-      attr-def: >-
-        Mean daily water temperature
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: degrees C
-    -
-      attr-label: min_temp_c
-      attr-def: >-
-        Minimum daily water temperature
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: degrees C
-    -
-      attr-label: max_temp_c
-      attr-def: >-
-        Maximum daily water temperature
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: degrees C
-    -
-      attr-label: site_id
-      attr-def: >-
-        Site identifier from the data provider.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-  -
-    data-name: temperature_observations_lordville.zip
-    data-description: Temperature observation data with sites matched to 36 model river segments in the Delaware River Basin.
-    attributes:
-    -
-      attr-label: subseg_id
-      attr-def: >-
-        An alternative unique reach identifier.XX
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: seg_id_nat
-      attr-def: >-
-        River reach identifier from XX, which the site was matched to based on latitude and longitude.
-      attr-defs:  >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: date
-      attr-def: >-
-        Date of temperature measurement
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: mean_temp_c
-      attr-def: >-
-        Mean daily water temperature
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: degrees C
-    -
-      attr-label: min_temp_c
-      attr-def: >-
-        Minimum daily water temperature
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: degrees C
-    -
-      attr-label: max_temp_c
-      attr-def: >-
-        Maximum daily water temperature
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: degrees C
-    -
-      attr-label: site_id
-      attr-def: >-
-        Site identifier from the data provider.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-    -
-      attr-label: in_time_holdout
-      attr-def: >-
-        Logical, is the date within the test holdout periods?
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-    -
-      attr-label: in_space_holdout
-      attr-def: >-
-        Logical, is the site a spatial holdouts?
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-    -
-      attr-label: test
-      attr-def: >-
-        Logical, should the observation be used for testing (and withheld from training)?
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-  -
-    data-name: temperature_observations_forecast_sites.csv
-    data-description: >-
-      Temperature observation for five priority forecasting sites in the Delaware River Basin. 
-      These sites were first pulled from NWIS, and remaining data gaps in the modeling period
+    data-name: temperature_observations{subset}.zip
+    data-description: >- 
+      Daily ater temperature observations with sites matched to 456 model river segments in the Delaware River Basin.
+      Files represent various subsets of similar data, and are either from all 456 segments (temperature_observations.zip), a subset of XX segments above the
+      Delaware River at Lordville, NY (temperature_observations_lordville.zip), or at the 5 priority forecast sites.
+      Water temperature observations were compiled from NWIS, EcoSHEDS, and WQP. If multiple sites were matched to a single
+      river reach and had measurements on the same day, the values were averaged.
+   
+      Temperature observation for five priority forecasting sites in the Delaware River Basin
+      were first pulled from NWIS, and remaining data gaps in the modeling period
       were filled if there was data available from other sources (WQP or EcoSHEDS).
+      
     attributes:
     -
       attr-label: subseg_id
@@ -229,76 +104,7 @@ entities:
     -
       attr-label: site_id
       attr-def: >-
-        Site identifier from the data provider.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-    -
-      attr-label: in_time_holdout
-      attr-def: >-
-        Logical, is the date within the test holdout periods?
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-    -
-      attr-label: in_space_holdout
-      attr-def: >-
-        Logical, is the site a spatial holdouts?
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-    -
-      attr-label: test
-      attr-def: >-
-        Logical, should the observation be used for testing (and withheld from training)?
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-  -
-    data-name: flow_observations.zip
-    data-description: Flow observation data with sites matched to 456 model river segments in the Delaware River Basin.
-    attributes:
-    -
-      attr-label: seg_id_nat
-      attr-def: >-
-        River reach identifier from XX, which the site was matched to based on latitude and longitude.
-      attr-defs:  >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: subseg_id
-      attr-def: >-
-        An alternative unique reach identifier.XX
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: date
-      attr-def: >-
-        Date of discharge measurement
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: discharge_cms
-      attr-def: >-
-        River flow or discharge
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: cubic meters per second
-    -
-      attr-label: site_id
-      attr-def: >-
-        Site identifier from the data provider.
+        Site identifier from the data provider. For USGS sites, this is the USGS site number with a "USGS-" prefix.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -327,149 +133,88 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA 
-  -
-    data-name: flow_observations_lordville.zip
-    data-description: Flow observation data with sites matched to 32 model river segments in the Delaware River Basin.
-    attributes:
-    -
-      attr-label: seg_id_nat
-      attr-def: >-
-        River reach identifier from XX, which the site was matched to based on latitude and longitude.
-      attr-defs:  >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: subseg_id
-      attr-def: >-
-        An alternative unique reach identifier.XX
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: date
-      attr-def: >-
-        Date of discharge measurement
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: discharge_cms
-      attr-def: >-
-        River flow or discharge
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: cubic meters per second
-    -
-      attr-label: site_id
-      attr-def: >-
-        Site identifier from the data provider.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-    -
-      attr-label: in_time_holdout
-      attr-def: >-
-        Logical, is the date within the test holdout periods?
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-    -
-      attr-label: in_space_holdout
-      attr-def: >-
-        Logical, is the site a spatial holdouts?
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-    -
-      attr-label: test
-      attr-def: >-
-        Logical, should the observation be used for testing (and withheld from training)?
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-  -
-    data-name: flow_observations_forecast_sites.csv
-    data-description: Flow observation data for 5 sites that will be used in daily forecasts.
-    attributes:
-    -
-      attr-label: seg_id_nat
-      attr-def: >-
-        River reach identifier from XX, which the site was matched to based on latitude and longitude.
-      attr-defs:  >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: subseg_id
-      attr-def: >-
-        An alternative unique reach identifier.XX
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: date
-      attr-def: >-
-        Date of discharge measurement
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: discharge_cms
-      attr-def: >-
-        River flow or discharge
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: cubic meters per second
-    -
-      attr-label: site_id
-      attr-def: >-
-        Site identifier from the data provider.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-    -
-      attr-label: in_time_holdout
-      attr-def: >-
-        Logical, is the date within the test holdout periods?
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-    -
-      attr-label: in_space_holdout
-      attr-def: >-
-        Logical, is the site a spatial holdouts?
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-    -
-      attr-label: test
-      attr-def: >-
-        Logical, should the observation be used for testing (and withheld from training)?
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
-  -
-    data-name: reservoir_releases.csv
+ -
+    data-name: flow_observations{subset}.zip
     data-description: >-
-      Daily reservoir releases from the Pepacton, Neversink, and Cannonsville reservoirs.
-      Reservoir release data was provided by the New York City Department of Environmental Protection. 
+      Daily mean flow observation data with sites matched to 456 model river segments in the Delaware River Basin.
+      Data were compiled from the National Water Information System (NWIS). Three subsets of similar data are provided,
+      including sites from all 456 segments (flow_observations.zip), sites from a subset of XX segments above 
+      the Delaware River at Lordville, NY (flow_observations_lordville.zip), or the 5 priority forecast sites. 
+    attributes:
+    -
+      attr-label: seg_id_nat
+      attr-def: >-
+        River reach identifier from XX, which the site was matched to based on latitude and longitude.
+      attr-defs:  >-
+        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: subseg_id
+      attr-def: >-
+        An alternative unique reach identifier.XX
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: date
+      attr-def: >-
+        Date of discharge measurement
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -
+      attr-label: discharge_cms
+      attr-def: >-
+        River flow or discharge
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: cubic meters per second
+    -
+      attr-label: site_id
+      attr-def: >-
+        Site identifier from the data provider.
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+    -  
+      attr-label: in_time_holdout
+      attr-def: >-
+        Logical, is the date within the test holdout periods?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+    -
+      attr-label: in_space_holdout
+      attr-def: >-
+        Logical, is the site a spatial holdouts?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+    -
+      attr-label: test
+      attr-def: >-
+        Logical, should the observation be used for testing (and withheld from training)?
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA 
+
+  -
+    data-name: reservoir_releases_by_type{_subset}.csv
+    data-description: >-
+      Daily reservoir releases from the Pepacton, Neversink, and Cannonsville reservoirs (reservoir_releases_by_type.csv) or
+      from only those reservoirs above the Delaware River at Lordville, NY (reservoir_releases_by_type_lordville.zip).
+      Reservoir release data was provided by the New York City Department of Environmental Protection (NYC DEP). 
+      Gaps in the NYC DEP data were filled by extracting data from the U.S. Geological Survey Office of the Delare River Basin 
+      reports that can be found at https://webapps.usgs.gov/odrm/data/data.html. 
     attributes:
     -
       attr-label: date
@@ -482,7 +227,7 @@ entities:
     -
       attr-label: reservoir
       attr-def: >-
-        Name of reservoir.
+        Name of reservoir, either Cannonsville, Pepacton, or Neversink.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -490,30 +235,36 @@ entities:
     -
       attr-label: release_type
       attr-def: >-
-        Type of release, including mandated releases ("Direct"), conservation releases ("Conserv"), or spillway releases ("Spill").
-      attr-defs: NA
+        Type of release, including directed releases ("Direct"), conservation releases ("Conserv"), or spillway releases ("Spill").
+      attr-defs: this data release
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: release_volume_cms
       attr-def: >-
-        Volume of the reservoir release.
+        Daily volume of the reservoir release.
       attr-defs: NA
       data-min: NA
       data-max: NA
-      data-units: cubic meters second
+      data-units: cubic meters per second
     -
       attr-label: GRAND_ID
       attr-def: >-
         Unique reservoir identifier.
-      attr-defs: NA
+      attr-defs: Global Reservoir and Dam Database
       data-min: NA
       data-max: NA
       data-units: NA
   -
-    data-name: reservoir_releases_lordville.csv
-    data-description: Daily reservoir releases from the Pepacton and Cannonsville reservoirs.
+    data-name: reservoir_releases_total.csv
+    data-description: >- 
+      Daily total reservoir releases from the Pepacton, Neversink, and Cannonsville reservoirs.
+      Reservoir release data was provided by the New York City Department of Environmental Protection (NYC DEP). 
+      Gaps in the NYC DEP data were filled by extracting data from the U.S. Geological Survey Office of the Delare River Basin 
+      reports that can be found at https://webapps.usgs.gov/odrm/data/data.html. Release values are total release volumes,
+      such that the different release types from file reservoir_releases_by_type.csv were summed by reservoir-date.
+    
     attributes:
     -
       attr-label: date
@@ -527,14 +278,6 @@ entities:
       attr-label: reservoir
       attr-def: >-
         Name of reservoir.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: release_type
-      attr-def: >-
-        Type of release, including mandated releases ("Direct"), conservation releases ("Conserv"), or spillway releases ("Spill").
       attr-defs: NA
       data-min: NA
       data-max: NA

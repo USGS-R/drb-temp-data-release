@@ -18,9 +18,9 @@ targets:
       - out_data/reservoir_releases.csv
       - out_data/reservoir_releases_lordville.csv
       - out_data/reservoir_realsat_monthly_surface_area.csv
-      - out_data/reservoir_io_obs.feather
-      - out_data/reservoir_temp_obs.rds
-      - out_data/reservoir_level_obs.rds
+      - out_data/reservoir_io_obs.csv
+      - out_data/reservoir_temp_obs.csv
+      - out_data/reservoir_level_obs.csv
 
   ##### Transfer of files from delaware-model-prep #####
   # daily flow and temperature data
@@ -58,23 +58,23 @@ targets:
   out_data/reservoir_realsat_monthly_surface_area.csv:
     command: file.copy(from = '../delaware-model-prep/2_observations/out/realsat_monthly_surface_area.csv', to = target_name)
   
-  out_data/reservoir_io_obs.feather:
+  out_data/reservoir_io_obs.csv:
     command: copy_filter_feather(
-      out_feather = target_name,
+      out_csv = target_name,
       in_feather = '../delaware-model-prep/9_collaborator_data/res/res_io_obs.feather',
       site_ids = reservoir_modeling_site_ids)
   
   ##### Transfer and filtering of files of file from lake-temperature-model-prep #####
-  out_data/reservoir_temp_obs.rds:
+  out_data/reservoir_temp_obs.csv:
     command: fetch_filter_tibble(
-      out_rds = target_name,
+      out_csv = target_name,
       in_ind = '../lake-temperature-model-prep/7b_temp_merge/out/drb_daily_reservoir_temps.rds.ind',
       in_repo = I('../lake-temperature-model-prep/'),
       site_ids = reservoir_modeling_site_ids)
     
-  out_data/reservoir_level_nwis.rds:
+  out_data/reservoir_level_nwis.csv:
     command: fetch_filter_tibble(
-      out_rds = target_name,
+      out_csv = target_name,
       in_ind = '../lake-temperature-model-prep/7a_nwis_munge/out/drb_reservoirs_waterlevels_munged.rds.ind',
       in_repo = I('../lake-temperature-model-prep/'),
       site_ids = reservoir_modeling_site_ids)
@@ -93,10 +93,10 @@ targets:
       in_repo = I('../delaware-model-prep/'),
       xwalk = I(c('Cannonsville' = 'nhdhr_120022743', 'Pepacton' = 'nhdhr_151957878')))
       
-  out_data/reservoir_level_obs.rds:
+  out_data/reservoir_level_obs.csv:
     command: combine_level_sources(
-      out_rds = target_name,
-      nwis_levels = 'out_data/reservoir_level_nwis.rds',
+      out_csv = target_name,
+      nwis_levels = 'out_data/reservoir_level_nwis.csv',
       nyc_levels = 'out_data/reservoir_level_nycdep.rds',
       hist_levels = 'out_data/reservoir_level_usgs_historical.rds')
       
