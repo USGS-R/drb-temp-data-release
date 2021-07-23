@@ -13,11 +13,12 @@ cross-cites:
     pubdate: XX
     link: XX
   -
-    authors: ['XX']
+    authors: ['Kenneth E. Mitchell','Dag Lohmann','Paul R. Houser','Eric F. Wood','John C. Schaake','Alan Robock','Brian A. Cosgrove','Justin Sheffield','Qingyun Duan','Lifeng Luo','R. Wayne Higgins','Rachel T. Pinker','J. Dan Tarpley','Dennis P. Lettenmaier','Curtis H. Marshall','Jared K. Entin','Ming Pan','Wei Shi','Victor Koren','Jesse Meng','Bruce H. Ramsay','Andrew A. Bailey']
     title: >-
-      NLDAS XX
-    pubdate: XX
-    link: XX
+      The multi-institution North American Land Data Assimilation System (NLDAS): Utilizing multiple GCIP products and partners in a continental distributed hydrological modeling system
+    pubdate: 2004
+    form: publication
+    link: http://dx.doi.org/10.1029/2003JD003823
   -
     authors: ['XX']
     title: >-
