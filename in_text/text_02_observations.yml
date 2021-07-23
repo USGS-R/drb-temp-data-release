@@ -211,7 +211,7 @@ entities:
     data-name: reservoir_releases_by_type{_subset}.csv
     data-description: >-
       Daily reservoir releases from the Pepacton, Neversink, and Cannonsville reservoirs (reservoir_releases_by_type.csv) or
-      from only those reservoirs above the Delaware River at Lordville, NY (reservoir_releases_by_type_lordville.zip).
+      from only those reservoirs above the Delaware River at Lordville, NY (reservoir_releases_by_type_lordville.csv).
       Reservoir release data was provided by the New York City Department of Environmental Protection (NYC DEP). 
       Gaps in the NYC DEP data were filled by extracting data from the U.S. Geological Survey Office of the Delare River Basin 
       reports that can be found at https://webapps.usgs.gov/odrm/data/data.html. 
