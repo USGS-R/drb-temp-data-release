@@ -18,7 +18,7 @@ fetch_filter_res_polygons <- function(out_rds, in_ind, in_repo, site_ids) {
   # return object rather than writing file as other functions in this .R file do
 }
 
-fetch_filter_tibble <- function(out_rds, in_ind, in_repo, site_ids) {
+fetch_filter_tibble <- function(out_csv, in_ind, in_repo, site_ids) {
   # pull the data file down to that other repo
   gd_get_elsewhere(gsub(in_repo, '', in_ind, fixed=TRUE), in_repo)
   
@@ -26,7 +26,7 @@ fetch_filter_tibble <- function(out_rds, in_ind, in_repo, site_ids) {
   as_data_file(in_ind) %>%
     readRDS() %>%
     filter(site_id %in% !!site_ids) %>%
-    saveRDS(out_rds)
+    readr::write_csv(out_csv)
 }
 
 fetch_filter_nycdep <- function(out_rds, in_ind, in_repo, site_ids) {
@@ -111,10 +111,10 @@ fetch_meteo_files <- function(out_yml, nml_rds) {
 }
 
 #' Read a feather file from another repo, filter it to the specified site_ids, and write a copy locally. This function blindly assumes the source file is up to date in the other repo, no checking
-copy_filter_feather <- function(out_feather, in_feather, site_ids) {
+copy_filter_feather <- function(out_csv, in_feather, site_ids) {
   
   # read and filter to just the specified sites
   arrow::read_feather(in_feather) %>%
     filter(res_id %in% site_ids) %>%
-    arrow::write_feather(out_feather)
+    readr::write_csv(out_csv)
 }
