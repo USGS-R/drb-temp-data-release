@@ -2,7 +2,8 @@ title: >-
   Predicting water temperature in the Delaware River Basin: 4 Model inputs
 
 abstract: >-
-  This dataset includes model inputs including gridded weather data, a stream network distance matrix, and stream reach attributes/metadata.
+  This dataset includes model inputs including gridded weather data, a stream network distance matrix, 
+  stream reach attributes and metadata, and reservoir characteristics.
   
 cross-cites:
   -
@@ -29,6 +30,12 @@ cross-cites:
       Geospatial Fabric for National Hydrologic Modeling XX
     pubdate: XX
     link: http://dx.doi.org/doi:10.5066/F7542KMD
+  -
+    authors: ['XX']
+    title: >-
+      Sciencebase item with reservoir bathy data XX
+    pubdate: XX
+    link: XX
     
 entities:
   -
