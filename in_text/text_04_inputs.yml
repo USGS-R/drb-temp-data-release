@@ -2,9 +2,9 @@ title: >-
   Predicting water temperature in the Delaware River Basin: 4 Model inputs
 
 abstract: >-
-  This dataset includes model inputs including gridded weather data, a stream network distance matrix, 
+  This dataset includes model inputs including gridded weather data, a stream network distance matrix,
   stream reach attributes and metadata, and reservoir characteristics.
-  
+
 cross-cites:
   -
     authors: ['XX']
@@ -51,7 +51,7 @@ cross-cites:
       Sciencebase item with reservoir bathy data XX
     pubdate: XX
     link: XX
-    
+
 entities:
   -
     data-name: distance_matrix.csv
@@ -121,14 +121,14 @@ entities:
       attr-def: >-
         Classification of river reaches relative to reservoirs.
       attr-defs: >-
-        reach = the river reach is > 2 segments away from a reservoir; 
-        upstream of reservoir (2) = reach is two segments above a reservoir; 
-        upstream of reservoir (1) = reach is one segment above a reservoir; 
-        downstream of reservoir (2) = reach is two segments below a reservoir; 
-        downstream of reservoir (1) = reach is one segment below a reservoir; 
-        reservoir_inlet_reach = the reach starting point is above a reservoir and the endpoint is within a reservoir; 
-        reservoir_outlet_reach = the reach starting point is within a reservoir and the endpoint is downstream of a reservoir; 
-        within_reservoir = the reach is fully contained within a reservoir (both start and end points are within a reservoir); 
+        reach = the river reach is > 2 segments away from a reservoir;
+        upstream of reservoir (2) = reach is two segments above a reservoir;
+        upstream of reservoir (1) = reach is one segment above a reservoir;
+        downstream of reservoir (2) = reach is two segments below a reservoir;
+        downstream of reservoir (1) = reach is one segment below a reservoir;
+        reservoir_inlet_reach = the reach starting point is above a reservoir and the endpoint is within a reservoir;
+        reservoir_outlet_reach = the reach starting point is within a reservoir and the endpoint is downstream of a reservoir;
+        within_reservoir = the reach is fully contained within a reservoir (both start and end points are within a reservoir);
         contains_reservoir = a reservoir is fully contained within the reach
       data-min: NA
       data-max: NA
@@ -207,14 +207,14 @@ entities:
       attr-def: >-
         Classification of river reaches relative to reservoirs.
       attr-defs: >-
-        reach = the river reach is > 2 segments away from a reservoir; 
-        upstream of reservoir (2) = reach is two segments above a reservoir; 
-        upstream of reservoir (1) = reach is one segment above a reservoir; 
-        downstream of reservoir (2) = reach is two segments below a reservoir; 
-        downstream of reservoir (1) = reach is one segment below a reservoir; 
-        reservoir_inlet_reach = the reach starting point is above a reservoir and the endpoint is within a reservoir; 
-        reservoir_outlet_reach = the reach starting point is within a reservoir and the endpoint is downstream of a reservoir; 
-        within_reservoir = the reach is fully contained within a reservoir (both start and end points are within a reservoir); 
+        reach = the river reach is > 2 segments away from a reservoir;
+        upstream of reservoir (2) = reach is two segments above a reservoir;
+        upstream of reservoir (1) = reach is one segment above a reservoir;
+        downstream of reservoir (2) = reach is two segments below a reservoir;
+        downstream of reservoir (1) = reach is one segment below a reservoir;
+        reservoir_inlet_reach = the reach starting point is above a reservoir and the endpoint is within a reservoir;
+        reservoir_outlet_reach = the reach starting point is within a reservoir and the endpoint is downstream of a reservoir;
+        within_reservoir = the reach is fully contained within a reservoir (both start and end points are within a reservoir);
         contains_reservoir = a reservoir is fully contained within the reach
       data-min: NA
       data-max: NA
@@ -282,7 +282,7 @@ entities:
     -
       attr-label: AREA_SKM
       attr-def: >-
-        Reservoir surface area. 
+        Reservoir surface area.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -290,7 +290,7 @@ entities:
     -
       attr-label: RES_NAME
       attr-def: >-
-        Reservoir name. 
+        Reservoir name.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -298,7 +298,7 @@ entities:
     -
       attr-label: DAM_NAME
       attr-def: >-
-        Dam name. 
+        Dam name.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -306,7 +306,7 @@ entities:
     -
       attr-label: ALT_NAME
       attr-def: >-
-        Alternative reservoir name. 
+        Alternative reservoir name.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -314,7 +314,7 @@ entities:
     -
       attr-label: RIVER
       attr-def: >-
-        The river name on which the reservoir and dam is situated. 
+        The river name on which the reservoir and dam is situated.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -322,7 +322,7 @@ entities:
     -
       attr-label: ALT_RIVER
       attr-def: >-
-        The alternative river name on which the reservoir and dam is situated. 
+        The alternative river name on which the reservoir and dam is situated.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -330,7 +330,7 @@ entities:
     -
       attr-label: YEAR
       attr-def: >-
-        Year the dam was built. 
+        Year the dam was built.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -338,7 +338,7 @@ entities:
     -
       attr-label: DAM_HGT_M
       attr-def: >-
-        Height of the dam. 
+        Height of the dam.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -346,7 +346,7 @@ entities:
     -
       attr-label: DAM_LEN_M
       attr-def: >-
-        The length of the dam (perpedicular to the river). 
+        The length of the dam (perpedicular to the river).
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -354,7 +354,7 @@ entities:
     -
       attr-label: DAM_LEN_M
       attr-def: >-
-        The length of the dam (perpedicular to the river). 
+        The length of the dam (perpedicular to the river).
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -362,7 +362,7 @@ entities:
     -
       attr-label: DEPTH_M
       attr-def: >-
-        Average depth of the reservoir. 
+        Average depth of the reservoir.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -370,7 +370,7 @@ entities:
     -
       attr-label: ELEV_MASL
       attr-def: >-
-        Elevation of reservoir surface in meters above sea level. 
+        Elevation of reservoir surface in meters above sea level.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -378,7 +378,7 @@ entities:
     -
       attr-label: CATCH_SKM
       attr-def: >-
-        Area of upstream catchment draining into the reservoir. 
+        Area of upstream catchment draining into the reservoir.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -398,7 +398,7 @@ entities:
     -
       attr-label: AREA_SKM
       attr-def: >-
-        Reservoir surface area. 
+        Reservoir surface area.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -406,7 +406,7 @@ entities:
     -
       attr-label: RES_NAME
       attr-def: >-
-        Reservoir name. 
+        Reservoir name.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -414,7 +414,7 @@ entities:
     -
       attr-label: DAM_NAME
       attr-def: >-
-        Dam name. 
+        Dam name.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -422,7 +422,7 @@ entities:
     -
       attr-label: ALT_NAME
       attr-def: >-
-        Alternative reservoir name. 
+        Alternative reservoir name.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -430,7 +430,7 @@ entities:
     -
       attr-label: RIVER
       attr-def: >-
-        The river name on which the reservoir and dam is situated. 
+        The river name on which the reservoir and dam is situated.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -438,7 +438,7 @@ entities:
     -
       attr-label: ALT_RIVER
       attr-def: >-
-        The alternative river name on which the reservoir and dam is situated. 
+        The alternative river name on which the reservoir and dam is situated.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -446,7 +446,7 @@ entities:
     -
       attr-label: YEAR
       attr-def: >-
-        Year the dam was built. 
+        Year the dam was built.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -454,7 +454,7 @@ entities:
     -
       attr-label: DAM_HGT_M
       attr-def: >-
-        Height of the dam. 
+        Height of the dam.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -462,7 +462,7 @@ entities:
     -
       attr-label: DAM_LEN_M
       attr-def: >-
-        The length of the dam (perpedicular to the river). 
+        The length of the dam (perpedicular to the river).
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -470,7 +470,7 @@ entities:
     -
       attr-label: DAM_LEN_M
       attr-def: >-
-        The length of the dam (perpedicular to the river). 
+        The length of the dam (perpedicular to the river).
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -478,7 +478,7 @@ entities:
     -
       attr-label: DEPTH_M
       attr-def: >-
-        Average depth of the reservoir. 
+        Average depth of the reservoir.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -486,7 +486,7 @@ entities:
     -
       attr-label: ELEV_MASL
       attr-def: >-
-        Elevation of reservoir surface in meters above sea level. 
+        Elevation of reservoir surface in meters above sea level.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -494,7 +494,7 @@ entities:
     -
       attr-label: CATCH_SKM
       attr-def: >-
-        Area of upstream catchment draining into the reservoir. 
+        Area of upstream catchment draining into the reservoir.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -520,7 +520,7 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
-      
+
     -
       attr-label: date
       attr-def: >-
@@ -563,21 +563,21 @@ entities:
     -
       attr-label: seg_shade
       attr-def: >-
-        Area-weighted average shade fraction for each segment      
+        Area-weighted average shade fraction for each segment
       data-min: NA
       data-max: NA
       data-units: decimal fraction
     -
       attr-label: seg_tave_air
       attr-def: >-
-         Area-weighted average air temperature for each segment from HRUs contributing flow to the segment    
+         Area-weighted average air temperature for each segment from HRUs contributing flow to the segment
       data-min: NA
       data-max: NA
       data-units: degrees Celsius
     -
       attr-label: seg_tave_gw
       attr-def: >-
-        Groundwater temperature.      
+        Groundwater temperature.
       data-min: NA
       data-max: NA
       data-units: degrees Celsius
@@ -625,7 +625,7 @@ entities:
     -
       attr-label: seginc_gwflow
       attr-def: >-
-          Area-weighted average groundwater discharge for each segment from HRUs contributing flow to the segment.   
+          Area-weighted average groundwater discharge for each segment from HRUs contributing flow to the segment.
       data-min: NA
       data-max: NA
       data-units: cubic meters per second
@@ -636,42 +636,42 @@ entities:
       data-min: NA
       data-max: NA
       data-units: meters
-    -  
+    -
       attr-label: seginc_sroff
       attr-def: >-
         Area-weighted average surface runoff for each segment from HRUs contributing flow to the segment.
       data-min: NA
       data-max: NA
       data-units: cubic meters per second
-    -  
+    -
       attr-label: seginc_ssflow
       attr-def: >-
         Area-weighted average interflow for each segment from HRUs contributing flow to the segment.
       data-min: NA
       data-max: NA
       data-units: cubic meters per second
-    -  
+    -
       attr-label: seginc_swrad
       attr-def: >-
         Area-weighted average solar radiation for each segment from HRUs contributing flow to the segment.
       data-min: NA
       data-max: NA
       data-units: watts per square meter
-    -  
+    -
       attr-label: seg_length
       attr-def: >-
         Length of stream segment.
       data-min: NA
       data-max: NA
       data-units: meters
-    -  
+    -
       attr-label: seg_slope
       attr-def: >-
         Stream segment slope.
       data-min: NA
       data-max: NA
       data-units: NA
-    -  
+    -
       attr-label: seg_elev
       attr-def: >-
         Stream segment average elevation above mean sea level.
@@ -699,7 +699,7 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
-      
+
     -
       attr-label: date
       attr-def: >-
@@ -742,21 +742,21 @@ entities:
     -
       attr-label: seg_shade
       attr-def: >-
-        Area-weighted average shade fraction for each segment      
+        Area-weighted average shade fraction for each segment
       data-min: NA
       data-max: NA
       data-units: decimal fraction
     -
       attr-label: seg_tave_air
       attr-def: >-
-         Area-weighted average air temperature for each segment from HRUs contributing flow to the segment    
+         Area-weighted average air temperature for each segment from HRUs contributing flow to the segment
       data-min: NA
       data-max: NA
       data-units: degrees Celsius
     -
       attr-label: seg_tave_gw
       attr-def: >-
-        Groundwater temperature.      
+        Groundwater temperature.
       data-min: NA
       data-max: NA
       data-units: degrees Celsius
@@ -804,7 +804,7 @@ entities:
     -
       attr-label: seginc_gwflow
       attr-def: >-
-          Area-weighted average groundwater discharge for each segment from HRUs contributing flow to the segment.   
+          Area-weighted average groundwater discharge for each segment from HRUs contributing flow to the segment.
       data-min: NA
       data-max: NA
       data-units: cubic meters per second
@@ -815,42 +815,42 @@ entities:
       data-min: NA
       data-max: NA
       data-units: meters
-    -  
+    -
       attr-label: seginc_sroff
       attr-def: >-
         Area-weighted average surface runoff for each segment from HRUs contributing flow to the segment.
       data-min: NA
       data-max: NA
       data-units: cubic meters per second
-    -  
+    -
       attr-label: seginc_ssflow
       attr-def: >-
         Area-weighted average interflow for each segment from HRUs contributing flow to the segment.
       data-min: NA
       data-max: NA
       data-units: cubic meters per second
-    -  
+    -
       attr-label: seginc_swrad
       attr-def: >-
         Area-weighted average solar radiation for each segment from HRUs contributing flow to the segment.
       data-min: NA
       data-max: NA
       data-units: watts per square meter
-    -  
+    -
       attr-label: seg_length
       attr-def: >-
         Length of stream segment.
       data-min: NA
       data-max: NA
       data-units: meters
-    -  
+    -
       attr-label: seg_slope
       attr-def: >-
         Stream segment slope.
       data-min: NA
       data-max: NA
       data-units: NA
-    -  
+    -
       attr-label: seg_elev
       attr-def: >-
         Stream segment average elevation above mean sea level.
@@ -993,7 +993,8 @@ entities:
     data-name: NLDAS_time[0.367700]_x[{x}]_y[{y}].csv
     data-description: >-
       A csv file for each reservoir with input meteorological data. Files are named "NLDAS_time[0.367700]_x{x}_y{y}.csv" where the x and y locations are longitude and latitude indices from NLDAS
-      of the individual meteorological data cell (data are from Mitchell et al. 2004). The filename of the NLDAS file associated with each reservoir is listed in reservoir_nml_{}.json within the 3_config child item.
+      of the individual meteorological data cell (data are from Mitchell et al. 2004).
+      The filename of the NLDAS file associated with each reservoir is listed in the "meteo_fl" fields in reservoir_nml_values.json, which is in the 3_config child item.
     attributes:
     -
       attr-label: time

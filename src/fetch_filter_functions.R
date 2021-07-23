@@ -9,7 +9,7 @@
 fetch_filter_res_polygons <- function(out_rds, in_ind, in_repo, site_ids) {
   # pull the data file down to that other repo
   gd_get_elsewhere(gsub(in_repo, '', in_ind, fixed=TRUE), in_repo)
-  
+
   # read and filter to just the specified sites
   as_data_file(in_ind) %>%
     readRDS() %>%
@@ -21,7 +21,7 @@ fetch_filter_res_polygons <- function(out_rds, in_ind, in_repo, site_ids) {
 fetch_filter_tibble <- function(out_csv, in_ind, in_repo, site_ids) {
   # pull the data file down to that other repo
   gd_get_elsewhere(gsub(in_repo, '', in_ind, fixed=TRUE), in_repo)
-  
+
   # read and filter to just the specified sites
   as_data_file(in_ind) %>%
     readRDS() %>%
@@ -32,12 +32,12 @@ fetch_filter_tibble <- function(out_csv, in_ind, in_repo, site_ids) {
 fetch_filter_nycdep <- function(out_rds, in_ind, in_repo, site_ids) {
   # pull the data file down to that other repo
   gd_get_elsewhere(gsub(in_repo, '', in_ind, fixed=TRUE), in_repo)
-  
+
   # read and filter to just the specified sites
   nycdep_data <- as_data_file(in_ind) %>%
     readRDS() %>%
     filter(site_id %in% !!site_ids)
-  
+
   # filter out erroneous Pepacton observation and save as rds
   nycdep_data <- nycdep_data[!(nycdep_data$site_id=="nhdhr_151957878" & nycdep_data$date=='1999-06-21'),] %>%
     saveRDS(out_rds)
@@ -57,15 +57,16 @@ fetch_filter_historical <- function(out_rds, in_ind, in_repo, xwalk) {
     saveRDS(out_rds)
 }
 
-fetch_filter_nml <- function(out_rds, in_ind, in_repo, site_ids) {
+fetch_filter_nml <- function(out_json, in_ind, in_repo, site_ids) {
   # pull the data file down to that other repo
-  gd_get_elsewhere(gsub(in_repo, '', in_ind, fixed=TRUE), in_repo)
-  
+  # gd_get_elsewhere(gsub(in_repo, '', in_ind, fixed=TRUE), in_repo)
+
   # read and filter to just the specified sites
   as_data_file(in_ind) %>%
     readRDS() %>%
     .[site_ids] %>%
-    saveRDS(out_rds)
+    RJSONIO::toJSON(pretty = TRUE) %>%
+    write(out_json)
 }
 
 confirm_meteo_staged <- function(csv_file) {
@@ -93,7 +94,7 @@ fetch_meteo_files <- function(out_yml, nml_rds) {
     ),
     add_complete = FALSE
   )
-  
+
   task_yml <- 'meteo_tasks.yml'
   create_task_makefile(
     task_plan = task_plan,
@@ -103,16 +104,15 @@ fetch_meteo_files <- function(out_yml, nml_rds) {
     include = c(),
     packages = 'scipiper',
     sources = c('src/fetch_filter_functions.R'))
-  
+
   loop_tasks(task_plan, task_yml, num_tries=1)
-  
+
   file.remove(task_yml)
-  
+
 }
 
 #' Read a feather file from another repo, filter it to the specified site_ids, and write a copy locally. This function blindly assumes the source file is up to date in the other repo, no checking
 copy_filter_feather <- function(out_csv, in_feather, site_ids) {
-  
   # read and filter to just the specified sites
   arrow::read_feather(in_feather) %>%
     filter(res_id %in% site_ids) %>%

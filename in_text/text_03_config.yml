@@ -3,7 +3,7 @@ title: >-
 
 abstract: >-
   This dataset includes Model parameters and metadata used to configure models.
-  
+
 cross-cites:
   -
     authors: ['Matthew R. Hipsey', 'Louise C. Bruce', 'Casper Boon', 'Brendan Busch', 'Cayelan C. Carey', 'David P. Hamilton', 'Paul C. Hanson', 'Jordan S. Read', 'Eduardo de Sousa', 'Michael Weber', 'Luke A. Winslow']
@@ -24,11 +24,11 @@ cross-cites:
       NLDAS XX
     pubdate: XX
     link: XX
-    
+
 entities:
   -
-    data-name: reservoir_nml_list.rds
-    data-description: list of reservoir parameters for input to GLM
+    data-name: reservoir_nml_values.json
+    data-description: JSON file containing a nested list of reservoir parameters for input to GLM. Top-level list elements are reservoirs, and fields within those elements are given as attributes below.
     attributes:
     -
       attr-label: site-id
@@ -136,7 +136,7 @@ entities:
         https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
       data-min: NA
       data-max: NA
-      data-units: 
+      data-units:
     -
       attr-label: H
       attr-def: >-
@@ -145,8 +145,20 @@ entities:
         https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
       data-min: NA
       data-max: NA
-      data-units: 
-    
+      data-units:
+  -
+    data-name: reservoir_nml_files.zip
+    data-description: zip file of complete .nml files, with calculated and calibrated parameters, as input to the GLM runs that were used to produce the DWALLIN dataset.
+    attributes:
+    -
+      attr-label: glm3_cal_nhdhr_{}.nml
+      attr-def:  >-
+        Configuration file that specifies a GLM run. Formatting of the file, and values within each file, are as specified in the GLM documentation at https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
+
 build-environment: Multiple computer systems were used to generate these data, including XX. The open source languages R and Python was used on all systems, as well as XX.
 
 process-date: !expr format(Sys.time(),'%Y%m%d')
@@ -157,4 +169,4 @@ data-name: Model configuration details
 data-description: >-
   Model configurations for running the General Lake Model (Hipsey et al. 2019) version 3.1 for each lake.
 
-file-format: rds files.
+file-format: JSON and zip files

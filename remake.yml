@@ -70,17 +70,17 @@ targets:
     command: sb_replace_files(sbid_01_spatial,
       "out_data/01_spatial_network.zip",
       "out_data/01_reservoir_polygons.zip")
-  
+
   #01_spatial_sb_data:
    # command: sb_replace_files(sbid_01_spatial,
     #  "out_data/lake_metadata.csv")
-  
+
   02_observations_sb_xml:
     command: sb_render_post_xml(sbid_02_observations,
       "in_text/text_SHARED.yml",
       "in_text/text_02_observations.yml",
       river_metadata)
-      
+
   02_observations_sb_data:
     command: sb_replace_files(sbid_02_observations,
       "out_data/temperature_observations.zip",
@@ -102,10 +102,11 @@ targets:
       "in_text/text_SHARED.yml",
       "in_text/text_03_config.yml",
       reservoir_metadata)
-  
+
   03_config_sb_data:
     command: sb_replace_files(sbid_03_config,
-      "out_data/reservoir_nml_list.rds")
+      "out_data/reservoir_nml_values.json",
+      "out_data/reservoir_nml_files.zip")
 
   04_inputs_sb_xml:
     command: sb_render_post_xml(sbid_04_inputs,
@@ -124,7 +125,7 @@ targets:
       "out_data/reach_attributes.csv",
       "out_data/reach_attributes_lordville.csv",
       "out_data/reservoir_interpolated_daily_water_budget_components.csv")
-      
+
   04_inputs_sb_meteo:
     command: sb_replace_files(sbid_04_inputs,
       "in_data/NLDAS_time[0.367700]_x[397]_y[136].csv",
@@ -148,7 +149,7 @@ targets:
   #05_predictions_sb_sntemp:
    # command: sb_replace_files(sbid_05_predictions,
     #  file_hash = "out/5_pb0_predict_zips.yml")
-  
+
   #06_evaluation_sb_xml:
    # command: sb_render_post_xml(sb_id_06_evaluation,
     #  "in_text/text_SHARED.yml",
