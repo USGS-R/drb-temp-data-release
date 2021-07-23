@@ -123,8 +123,8 @@ sf_to_zip <- function(zip_filename, sf_object, layer_name){
 }
 
 # bring together various water level sources
-combine_level_sources <- function(out_rds, nwis_levels, nyc_levels, hist_levels) {
-  nwis <- readRDS(nwis_levels)
+combine_level_sources <- function(out_csv, nwis_levels, nyc_levels, hist_levels) {
+  nwis <- readr::read_csv(nwis_levels)
   nyc <- readRDS(nyc_levels)
   hist <- readRDS(hist_levels) %>% 
     mutate(date = as.Date(date)) %>%
@@ -160,6 +160,6 @@ combine_level_sources <- function(out_rds, nwis_levels, nyc_levels, hist_levels)
     mutate(surface_elevation_m = na.approx(surface_elevation_m)) %>%
     mutate(data_type = ifelse(is.na(data_type), 'daily interpolated', data_type))
     
-  saveRDS(out_dat, out_rds)
+  readr::write_csv(out_dat, out_csv)
   
   }

@@ -85,14 +85,17 @@ targets:
     command: sb_replace_files(sbid_02_observations,
       "out_data/temperature_observations.zip",
       "out_data/temperature_observations_lordville.zip",
+      "out_data/temperature_observations_forecast_sites.csv",
       "out_data/flow_observations.zip",
       "out_data/flow_observations_lordville.zip",
-      "out_data/reservoir_releases.csv",
-      "out_data/reservoir_releases_lordville.csv",
+      "out_data/flow_observations_forecast_sites.csv",
+      "out_data/reservoir_releases_total.csv",
+      "out_data/reservoir_releases_by_type.csv",
+      "out_data/reservoir_releases_by_type_lordville.csv",
       "out_data/reservoir_realsat_monthly_surface_area.csv",
-      "out_data/reservoir_io_obs.feather",
-      "out_data/reservoir_temp_obs.rds",
-      "out_data/reservoir_level_obs.rds")
+      "out_data/reservoir_io_obs.csv",
+      "out_data/reservoir_temp_obs.csv",
+      "out_data/reservoir_level_obs.csv")
 
   03_config_sb_xml:
     command: sb_render_post_xml(sbid_03_config,
@@ -136,10 +139,11 @@ targets:
 
   05_predictions_sb_data:
     command: sb_replace_files(sbid_05_predictions,
-      "out_data/reservoir_io_sntemp.feather",
+      "out_data/reservoir_io_sntemp.csv",
       "out_data/reservoir_downstream_preds.csv",
       "out_data/reservoir_outlet_depth_preds.csv",
-      "out_data/dwallin_stream_preds.csv")
+      "out_data/dwallin_stream_preds.csv", 
+      "out_data/forecast[2021-04-16_2021-07-16]_files.zip")
 
   #05_predictions_sb_sntemp:
    # command: sb_replace_files(sbid_05_predictions,
