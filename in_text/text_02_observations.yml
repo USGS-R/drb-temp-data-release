@@ -47,7 +47,7 @@ entities:
       Water temperature observations were compiled from NWIS, EcoSHEDS, and WQP. If multiple sites were matched to a single
       river reach and had measurements on the same day, the values were averaged.
    
-      Temperature observation for five priority forecasting sites in the Delaware River Basin
+      Temperature observations for five priority forecasting sites in the Delaware River Basin
       were first pulled from NWIS, and remaining data gaps in the modeling period
       were filled if there was data available from other sources (WQP or EcoSHEDS).
       
