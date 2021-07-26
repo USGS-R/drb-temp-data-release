@@ -1067,7 +1067,7 @@ entities:
     data-description: >-
       NOAA Global Ensemble Forecasting System v12.0 0.25-degree operational model output for the 00 UTC forecast cycle from 2021-04-15 to 2021-07-16.
       These data are aggregated to the daily scale and NOAA GEFS grid cells are matched to the centroid of the target stream segment. The target stream segment
-      seg_id_nat (National Geospatial Fabric segment code) is used as the location identifier in these data.
+      seg_id_nat (National Geospatial Fabric segment code) is used as the location identifier for these data.
     attributes:
     -
       attr-label: RH
@@ -1156,7 +1156,7 @@ entities:
       attr-defs: NA
       data-min: NA
       data-max: NA
-      data-units: dimensionless
+      data-units: integer
 
 build-environment: Multiple computer systems were used to generate these data, including XX. The open source languages R and Python was used on all systems, as well as XX.
 
