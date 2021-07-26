@@ -208,6 +208,20 @@ entities:
       data-min: NA
       data-max: NA
       data-units: degrees Celsius
+      
+  -
+    data-name: out_data/forecast[2021-04-16_2021-07-16]_files.zip
+    data-description: >-
+      XX
+    attributes:
+    -
+      attr-label: XX
+      attr-def: >-
+        XX
+      attr-defs:
+      data-min: NA
+      data-max: NA
+      data-units: NA
 
 build-environment: >-
   Reservoir outflow predictions were generated with calibrated models built using the General Lake Model (Hipsey et al. 2019) version 3.1.
