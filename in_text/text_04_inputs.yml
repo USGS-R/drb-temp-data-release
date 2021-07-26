@@ -51,6 +51,11 @@ cross-cites:
       Sciencebase item with reservoir bathy data XX
     pubdate: XX
     link: XX
+  -
+    title: >-
+      National Oceanic and Atmospheric Administration Global Ensemble Forecast System
+    pubdate: 2020
+    link: https://www.emc.ncep.noaa.gov/emc/pages/numerical_forecast_systems/gefs.php
 
 entities:
   -
