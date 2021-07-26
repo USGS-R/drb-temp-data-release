@@ -15,14 +15,22 @@ larger-cites:
       Near-term forecasts of stream temperature using process-guided deep learning and data assimilation
     pubdate: 2021
 
+  -
+    authors: ["Jacob A. Zwart", "Samantha K. Oliver", "David D. Watkins", "Jeffrey Sadler", "Alison P. Appling", "Hayley Corson-Dosch", "Xiaowei Jia", "Vipin Kumar", "Jordan Read"]
+    title: >-
+      Source code: Near-term forecasts of stream temperature using process-guided deep learning and data assimilation
+    pubdate: 2021
+    link: https://doi.org/10.5281/zenodo.5120248
+
     
 # ----supporting publications----    
 cross-cites:
   -
-    authors: ["XX"]
+    authors: ["Xiaowei Jia", "Jacob Zwart", "Jeffrey Sadler", 'Alison Appling', 'Samantha Oliver', 'Steven Markstrom', "Jared Willard", 'Shaoming Xu', 'Michael Steinbach', "Jordan Read", 'Vipin Kumar']
     title: >-
-      XX
-    pubdate: 2019
+      Physics-Guided Recurrent Graph Model for Predicting Flow and Temperature in River Networks
+    pubdate: 2020
+    link: https://doi.org/10.1137/1.9781611976700.69
 
 
 purpose: Decision support, limnological research, fish habitat, reservoir management, and climate science.
