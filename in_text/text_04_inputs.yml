@@ -7,11 +7,12 @@ abstract: >-
 
 cross-cites:
   -
-    authors: ['XX']
+    authors: ['John T. Abatzoglou']
     title: >-
-      GridMet XX
-    pubdate: XX
-    link: XX
+      Development of gridded surface meteorological data for ecological applications and modelling
+    pubdate: 2013
+    form: publication
+    link: https://doi.org/10.1002/joc.3413
   -
     authors: ['Kenneth E. Mitchell','Dag Lohmann','Paul R. Houser','Eric F. Wood','John C. Schaake','Alan Robock','Brian A. Cosgrove','Justin Sheffield','Qingyun Duan','Lifeng Luo','R. Wayne Higgins','Rachel T. Pinker','J. Dan Tarpley','Dennis P. Lettenmaier','Curtis H. Marshall','Jared K. Entin','Ming Pan','Wei Shi','Victor Koren','Jesse Meng','Bruce H. Ramsay','Andrew A. Bailey']
     title: >-
@@ -34,23 +35,29 @@ cross-cites:
     form: publication
     link: https://doi.org/10.5194/gmd-12-473-2019
   -
-    authors: ['XX']
+    authors: ["Bernhard Lehner", "Catherine Reidy Liermann", "Carmen Revenga", "Charles Vörösmarty", "Balazs Fekete", "Philippe Crouzet", "Petra Döll", "Marcel Endejan", ""Karen Frenken", "Jun Magome", "Christer Nilsson", "James C Robertson", "Raimund Rödel", "Nikolai Sindorf", "Dominik Wisser"]
     title: >-
-      GRanD reservoir database. XX
-    pubdate: XX
-    link: XX
+      High-resolution mapping of the world’s reservoirs and dams for sustainable river-flow management.
+    pubdate: 2011
+    link: https://doi.org/10.1890/100125
   -
-    authors: ['XX']
+    authors: ['Roland Viger', 'Andrew Bock']
     title: >-
-      Geospatial Fabric for National Hydrologic Modeling XX
-    pubdate: XX
+      GIS Features of the Geospatial Fabric for National Hydrologic Modeling
+    pubdate: 2014
     link: http://dx.doi.org/doi:10.5066/F7542KMD
   -
-    authors: ['XX']
+    authors: ['Roland Viger']
     title: >-
-      Sciencebase item with reservoir bathy data XX
-    pubdate: XX
-    link: XX
+      Preliminary spatial parameters for PRMS based on the Geospatial Fabric, NLCD2001 and SSURGO
+    pubdate: 2014
+    link: http://dx.doi.org/doi:10.5066/F7WM1BF7
+  -
+    authors: ['Elizabeth A. Nystrom']
+    title: >-
+          Bathymetry of Ashokan, Cannonsville, Neversink, Pepacton, Rondout, and Schoharie Reservoirs, New York
+    pubdate: 2018
+    link: https://doi.org/10.3133/sir20175064
   -
     title: >-
       National Oceanic and Atmospheric Administration Global Ensemble Forecast System

@@ -13,17 +13,12 @@ cross-cites:
     form: publication
     link: https://doi.org/10.5194/gmd-12-473-2019
   -
-    authors: ['XX']
+    authors: NA
     title: >-
       The General Lake Model - Configuration Options
     pubdate: XX
     link: https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
-  -
-    authors: ['XX']
-    title: >-
-      NLDAS XX
-    pubdate: XX
-    link: XX
+
 
 entities:
   -
