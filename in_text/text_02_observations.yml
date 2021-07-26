@@ -2,14 +2,29 @@ title: >-
   Predicting water temperature in the Delaware River Basin: 2 Water temperature and flow observations
 
 abstract: >-
-  Observations related to water and thermal budgets in the Delaware River Basin. Data from reservoirs in the basin include
+  <p>Observations related to water and thermal budgets in the Delaware River Basin. Data from reservoirs in the basin include
   reservoir characteristics (e.g., bathymetry), daily water levels, daily depth-resolved water temperature observations, 
   and daily inflows, diversions, and releases. Data from streams in the basin include daily flow and temperature observations.  
   Data were compiled from a variety of sources to cover the modeling period (1980-2021), including the National Water Inventory System, 
   Water Quality Portal, EcoSHEDS stream water temperature database, ReaLSAT, and the New York Department of Environmental Conservation.
   The data are formatted as a single csv (comma separated values) or zipped csv. 
-
-
+  
+  <p>For modeling purposes, we sought to create a test set of flow and temperature observations that were representative of 
+  dynamics throughout the Delaware River basin from water year 1980-present. Test holdouts are documented in the 
+  flow and temperature files. To minimize the possibility of the correlation 
+  between sites and temporal autocorrelation at single sites causing artificially high test performance, we created temporal 
+  holdouts (time periods where data from all sites were reserved for testing), and spatial holdouts (sites where all data were 
+  reserved for testing). In all, this resulted in a train/test split of 66.2%/33.8% for observed temperature reach days, 
+  and 71.4%/28.6% for observed flow reach days. 
+  
+  <p>For temporal holdouts: All data in the water years 1980-84, 2011-15, and 2021 were reserved for the test set. 
+  These windows were chosen to attempt to balance the ability to test on the most recent data (critical to assess 
+  performance in an operational setting) and historical periods, while still training on a sufficient amount of 
+  modern continuous data. For spatial holdouts: We chose eight reaches of the PRMS network to reserve all data for testing, 
+  based on representing key parts of the Delaware basin (mainstem, headwaters, reservoir-adjacent reaches), representing 
+  the distribution catchment attributes (e.g. fraction of impervious surfaces) and minimizing the number of observations 
+  within a 20 km distance along the network ('fish radius').
+  
 cross-cites:
   -
     authors: ['Ankush Khandelwal', 'Rahul Ghosh', 'Zhihao Wei', 'Huangying Kuang', 'Hilary Dugan', 'Paul Hanson', 'Anuj Karpatne', 'Vipin Kumar']
@@ -19,23 +34,24 @@ cross-cites:
     link: https://hdl.handle.net/11299/216044
     
   -
-    authors: ['XX']
+    authors: ['U.S. Geological Survey']
     title: >-
-      NWIS
-    pubdate: XXXX
-    link: XX
+      USGS Water Data for the Nation, accessed on 2021-07-16
+    pubdate: 2016
+    link: https://waterdata.usgs.gov/nwis
   -
-    authors: ['XX']
+    authors: ['Emily K. Read',  'Lindsay Carr',  'Laura De Cicco',  'Hilary A. Dugan',  'Paul C. Hanson',
+    'Julia A. Hart',  'James Kreft',  'Jordan S. Read',  'Luke A. Winslow']
     title: >-
-      Water Quality Portal
-    pubdate: XXXX
-    link: XX
+      Water quality data for national-scale aquatic research: The Water Quality Portal, accessed on 2021-04-21
+    pubdate: 2017
+    link: https://doi.org/10.1002/2016WR019993
   -
-    authors: ['XX']
+    authors: NA
     title: >-
-      EcoSHEDS
-    pubdate: XXXX
-    link: XX
+      SHEDS Stream Temperature Database, accessed on 2020-06-22 
+    pubdate: NA
+    link: http://db.ecosheds.org/
 
 entities:
   -
@@ -63,9 +79,15 @@ entities:
     -
       attr-label: seg_id_nat
       attr-def: >-
-        River reach identifier from XX, which the site was matched to based on latitude and longitude.
+        The closest river reach from the Geospatial Fabric v1.1, by Euclidean distance, from the monitoring site. 
+        Matches were limited to a 500m buffer of the monitoring site. The reach number is from the field "nsegment_v1_1" in the 
+        Geospatial Fabric for the National Hydrologic Model v1.1.
+        
+        Once the original reach match was assigned, the matched segment was reassigned if the endpoint of the 
+        upstream reach was closer to the monitoring site (by river distance) than the endpoint of the matched reach. 
+        If the upstream endpoint was closer, but there was a confluence directly upstream, then the original match was kept.
       attr-defs:  >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+        https://doi.org/10.5066/P971JAGF
       data-min: NA
       data-max: NA
       data-units: NA
@@ -133,20 +155,27 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA 
- -
+      
+  -
     data-name: flow_observations{subset}.zip
     data-description: >-
       Daily mean flow observation data with sites matched to 456 model river segments in the Delaware River Basin.
       Data were compiled from the National Water Information System (NWIS). Three subsets of similar data are provided,
-      including sites from all 456 segments (flow_observations.zip), sites from a subset of XX segments above 
+      including sites from any of the 456 segments (flow_observations.zip), sites from a subset of XX segments above 
       the Delaware River at Lordville, NY (flow_observations_lordville.zip), or the 5 priority forecast sites. 
     attributes:
     -
       attr-label: seg_id_nat
       attr-def: >-
-        River reach identifier from XX, which the site was matched to based on latitude and longitude.
+        The closest river reach from the Geospatial Fabric v1.1, by Euclidean distance, from the monitoring site. 
+        Matches were limited to a 500m buffer of the monitoring site. The reach number is from the field "nsegment_v1_1" in the 
+        Geospatial Fabric for the National Hydrologic Model v1.1.
+        
+        <p>Once the original reach match was assigned, the matched segment was reassigned if the endpoint of the 
+        upstream reach was closer to the monitoring site (by river distance) than the endpoint of the matched reach. 
+        If the upstream endpoint was closer, but there was a confluence directly upstream, then the original match was kept.
       attr-defs:  >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+        https://doi.org/10.5066/P971JAGF
       data-min: NA
       data-max: NA
       data-units: NA
@@ -289,15 +318,8 @@ entities:
       attr-defs: NA
       data-min: 0.0438125
       data-max: 762.1622
-      data-units: cubic meters second
-    -
-      attr-label: GRAND_ID
-      attr-def: >-
-        Unique reservoir identifier.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA 
+      data-units: cubic meters per second
+
   -
     data-name: reservoir_realsat_monthly_surface_area.csv
     data-description: >-
