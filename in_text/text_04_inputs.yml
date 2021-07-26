@@ -1062,6 +1062,19 @@ entities:
       data-min: 0
       data-max: NA
       data-units: m day−1
+  -
+    data-name: noaagefs_meteo_files.zip
+    data-description: >-
+      XX
+    attributes:
+    -
+      attr-label: XX
+      attr-def: >-
+        XX
+      attr-defs: NA
+      data-min: NA
+      data-max: NA
+      data-units: NA
 
 build-environment: Multiple computer systems were used to generate these data, including XX. The open source languages R and Python was used on all systems, as well as XX.
 
