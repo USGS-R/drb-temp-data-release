@@ -5,7 +5,6 @@ include:
   - 3_config.yml
   - 4_inputs.yml
   - 5_predictions.yml
-  #- 6_evaluation.yml
 
 
 packages:
@@ -33,7 +32,6 @@ targets:
       - 00_parent_sb_xml
       - 01_spatial_sb_xml
       - 01_spatial_sb_shp
-      #- 01_spatial_sb_data
       - 02_observations_sb_data
       - 02_observations_sb_xml
       - 03_config_sb_xml
@@ -43,9 +41,6 @@ targets:
       - 04_inputs_sb_meteo
       - 05_predictions_sb_xml
       - 05_predictions_sb_data
-      #- 06_evaluation_sb_data
-      #- 06_evaluation_sb_xml
-
 
 # in case you want to mess w/ the xml alone:
   out_xml/00_parent.xml:
@@ -70,10 +65,6 @@ targets:
     command: sb_replace_files(sbid_01_spatial,
       "out_data/01_spatial_network.zip",
       "out_data/01_reservoir_polygons.zip")
-
-  #01_spatial_sb_data:
-   # command: sb_replace_files(sbid_01_spatial,
-    #  "out_data/lake_metadata.csv")
 
   02_observations_sb_xml:
     command: sb_render_post_xml(sbid_02_observations,
@@ -147,23 +138,7 @@ targets:
       "out_data/dwallin_stream_preds.csv", 
       "out_data/forecast[2021-04-16_2021-07-16]_files.zip")
 
-  #05_predictions_sb_sntemp:
-   # command: sb_replace_files(sbid_05_predictions,
-    #  file_hash = "out/5_pb0_predict_zips.yml")
-
-  #06_evaluation_sb_xml:
-   # command: sb_render_post_xml(sb_id_06_evaluation,
-    #  "in_text/text_SHARED.yml",
-     # "in_text/text_06_evaluation.yml",
-      #river_metadata)
-
-  #06_evaluation_sb_data:
-   # command: sb_replace_files(sb_id_06_evaluation,
-    #  "out_data/sntemp_matched_to_observations.zip",
-     # "out_data/sntemp_evaluation.csv")
-
   # ------ SB IDs --------
-
 
   sbid_00_parent:
     command: c(I('5f6a26af82ce38aaa2449100'))
