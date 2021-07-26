@@ -14,7 +14,7 @@ sources:
 targets:
   3_config:
     depends:
-      - out_data/reservoir_nml_list.json
+      - out_data/reservoir_nml_values.json
 
   ##### Transfer and filtering of files from lake-temperature-model-prep #####
 
