@@ -4,7 +4,6 @@ title: >-
 abstract: >-
   This dataset includes model inputs including gridded weather data, a stream network distance matrix,
   stream reach attributes and metadata, and reservoir characteristics.
-
 cross-cites:
   -
     authors: ['John T. Abatzoglou']
@@ -35,11 +34,13 @@ cross-cites:
     form: publication
     link: https://doi.org/10.5194/gmd-12-473-2019
   -
-    authors: ["Bernhard Lehner", "Catherine Reidy Liermann", "Carmen Revenga", "Charles Vörösmarty", "Balazs Fekete", "Philippe Crouzet", "Petra Döll", "Marcel Endejan", ""Karen Frenken", "Jun Magome", "Christer Nilsson", "James C Robertson", "Raimund Rödel", "Nikolai Sindorf", "Dominik Wisser"]
+    authors: ["Bernhard Lehner", "Catherine Reidy Liermann", "Carmen Revenga", "Charles Vorosmarty", "Balazs Fekete", "Philippe Crouzet", "Petra Doll", "Marcel Endejan", "Karen Frenken", "Jun Magome", "Christer Nilsson", "James C Robertson", "Raimund Rodel", "Nikolai Sindorf", "Dominik Wisser"]
     title: >-
-      High-resolution mapping of the world’s reservoirs and dams for sustainable river-flow management.
+      High-resolution mapping of the world's reservoirs and dams for sustainable river-flow management
     pubdate: 2011
-    link: https://doi.org/10.1890/100125
+    form: publication
+    link: >-
+      https://doi.org/10.1890/100125
   -
     authors: ['Roland Viger', 'Andrew Bock']
     title: >-
@@ -55,19 +56,25 @@ cross-cites:
   -
     authors: ['Elizabeth A. Nystrom']
     title: >-
-          Bathymetry of Ashokan, Cannonsville, Neversink, Pepacton, Rondout, and Schoharie Reservoirs, New York
+      Bathymetry of Ashokan, Cannonsville, Neversink, Pepacton, Rondout, and Schoharie Reservoirs, New York
     pubdate: 2018
     link: https://doi.org/10.3133/sir20175064
   -
+    authors: ['NA']
     title: >-
       National Oceanic and Atmospheric Administration Global Ensemble Forecast System
     pubdate: 2020
     link: https://www.emc.ncep.noaa.gov/emc/pages/numerical_forecast_systems/gefs.php
-
+    
 entities:
   -
-    data-name: distance_matrix.csv
-    data-description: A matrix documenting the upstream (negative numbers) or downstream (positive numbers) distances between river reaches.
+    data-name: >-
+      distance_matrix{_subset}.csv
+    data-description: >- 
+      A matrix documenting the upstream (negative numbers) or downstream (positive numbers) 
+      distances between river reaches. Files are either for all 456 reaches in the Delaware
+      River Basin modeling network (distance_matrix.csv), 
+      or for a subset of XX reaches above Lordville, New York (distance_matrix_lordville.csv). 
     attributes:
     -
       attr-label: from
@@ -77,9 +84,10 @@ entities:
         https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
-      data-units: NA
+      data-units: meters
     -
-      attr-label: {seg_id_nat}
+      attr-label: >-
+        {seg_id_nat}
       attr-def: >-
         Distance (in meters) between the seg_id_nat in the from column to the {seg_id_nat} in the column name. Positive numbers indicate a downstream direction, while positive numbers indicate an upstream direction.
       attr-defs: NA
@@ -87,34 +95,19 @@ entities:
       data-max: NA
       data-units: meters
   -
-    data-name: distance_matrix_lordville.csv
-    data-description: A matrix documenting the upstream (negative numbers) or downstream (positive numbers) distances between river reaches.
-    attributes:
-    -
-      attr-label: from
-      attr-def: >-
-        The segment ID (seg_id_nat) of the starting segment for the distance calculation.
-      attr-defs: >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: {seg_id_nat}
-      attr-def: >-
-        Distance (in meters) between the seg_id_nat in the from column to the {seg_id_nat} in the column name. Positive numbers indicate a downstream direction, while positive numbers indicate an upstream direction.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: meters
-  -
-    data-name: reach_attributes.csv
-    data-description: Metadata about reaches in the Delaware River Basin, including fields for upstream/downstream segments, segment length, and position relative to reservoirs.
+    data-name: >-
+      reach_attributes{subset}.csv
+    data-description: >- 
+      Metadata about reaches in the Delaware River Basin, including fields for 
+      upstream/downstream segments, segment length, and position relative to reservoirs. 
+      Files either describe all 456 reaches in the Delaware River Basin modeling network, or
+      a subset of 56 reaches above Lordville, New York.
     attributes:
     -
       attr-label: seg_id_nat
       attr-def: >-
-        Stream reach identification number for this dataset. This is the ID named XX from the Geospatial Fabric for  National Hydrologic Modeling."
+        Stream reach identification number for this dataset. 
+        This is the ID named seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling.
       attr-defs: >-
         https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
@@ -124,7 +117,8 @@ entities:
       attr-label: frac_overlap
       attr-def: >-
         The fraction of stream segment length that overlaps with a reservoir.
-      attr-defs: NA indicates no overlap with reservoir.
+      attr-defs: >- 
+        NA indicates no overlap with reservoir.
       data-min: NA
       data-max: NA
       data-units: NA
@@ -149,7 +143,7 @@ entities:
       attr-label: nearest_GRAND_ID
       attr-def: >-
         The unique identifier (GRAND ID) if the nearest reservoir. Only reaches within two reaches of a reservoir are associated with a reservoir, such that reaches with reach_class = reach have an NA in this field.
-      attr-defs: NA
+      attr-defs: https://doi.org/10.1890/100125
       data-min: NA
       data-max: NA
       data-units: NA
@@ -194,94 +188,12 @@ entities:
       data-max: NA
       data-units: meters
   -
-    data-name: reach_attributes_lordville.csv
-    data-description: Metadata about reaches in a 56-segment subset of the Delaware River Basin, including fields for upstream/downstream segments, segment length, and position relative to reservoirs.
-    attributes:
-    -
-      attr-label: seg_id_nat
-      attr-def: >-
-        Stream reach identification number for this dataset. This is the ID named XX from the Geospatial Fabric for  National Hydrologic Modeling."
-      attr-defs:  >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: frac_overlap
-      attr-def: >-
-        The fraction of stream segment length that overlaps with a reservoir.
-      attr-defs: NA indicates no overlap with reservoir.
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: reach_class
-      attr-def: >-
-        Classification of river reaches relative to reservoirs.
-      attr-defs: >-
-        reach = the river reach is > 2 segments away from a reservoir;
-        upstream of reservoir (2) = reach is two segments above a reservoir;
-        upstream of reservoir (1) = reach is one segment above a reservoir;
-        downstream of reservoir (2) = reach is two segments below a reservoir;
-        downstream of reservoir (1) = reach is one segment below a reservoir;
-        reservoir_inlet_reach = the reach starting point is above a reservoir and the endpoint is within a reservoir;
-        reservoir_outlet_reach = the reach starting point is within a reservoir and the endpoint is downstream of a reservoir;
-        within_reservoir = the reach is fully contained within a reservoir (both start and end points are within a reservoir);
-        contains_reservoir = a reservoir is fully contained within the reach
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: nearest_GRAND_ID
-      attr-def: >-
-        The unique identifier (GRAND ID) if the nearest reservoir. Only reaches within two reaches of a reservoir are associated with a reservoir, such that reaches with reach_class = reach have an NA in this field.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: subseg_id
-      attr-def: >-
-        An alternative unique reach identifier.XX
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: subseg_seg
-      attr-def: >-
-        An alternative unique reach identifier.XX
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: subseg_length
-      attr-def: >-
-        Length of stream reach.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: meters
-    -
-      attr-label: from_segs
-      attr-def: >-
-        subseg_seg identifier(s) of the upstream segment. NA indicates a headwater stream with no upstream segments.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: meters
-    -
-      attr-label: to_seg
-      attr-def: >-
-        subseg_seg identifier of the downstream segment.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: meters
-  -
-    data-name: reservoir_features.csv
-    data-description: Features of the 17 dam and reservoir systems in the Delaware River Basin.
+    data-name: reservoir_features{subset}.csv
+    data-description: >-
+      Features of the 17 dam and reservoir systems in the Delaware River Basin. 
+      Data come from the GRaND database, and either represent teh 17 dam and reservoir systems 
+      across the basin (reservoir_features.csv), or the 2 dam and reservoir systems 
+      (Pepacton and Cannonsville) above Lordville, New York (reservoir_features_lordville.csv).
     attributes:
     -
       attr-label: GRAND_ID
@@ -396,308 +308,17 @@ entities:
       data-max: NA
       data-units: square kilometers
   -
-    data-name: reservoir_features_lordville.csv
-    data-description: Features of the 2 dam and reservoir systems upstream of Lordville in the Delaware River Basin. XX
-    attributes:
-    -
-      attr-label: GRAND_ID
-      attr-def: >-
-        Unique reservoir identifier.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: AREA_SKM
-      attr-def: >-
-        Reservoir surface area.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: square kilometers
-    -
-      attr-label: RES_NAME
-      attr-def: >-
-        Reservoir name.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: DAM_NAME
-      attr-def: >-
-        Dam name.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: ALT_NAME
-      attr-def: >-
-        Alternative reservoir name.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: RIVER
-      attr-def: >-
-        The river name on which the reservoir and dam is situated.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: ALT_RIVER
-      attr-def: >-
-        The alternative river name on which the reservoir and dam is situated.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: YEAR
-      attr-def: >-
-        Year the dam was built.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: DAM_HGT_M
-      attr-def: >-
-        Height of the dam.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: meters
-    -
-      attr-label: DAM_LEN_M
-      attr-def: >-
-        The length of the dam (perpedicular to the river).
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: meters
-    -
-      attr-label: DAM_LEN_M
-      attr-def: >-
-        The length of the dam (perpedicular to the river).
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: meters
-    -
-      attr-label: DEPTH_M
-      attr-def: >-
-        Average depth of the reservoir.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: meters
-    -
-      attr-label: ELEV_MASL
-      attr-def: >-
-        Elevation of reservoir surface in meters above sea level.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: meters
-    -
-      attr-label: CATCH_SKM
-      attr-def: >-
-        Area of upstream catchment draining into the reservoir.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: square kilometers
-  -
-    data-name: sntemp_inputs_outputs.zip
-    data-description: PRMS-SNTemp inputs and outputs, including weather driver data, intermediate varibles, and model predictions.
+    data-name: >-
+      sntemp_inputs_outputs{subset}.zip
+    data-description: >-
+      PRMS-SNTemp inputs and outputs, including weather driver data, intermediate varibles, and 
+      model predictions. Files either contain inputs/outputs from all 456 stream reaches in the 
+      Delaware River Basin modeling network, or for the 56 segments above Lordville, New York. 
     attributes:
     -
       attr-label: seg_id_nat
       attr-def: >-
-        Stream reach identification number for this dataset. This is the ID named XX from the Geospatial Fabric for  National Hydrologic Modeling."
-      attr-defs: >-
-        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: model_idx
-      attr-def: >-
-        Unique river segment identifier from the model cutout.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-
-    -
-      attr-label: date
-      attr-def: >-
-        Date of the observation or prediction.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: seg_ccov
-      attr-def: >-
-        Area-weighted average cloud cover fraction for each segment from HRUs contributing flow to the segment.
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: decimal fraction
-    -
-      attr-label: seg_humid
-      attr-def: >-
-        Area-weighted average relative humidity for each segment from HRUs contributing flow to the segment
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: decimal fraction
-    -
-      attr-label: seg_outflow
-      attr-def: >-
-        Streamflow leaving a segment
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: cubic meters per second
-    -
-      attr-label: seg_rain
-      attr-def: >-
-        Area-weighted average rainfall for each segment from HRUs contributing flow to the segment      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: meters
-    -
-      attr-label: seg_shade
-      attr-def: >-
-        Area-weighted average shade fraction for each segment
-      data-min: NA
-      data-max: NA
-      data-units: decimal fraction
-    -
-      attr-label: seg_tave_air
-      attr-def: >-
-         Area-weighted average air temperature for each segment from HRUs contributing flow to the segment
-      data-min: NA
-      data-max: NA
-      data-units: degrees Celsius
-    -
-      attr-label: seg_tave_gw
-      attr-def: >-
-        Groundwater temperature.
-      data-min: NA
-      data-max: NA
-      data-units: degrees Celsius
-    -
-      attr-label: seg_tave_sroff
-      attr-def: >-
-        Surface runoff temperature.
-      data-min: NA
-      data-max: NA
-      data-units: degrees Celsius
-    -
-      attr-label: seg_tave_ss
-      attr-def: >-
-        Subsurface temperature.
-      data-min: NA
-      data-max: NA
-      data-units: degrees Celsius
-    -
-      attr-label: seg_tave_upstream
-      attr-def: >-
-        Temperature of streamflow entering each segment.
-      data-min: NA
-      data-max: NA
-      data-units: degrees Celsius
-    -
-      attr-label: seg_tave_water
-      attr-def: >-
-        Computed daily mean stream temperature for each segment      data-min: NA
-      data-max: NA
-      data-units: degrees Celsius
-    -
-      attr-label: seg_upstream_inflow
-      attr-def: >-
-        Sum of inflow from upstream segments
-      data-min: NA
-      data-max: NA
-      data-units: cubic meters per second
-    -
-      attr-label: seg_width
-      attr-def: >-
-        Width of each segment.
-      data-min: NA
-      data-max: NA
-      data-units: meters
-    -
-      attr-label: seginc_gwflow
-      attr-def: >-
-          Area-weighted average groundwater discharge for each segment from HRUs contributing flow to the segment.
-      data-min: NA
-      data-max: NA
-      data-units: cubic meters per second
-    -
-      attr-label: seginc_potet
-      attr-def: >-
-        Area-weighted average potential ET for each segment from HRUs contributing flow to the segment.
-      data-min: NA
-      data-max: NA
-      data-units: meters
-    -
-      attr-label: seginc_sroff
-      attr-def: >-
-        Area-weighted average surface runoff for each segment from HRUs contributing flow to the segment.
-      data-min: NA
-      data-max: NA
-      data-units: cubic meters per second
-    -
-      attr-label: seginc_ssflow
-      attr-def: >-
-        Area-weighted average interflow for each segment from HRUs contributing flow to the segment.
-      data-min: NA
-      data-max: NA
-      data-units: cubic meters per second
-    -
-      attr-label: seginc_swrad
-      attr-def: >-
-        Area-weighted average solar radiation for each segment from HRUs contributing flow to the segment.
-      data-min: NA
-      data-max: NA
-      data-units: watts per square meter
-    -
-      attr-label: seg_length
-      attr-def: >-
-        Length of stream segment.
-      data-min: NA
-      data-max: NA
-      data-units: meters
-    -
-      attr-label: seg_slope
-      attr-def: >-
-        Stream segment slope.
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: seg_elev
-      attr-def: >-
-        Stream segment average elevation above mean sea level.
-      data-min: NA
-      data-max: NA
-      data-units: meters
-  -
-    data-name: sntemp_inputs_outputs_lordville.zip
-    data-description: PRMS-SNTemp inputs and outputs, including weather driver data, intermediate varibles, and model predictions for a subset of 56 segments.
-    attributes:
-    -
-      attr-label: seg_id_nat
-      attr-def: >-
-        Stream reach identification number for this dataset. This is the ID named XX from the Geospatial Fabric for  National Hydrologic Modeling."
+        Stream reach identification number for this dataset. This is the ID named seg_id_nat from the Geospatial Fabric for  National Hydrologic Modeling."
       attr-defs: >-
         https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
@@ -916,7 +537,7 @@ entities:
     -
       attr-label: data_type
       attr-def: >-
-        Type of data - monthly or daily
+        Type of data - monthly or daily values.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -924,15 +545,15 @@ entities:
     -
       attr-label: res_level_m
       attr-def: >-
-        XX
+        Reservoir surface elevation.
       attr-defs: NA
       data-min: NA
       data-max: NA
-      data-units: NA
+      data-units: meters
     -
       attr-label: gross_storage_m3
       attr-def: >-
-        XX
+        Total reservoir storage.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -940,7 +561,7 @@ entities:
     -
       attr-label: storage_change_cms
       attr-def: >-
-        XX
+        Reservoir storage change.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -948,7 +569,7 @@ entities:
     -
       attr-label: conservation_release_cms
       attr-def: >-
-        Volume of conservation release
+        Volume of reservoir conservation release
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -956,7 +577,7 @@ entities:
     -
       attr-label: directed_release_cms
       attr-def: >-
-        Volume of directed release
+        Volume of reservoir directed release
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -972,7 +593,7 @@ entities:
     -
       attr-label: spillway_cms
       attr-def: >-
-        Volume spilled over spillway
+        Volume spilled over reservoir spillway
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -980,7 +601,7 @@ entities:
     -
       attr-label: total_runoff_cms
       attr-def: >-
-        XX
+        Total runoff contributing to discharge from reservoir.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -988,7 +609,7 @@ entities:
     -
       attr-label: storage_above_sill_cms
       attr-def: >-
-        XX
+        Storage above the reservoir sill.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -996,13 +617,14 @@ entities:
     -
       attr-label: source_file
       attr-def: >-
-        XX
+        Where the data originated.
       attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: NA
   -
-    data-name: NLDAS_time[0.367700]_x[{x}]_y[{y}].csv
+    data-name: >-
+      NLDAS_time[0.367700]_x[{x}]_y[{y}].csv
     data-description: >-
       A csv file for each reservoir with input meteorological data. Files are named "NLDAS_time[0.367700]_x{x}_y{y}.csv" where the x and y locations are longitude and latitude indices from NLDAS
       of the individual meteorological data cell (data are from Mitchell et al. 2004).
@@ -1020,11 +642,11 @@ entities:
       attr-label: ShortWave
       attr-def: >-
         Incoming radiant energy with wavelengths between ~300 and ~3000 nm,
-          emitted by the sun and reaching the reservoir surface after passing through the atmosphere, as a daily average.
+        emitted by the sun and reaching the reservoir surface after passing through the atmosphere, as a daily average.
       attr-defs: This data release
       data-min: NA
       data-max: NA
-      data-units: W m-2
+      data-units: Watts per meter squared
     -
       attr-label: LongWave
       attr-def: >-
@@ -1032,7 +654,7 @@ entities:
       attr-defs: This data release
       data-min: NA
       data-max: NA
-      data-units: W m-2
+      data-units: Watts per meter squared
     -
       attr-label: AirTemp
       attr-def: >-
@@ -1049,7 +671,7 @@ entities:
       data-min: 0
       data-max: 100
       data-units: >-
-          %
+        %
     -
       attr-label: Windspeed
       attr-def: >-
@@ -1112,7 +734,7 @@ entities:
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
       data-min: NA
       data-max: NA
-      data-units: W/m^2
+      data-units: Watts per meter squared
     -
       attr-label: WS
       attr-def: >-
@@ -1120,7 +742,7 @@ entities:
       attr-defs: https://www.nco.ncep.noaa.gov/pmb/products/gens/gec00.t00z.pgrb2s.0p25.f003.shtml
       data-min: NA
       data-max: NA
-      data-units: m/s
+      data-units: meters per second
     -
       attr-label: TMAX
       attr-def: >-
@@ -1152,7 +774,8 @@ entities:
       attr-defs: NA
       data-min: NA
       data-max: NA
-      data-units: seconds since 1970-01-01 00:00:00.0 0:00
+      data-units: >-
+        seconds since 1970-01-01 00:00:00.0 0:00
     -
       attr-label: seg_id_nat
       attr-def: >-
@@ -1160,7 +783,7 @@ entities:
       attr-defs: NA
       data-min: NA
       data-max: NA
-      data-units: deminsionless
+      data-units: dimensionless
     -
       attr-label: E
       attr-def: >-

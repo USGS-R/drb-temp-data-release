@@ -41,7 +41,6 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
-
     -
       attr-label: subseg_length
       attr-def: >-
@@ -59,7 +58,7 @@ entities:
       data-min: NA
       data-max: NA
       data-units: NA
-   -
+    -
       attr-label: to_seg
       attr-def: >-
         Reach identifier (subseg_seg) of the downstream segment. NA indicates a terminal stream.
@@ -100,7 +99,13 @@ entities:
       data-max: NA
       data-units: NA
 
+
+process-date: !expr format(Sys.time(),'%Y%m%d')
 file-format: Shapefile Data Set
+
+indirect-spatial: U.S.A.
+latitude-res: 0.1
+longitude-res: 0.1
 
 build-environment: >-
   This dataset was generated using open source tools available in the R programming language (R version 4.0.2 (2020-06-22)).

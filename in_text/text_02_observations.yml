@@ -50,7 +50,6 @@ cross-cites:
     authors: NA
     title: >-
       SHEDS Stream Temperature Database, accessed on 2020-06-22 
-    pubdate: NA
     link: http://db.ecosheds.org/
 
 entities:
@@ -300,8 +299,8 @@ entities:
       attr-def: >-
         Date of water release.
       attr-defs: NA
-      data-min: 1982-01-01
-      data-max: 2021-07-09
+      data-min: 19820101
+      data-max: 20210709
       data-units: NA
     -
       attr-label: reservoir
@@ -532,4 +531,5 @@ entities:
       data-max: NA
       data-units: NA
 
+process-date: !expr format(Sys.time(),'%Y%m%d')
 file-format: comma-delimited files (some compressed into zip files), rds files, feather files.

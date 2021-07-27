@@ -71,6 +71,12 @@ targets:
       "in_text/text_SHARED.yml",
       "in_text/text_02_observations.yml",
       river_metadata)
+      
+  out_xml/02_observations_fgdc_metadata.xml:
+    command: render(filename = target_name,
+      "in_text/text_SHARED.yml",
+      "in_text/text_02_observations.yml",
+      river_metadata)
 
   02_observations_sb_data:
     command: sb_replace_files(sbid_02_observations,
@@ -117,6 +123,12 @@ targets:
       "out_data/reach_attributes_lordville.csv",
       "out_data/reservoir_interpolated_daily_water_budget_components.csv",
       "out_data/noaagefs_meteo_files.zip")
+  
+  out_xml/04_inputs_fgdc_metadata.xml:
+    command: render(filename = target_name,
+      "in_text/text_SHARED.yml",
+      "in_text/text_04_inputs.yml",
+      river_metadata)
 
   04_inputs_sb_meteo:
     command: sb_replace_files(sbid_04_inputs,
