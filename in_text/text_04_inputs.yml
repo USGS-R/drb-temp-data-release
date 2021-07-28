@@ -74,7 +74,7 @@ entities:
       A matrix documenting the upstream (negative numbers) or downstream (positive numbers) 
       distances between river reaches. Files are either for all 456 reaches in the Delaware
       River Basin modeling network (distance_matrix.csv), 
-      or for a subset of XX reaches above Lordville, New York (distance_matrix_lordville.csv). 
+      or for a subset of 56 reaches above Lordville, New York (distance_matrix_lordville.csv). 
     attributes:
     -
       attr-label: from
@@ -149,17 +149,19 @@ entities:
       data-units: NA
     -
       attr-label: subseg_id
-      attr-def: >-
-        An alternative unique reach identifier.XX
-      attr-defs: NA
+      attr-def:  >-
+        An alternative unique reach identifier which was created in order to split segments such that 
+        segment start and endpoints were connected by one reach with no intersecting reaches. The ID was created
+        using the seg_id from the Geospatial Fabric and an index from one to the number of splits (e.g., {subseg_id}_{index}).
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: subseg_seg
       attr-def: >-
-        An alternative unique reach identifier.XX
-      attr-defs: NA
+        An alternative reach identifier, which corresponds to seg_id in the Geospatial Fabric. 
+      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
       data-units: NA
@@ -174,16 +176,17 @@ entities:
     -
       attr-label: from_segs
       attr-def: >-
-        subseg_seg identifier(s) of the upstream segment. NA indicates a headwater stream with no upstream segments.
-      attr-defs: NA
+        Reach identifier (subseg_seg) of the upstream segment. NA indicates a headwater stream with no upstream segments.
+        Multiple upstream segments are seperated with a semicolon.
+      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
       data-units: meters
     -
       attr-label: to_seg
       attr-def: >-
-        subseg_seg identifier of the downstream segment.
-      attr-defs: NA
+        Reach identifier (subseg_seg) of the downstream segment. NA indicates a terminal stream.
+      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
       data-units: meters
