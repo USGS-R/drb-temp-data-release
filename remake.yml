@@ -60,6 +60,12 @@ targets:
       "in_text/text_SHARED.yml",
       "in_text/text_01_spatial.yml",
       river_metadata)
+      
+  out_xml/01_spatial_fgdc_metadata.xml:
+    command: render(filename = target_name,
+      "in_text/text_SHARED.yml",
+      "in_text/text_01_spatial.yml",
+      river_metadata)
 
   01_spatial_sb_shp:
     command: sb_replace_files(sbid_01_spatial,
@@ -96,6 +102,12 @@ targets:
 
   03_config_sb_xml:
     command: sb_render_post_xml(sbid_03_config,
+      "in_text/text_SHARED.yml",
+      "in_text/text_03_config.yml",
+      reservoir_metadata)
+      
+  out_xml/03_config_fgdc_metadata.xml:
+    command: render(filename = target_name, 
       "in_text/text_SHARED.yml",
       "in_text/text_03_config.yml",
       reservoir_metadata)

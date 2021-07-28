@@ -2,21 +2,21 @@ title: >-
   Predicting water temperature in the Delaware River Basin: 1 Waterbody information for 456 river reaches and 2 reservoirs
 
 abstract: >-
-  This dataset provides one shapefile of polylines for the 456 river segments in this study, a reservoir polygon metadata file, and one shapefile of reservoir polygons for the Pepacton and Cannonsville reservoirs.
+  This dataset provides one shapefile of polylines for the 456 river segments in this study, and one shapefile of reservoir polygons for the Pepacton and Cannonsville reservoirs.
 
 cross-cites:
   -
-    authors: ['Roland Viger', 'XX']
+    authors: ['Roland Viger', 'Andrew Bock']
     title: >-
       GIS Features of the Geospatial Fabric for National Hydrologic Modeling
     pubdate: 2014
     link: http://dx.doi.org/doi:10.5066/F7542KMD
   -
-    authors: ['Andrew R Bock', 'Marilyn Santiago', 'Michael E Wieczorek', 'Sydney S Foks', 'Melissa A Lombard']
+    authors: ['Roland Viger']
     title: >-
-      Geospatial Fabric for National Hydrologic Modeling, version 1.1
-    pubdate: 2020
-    link: https://doi.org/10.5066/P971JAGF
+      Preliminary spatial parameters for PRMS based on the Geospatial Fabric, NLCD2001 and SSURGO
+    pubdate: 2014
+    link: http://dx.doi.org/doi:10.5066/F7WM1BF7
 
 entities:
   -
@@ -62,7 +62,7 @@ entities:
       attr-label: to_seg
       attr-def: >-
         Reach identifier (subseg_seg) of the downstream segment. NA indicates a terminal stream.
-      attr-defs: NA
+      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
       data-units: NA
@@ -70,7 +70,7 @@ entities:
       attr-label: to_subseg
       attr-def: >-
         Reach identifier (subseg_id) identifier of the downstream segment. NA indicates a terminal stream.
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -106,7 +106,3 @@ file-format: Shapefile Data Set
 indirect-spatial: U.S.A.
 latitude-res: 0.1
 longitude-res: 0.1
-
-build-environment: >-
-  This dataset was generated using open source tools available in the R programming language (R version 4.0.2 (2020-06-22)).
-  The computing platform for generating data and metadata was x86_64-w64-mingw32. XX use meddle::environment_metadata() to complete text.

@@ -1,6 +1,7 @@
 retrieve_network <- function(network_sf_fl) {
   network <- readRDS(network_sf_fl)
-  out <- network$edges
+  out <- network$edges %>%
+    select(-start_pt, -end_pt, -subseg_updown)
   out <- sf::st_transform(out, crs = 4326)
   return(out)
 }
