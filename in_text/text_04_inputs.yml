@@ -534,7 +534,7 @@ entities:
     -
       attr-label: storage_perc
       attr-def: >-
-        XX
+        Percent of total reservoir storage volume occupied by current reservoir volume.
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -791,8 +791,9 @@ entities:
     -
       attr-label: seg_id_nat
       attr-def: >-
-         Stream reach identification number for this dataset. This is the ID named XX from the Geospatial Fabric for  National Hydrologic Modeling.
-      attr-defs: NA
+        National unique stream reach identifier. This is the ID named seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling.
+      attr-defs: >-
+        https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
       data-units: dimensionless
@@ -805,7 +806,7 @@ entities:
       data-max: NA
       data-units: integer
 
-build-environment: Multiple computer systems were used to generate these data, including XX. The open source languages R and Python was used on all systems, as well as XX.
+build-environment: Multiple computer systems were used to generate these data, including Windows, OSX, and linux. The open source languages R and Python was used on all systems.
 
 process-date: !expr format(Sys.time(),'%Y%m%d')
 indirect-spatial: U.S.A.
