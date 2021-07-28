@@ -15,6 +15,7 @@ abstract: >-
   reservoir processes that affect temperature dynamics. These weighted values were then used to pre-train the deep learning
   models that were used to forecast temperature. More details on these methods can be found in Zwart et al. 2021.
   
+  <p>Code that generated these results can be found in Zwart et al. 2021 (https://doi.org/10.5281/zenodo.5120248).
 
 cross-cites:
   -
