@@ -6,6 +6,14 @@ abstract: >-
   stream reach attributes and metadata, and reservoir characteristics.
 cross-cites:
   -
+    authors: ['Steven L. Markstrom']
+    title: >-
+      P2S-Coupled simulation with the Precipitation-Runoff Modeling 
+      System (PRMS) and the Stream Temperature Network (SNTemp) Models
+    pudate: 2012
+    form: publication
+    link: https://doi.org/10.3133/ofr20121116
+  -
     authors: ['John T. Abatzoglou']
     title: >-
       Development of gridded surface meteorological data for ecological applications and modelling
@@ -323,7 +331,7 @@ entities:
     -
       attr-label: seg_id_nat
       attr-def: >-
-        Stream reach identification number for this dataset. This is the ID named seg_id_nat from the Geospatial Fabric for  National Hydrologic Modeling."
+        Stream reach identification number for this dataset. This is the ID named seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling.
       attr-defs: >-
         https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
@@ -373,7 +381,8 @@ entities:
     -
       attr-label: seg_rain
       attr-def: >-
-        Area-weighted average rainfall for each segment from HRUs contributing flow to the segment      attr-defs: NA
+        Area-weighted average rainfall for each segment from HRUs contributing flow to the segment      
+      attr-defs: NA
       data-min: NA
       data-max: NA
       data-units: meters
@@ -422,7 +431,8 @@ entities:
     -
       attr-label: seg_tave_water
       attr-def: >-
-        Computed daily mean stream temperature for each segment      data-min: NA
+        Computed daily mean stream temperature for each segment      
+      data-min: NA
       data-max: NA
       data-units: degrees Celsius
     -
@@ -512,8 +522,8 @@ entities:
       attr-def: >-
         Date of diversion
       attr-defs: NA
-      data-min: '1979-10-01'
-      data-max: '2020-12-31'
+      data-min: 19791001
+      data-max: 20201231
       data-units: NA
     -
       attr-label: diversion_cms
@@ -566,7 +576,7 @@ entities:
     -
       attr-label: storage_change_cms
       attr-def: >-
-        Reservoir storage change.
+        Reservoir storage change
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -606,7 +616,7 @@ entities:
     -
       attr-label: total_runoff_cms
       attr-def: >-
-        Total runoff contributing to discharge from reservoir.
+        Total runoff contributing to discharge from reservoir
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -614,7 +624,7 @@ entities:
     -
       attr-label: storage_above_sill_cms
       attr-def: >-
-        Storage above the reservoir sill.
+        Storage above the reservoir sill
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -622,7 +632,7 @@ entities:
     -
       attr-label: source_file
       attr-def: >-
-        Where the data originated.
+        Where the data originated
       attr-defs: NA
       data-min: NA
       data-max: NA
@@ -675,8 +685,7 @@ entities:
       attr-defs: This data release
       data-min: 0
       data-max: 100
-      data-units: >-
-        %
+      data-units: percent
     -
       attr-label: Windspeed
       attr-def: >-
