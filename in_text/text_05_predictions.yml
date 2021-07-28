@@ -2,9 +2,19 @@ title: >-
   Predicting water temperature in the Delaware River Basin: 5 Model prediction data
 
 abstract: >-
-  PRMS-SNTemp was used to predict daily temperatures at 456 stream reaches in the Delaware River Basin. Daily stream temperature predictions for inflow and outflow reaches for Cannonsville and Pepacton reservoirs were pulled aside into a separate feather file.
-
-  Reservoir outflow predictions and in-reservoir temperature predictions were generated with calibrated models built using the General Lake Model v3.1.
+  <p>Several models were used to improve water temperature prediction in the Delaware River Basin.
+  
+  <p>PRMS-SNTemp was used to predict daily temperatures at 456 stream reaches in the Delaware River Basin. 
+  Daily stream temperature predictions for inflow and outflow reaches for Cannonsville and Pepacton reservoirs 
+  were pulled aside into a separate csv to be used as inputs to the General Lake Model.
+  Reservoir outflow predictions and in-reservoir temperature predictions were generated with 
+  calibrated models built using the General Lake Model (GLM) v3.1. We calculated a decay rate based on observed
+  data to estimate the decay of the reservoir influence on stream temperature as a function of distance downstream
+  of a reservoir. These decay rates from Pepacton and Cannonsville were used to weight the predictions from GLM and 
+  PRMS-SNTemp on the East and West Branch of the Delaware River, respectively, to represent the mix of stream and 
+  reservoir processes that affect temperature dynamics. These weighted values were then used to pre-train the deep learning
+  models that were used to forecast temperature. More details on these methods can be found in Zwart et al. 2021.
+  
 
 cross-cites:
   -
