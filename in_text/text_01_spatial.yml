@@ -2,15 +2,21 @@ title: >-
   Predicting water temperature in the Delaware River Basin: 1 Waterbody information for 456 river reaches and 2 reservoirs
 
 abstract: >-
-  This dataset provides one shapefile of polylines for the 456 river segments in this study, a reservoir polygon metadata file, and one shapefile of reservoir polygons for the Pepacton and Cannonsville reservoirs.
+  This dataset provides one shapefile of polylines for the 456 river segments in this study, and one shapefile of reservoir polygons for the Pepacton and Cannonsville reservoirs.
 
 cross-cites:
   -
-    authors: ['Roland Viger', 'XX']
+    authors: ['Roland Viger', 'Andrew Bock']
     title: >-
       GIS Features of the Geospatial Fabric for National Hydrologic Modeling
     pubdate: 2014
     link: http://dx.doi.org/doi:10.5066/F7542KMD
+  -
+    authors: ['Roland Viger']
+    title: >-
+      Preliminary spatial parameters for PRMS based on the Geospatial Fabric, NLCD2001 and SSURGO
+    pubdate: 2014
+    link: http://dx.doi.org/doi:10.5066/F7WM1BF7
 
 entities:
   -
@@ -20,76 +26,59 @@ entities:
     -
       attr-label: subseg_id
       attr-def: >-
-        An alternative unique reach identifier.XX
-      attr-defs: NA
+        An alternative unique reach identifier which was created in order to split segments such that 
+        segment start and endpoints were connected by one reach with no intersecting reaches. The ID was created
+        using the seg_id from the Geospatial Fabric and an index from one to the number of splits (e.g., {subseg_id}_{index}). 
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: subseg_seg
       attr-def: >-
-        An alternative unique reach identifier.XX
-      attr-defs: NA
+        An alternative reach identifier, which corresponds to seg_id in the Geospatial Fabric. 
+      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
       data-units: NA
     -
-      attr-label: subseg_updown
-      attr-def:
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: subset_length
+      attr-label: subseg_length
       attr-def: >-
         Length of stream reach.
-      attr-defs: NA
+      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
-      data-units: NA
-    -
-      attr-label: start_pt
-      attr-def:
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
-    -
-      attr-label: end_pt
-      attr-def:
-      attr-defs: NA
-      data-min: NA
-      data-max: NA
-      data-units: NA
+      data-units: meters
     -
       attr-label: from_segs
       attr-def: >-
-        seg identifier(s) of the upstream segment. NA indicates a headwater stream with no upstream segments.
-      attr-defs: NA
+        Reach identifier (subseg_seg) of the upstream segment. NA indicates a headwater stream with no upstream segments.
+        Multiple upstream segments are seperated with a semicolon.
+      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: to_seg
       attr-def: >-
-        seg identifier of the downstream segment.
-      attr-defs: NA
+        Reach identifier (subseg_seg) of the downstream segment. NA indicates a terminal stream.
+      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
       data-units: NA
     -
       attr-label: to_subseg
       attr-def: >-
-        subseg_seg identifier of the downstream segment.
-      attr-defs: NA
+        Reach identifier (subseg_id) identifier of the downstream segment. NA indicates a terminal stream.
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
+ 
     -
       attr-label: seg_id_nat
       attr-def: >-
-        Stream reach identification number for this dataset. This is the ID named XX from the Geospatial Fabric for  National Hydrologic Modeling."
+        National unique stream reach identifier. This is the ID named seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling.
       attr-defs: >-
         https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
@@ -102,15 +91,18 @@ entities:
     -
       attr-label: site_id
       attr-def: >-
-        Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
+        Reservoir identification number for this dataset. 
+        Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
       attr-defs: >-
         http://nhd.usgs.gov/
       data-min: NA
       data-max: NA
       data-units: NA
 
+
+process-date: !expr format(Sys.time(),'%Y%m%d')
 file-format: Shapefile Data Set
 
-build-environment: >-
-  This dataset was generated using open source tools available in the R programming language (R version 4.0.2 (2020-06-22)).
-  The computing platform for generating data and metadata was x86_64-w64-mingw32. XX use meddle::environment_metadata() to complete text.
+indirect-spatial: U.S.A.
+latitude-res: 0.1
+longitude-res: 0.1

@@ -24,6 +24,7 @@ targets:
       - out_data/sntemp_inputs_outputs.zip
       - out_data/sntemp_inputs_outputs_lordville.zip
       - out_data/reservoir_interpolated_daily_water_budget_components.csv
+      - out_data/noaagefs_meteo_files.zip
       - log/reservoir_meteo_files.yml
       
   #weather_drivers:
@@ -70,6 +71,10 @@ targets:
   out_data/reservoir_interpolated_daily_water_budget_components.csv:
     command: file.copy(from = '../delaware-model-prep/2_observations/out/interpolated_daily_reservoir_water_budget_components.csv', to = target_name)
   
+  # NOAA GEFS meteo files for forecasts
+  out_data/noaagefs_meteo_files.zip:
+    command: file.copy(from = 'in_data/met_drivers.zip', to = target_name)
+    
   # For now, we're putting meteo files manually into in_data, so all we
   # do here is confirm that the requisite files exist.
   # Not quite robust pipelining - if the files in in_data change
@@ -79,3 +84,4 @@ targets:
     command: fetch_meteo_files(
       out_yml = target_name,
       nml_rds = 'out_data/reservoir_nml_list.rds')
+      
