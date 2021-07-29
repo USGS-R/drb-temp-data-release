@@ -152,7 +152,13 @@ targets:
     command: sb_render_post_xml(sbid_05_predictions,
       "in_text/text_SHARED.yml",
       "in_text/text_05_predictions.yml",
-      reservoir_metadata)
+      river_metadata)
+
+  out_xml/05_predictions_fgdc_metadata.xml:
+    command: render(filename = target_name,
+      "in_text/text_SHARED.yml",
+      "in_text/text_05_predictions.yml",
+      river_metadata)
 
   05_predictions_sb_data:
     command: sb_replace_files(sbid_05_predictions,
