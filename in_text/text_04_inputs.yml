@@ -90,8 +90,8 @@ entities:
         The segment ID (seg_id_nat) of the starting segment for the distance calculation.
       attr-defs: >-
         https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
+      data-min: -138821.4
+      data-max: 120381.61
       data-units: meters
     -
       attr-label: >-
@@ -99,8 +99,8 @@ entities:
       attr-def: >-
         Distance (in meters) between the seg_id_nat in the from column to the {seg_id_nat} in the column name. Positive numbers indicate a downstream direction, while positive numbers indicate an upstream direction.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: -138821.4
+      data-max: 120381.61
       data-units: meters
   -
     data-name: >-
@@ -127,8 +127,8 @@ entities:
         The fraction of stream segment length that overlaps with a reservoir.
       attr-defs: >- 
         NA indicates no overlap with reservoir.
-      data-min: NA
-      data-max: NA
+      data-min: 0.01870757
+      data-max: 1.0
       data-units: NA
     -
       attr-label: reach_class
@@ -186,8 +186,8 @@ entities:
       attr-def: >-
         Length of stream reach.
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
+      data-min: 108.8776
+      data-max: 31063.61
       data-units: meters
     -
       attr-label: from_segs
@@ -359,176 +359,176 @@ entities:
       attr-def: >-
         Date of the observation or prediction.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 1980-01-01
+      data-max: 2020-07-31
       data-units: NA
     -
       attr-label: seg_ccov
       attr-def: >-
         Area-weighted average cloud cover fraction for each segment from HRUs contributing flow to the segment.
       attr-defs: https://doi.org/10.1002/joc.3413
-      data-min: NA
-      data-max: NA
+      data-min: 0.2565
+      data-max: 0.8
       data-units: decimal fraction
     -
       attr-label: seg_humid
       attr-def: >-
         Area-weighted average relative humidity for each segment from HRUs contributing flow to the segment
       attr-defs: https://doi.org/10.1002/joc.3413
-      data-min: NA
-      data-max: NA
+      data-min: 0.7
+      data-max: 0.7
       data-units: decimal fraction
     -
       attr-label: seg_outflow
       attr-def: >-
         Streamflow leaving a segment
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 1.50589e-05
+      data-max: 838.4617
       data-units: cubic meters per second
     -
       attr-label: seg_rain
       attr-def: >-
         Area-weighted average rainfall for each segment from HRUs contributing flow to the segment      
       attr-defs: https://doi.org/10.1002/joc.3413
-      data-min: NA
-      data-max: NA
+      data-min: 0.0
+      data-max: 0.160782
       data-units: meters
     -
       attr-label: seg_shade
       attr-def: >-
         Area-weighted average shade fraction for each segment
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 0
       data-units: decimal fraction
     -
       attr-label: seg_tave_air
       attr-def: >-
          Area-weighted average air temperature for each segment from HRUs contributing flow to the segment
       attr-defs: https://doi.org/10.1002/joc.3413
-      data-min: NA
-      data-max: NA
+      data-min: -25.44
+      data-max: 28.22
       data-units: degrees Celsius
     -
       attr-label: seg_tave_gw
       attr-def: >-
         Groundwater temperature.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: -12.49
+      data-max: 23.46
       data-units: degrees Celsius
     -
       attr-label: seg_tave_sroff
       attr-def: >-
         Surface runoff temperature.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 0
       data-units: degrees Celsius
     -
       attr-label: seg_tave_ss
       attr-def: >-
         Subsurface temperature.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: -19.29
+      data-max: 26.08
       data-units: degrees Celsius
     -
       attr-label: seg_tave_upstream
       attr-def: >-
         Temperature of streamflow entering each segment.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: -98.9
+      data-max: 26.09
       data-units: degrees Celsius
     -
       attr-label: seg_tave_water
       attr-def: >-
         Computed daily mean stream temperature for each segment      
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 26.09
       data-units: degrees Celsius
     -
       attr-label: seg_upstream_inflow
       attr-def: >-
         Sum of inflow from upstream segments
       attr-defs: This data release 
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 841.5766
       data-units: cubic meters per second
     -
       attr-label: seg_width
       attr-def: >-
         Width of each segment.
       attr-defs: This data release.
-      data-min: NA
-      data-max: NA
+      data-min: 1.622
+      data-max: 93.45
       data-units: meters
     -
       attr-label: seginc_gwflow
       attr-def: >-
           Area-weighted average groundwater discharge for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 12.46791
       data-units: cubic meters per second
     -
       attr-label: seginc_potet
       attr-def: >-
         Area-weighted average potential ET for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 4.146e-08
+      data-max: 0.3052
       data-units: meters
     -
       attr-label: seginc_sroff
       attr-def: >-
         Area-weighted average surface runoff for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 88.00875
       data-units: cubic meters per second
     -
       attr-label: seginc_ssflow
       attr-def: >-
         Area-weighted average interflow for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 147.5874
       data-units: cubic meters per second
     -
       attr-label: seginc_swrad
       attr-def: >-
         Area-weighted average solar radiation for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0.0009744971
+      data-max: 341.4374
       data-units: watts per square meter
     -
       attr-label: seg_length
       attr-def: >-
         Length of stream segment.
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
+      data-min: 108.8776
+      data-max: 31063.61
       data-units: meters
     -
       attr-label: seg_slope
       attr-def: >-
         Stream segment slope.
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
+      data-min: 2e-06
+      data-max: 0.04883
       data-units: NA
     -
       attr-label: seg_elev
       attr-def: >-
         Stream segment average elevation above mean sea level.
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
+      data-min: 256.44
+      data-max: 618.24
       data-units: meters
   -
     data-name: reservoir_interpolated_daily_water_budget_components.csv
@@ -551,8 +551,8 @@ entities:
       attr-def: >-
         Date of diversion
       attr-defs: This data release
-      data-min: 19791001
-      data-max: 20201231
+      data-min: 1979-10-01
+      data-max: 2020-12-31
       data-units: NA
     -
       attr-label: diversion_cms
@@ -567,16 +567,16 @@ entities:
       attr-def: >-
         Precipitation
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 4.87
       data-units: inches
     -
       attr-label: storage_perc
       attr-def: >-
         Percent of total reservoir storage volume occupied by current reservoir volume.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 17.75855
+      data-max: 110.2272
       data-units: percentage
     -
       attr-label: data_type
@@ -591,72 +591,72 @@ entities:
       attr-def: >-
         Reservoir surface elevation.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 329.184
+      data-max: 391.0523
       data-units: meters
     -
       attr-label: gross_storage_m3
       attr-def: >-
         Total reservoir storage.
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 79358318
+      data-max: 663599577
       data-units: cubic meters
     -
       attr-label: storage_change_cms
       attr-def: >-
         Reservoir storage change
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: -756.7326
+      data-max: 1060.398
       data-units: cubic meters per second
     -
       attr-label: conservation_release_cms
       attr-def: >-
         Volume of reservoir conservation release
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0.0
+      data-max: 44.2818
       data-units: cubic meters per second
     -
       attr-label: directed_release_cms
       attr-def: >-
         Volume of reservoir directed release
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0.0
+      data-max: 43.7124
       data-units: cubic meters per second
     -
       attr-label: total_release_cms
       attr-def: >-
         Total volume released
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0.7446
+      data-max: 44.2818
       data-units: cubic meters per second
     -
       attr-label: spillway_cms
       attr-def: >-
         Volume spilled over reservoir spillway
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 0
+      data-max: 355.875
       data-units: cubic meters per second
     -
       attr-label: total_runoff_cms
       attr-def: >-
         Total runoff contributing to discharge from reservoir
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: -6.57
+      data-max: 789.5826
       data-units: cubic meters per second
     -
       attr-label: storage_above_sill_cms
       attr-def: >-
         Storage above the reservoir sill
       attr-defs: This data release
-      data-min: NA
-      data-max: NA
+      data-min: 243625103
+      data-max: 636738619
       data-units: cubic meters per second
     -
       attr-label: source_file
