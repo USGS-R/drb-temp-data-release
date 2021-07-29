@@ -8,7 +8,7 @@ cross-cites:
   -
     authors: ['Steven L. Markstrom']
     title: >-
-      P2S-Coupled simulation with the Precipitation-Runoff Modeling 
+      P2S-Coupled simulation with the Precipitation-Runoff Modeling
       System (PRMS) and the Stream Temperature Network (SNTemp) Models
     pudate: 2012
     form: publication
@@ -79,9 +79,9 @@ entities:
     data-name: >-
       distance_matrix{_subset}.csv
     data-description: >- 
-      A matrix documenting the upstream (negative numbers) or downstream (positive numbers) 
+      A matrix documenting the upstream (negative numbers) or downstream (positive numbers)
       distances between river reaches. Files are either for all 456 reaches in the Delaware
-      River Basin modeling network (distance_matrix.csv), 
+      River Basin modeling network (distance_matrix.csv),
       or for a subset of 56 reaches above Lordville, New York (distance_matrix_lordville.csv). 
     attributes:
     -
@@ -106,15 +106,15 @@ entities:
     data-name: >-
       reach_attributes{subset}.csv
     data-description: >- 
-      Metadata about reaches in the Delaware River Basin, including fields for 
-      upstream/downstream segments, segment length, and position relative to reservoirs. 
+      Metadata about reaches in the Delaware River Basin, including fields for
+      upstream/downstream segments, segment length, and position relative to reservoirs.
       Files either describe all 456 reaches in the Delaware River Basin modeling network, or
       a subset of 56 reaches above Lordville, New York.
     attributes:
     -
       attr-label: seg_id_nat
       attr-def: >-
-        Stream reach identification number for this dataset. 
+        Stream reach identification number for this dataset.
         This is the ID named seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling.
       attr-defs: >-
         https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
@@ -136,13 +136,21 @@ entities:
         Classification of river reaches relative to reservoirs.
       attr-defs: >-
         reach = the river reach is > 2 segments away from a reservoir;
+        
         upstream of reservoir (2) = reach is two segments above a reservoir;
+        
         upstream of reservoir (1) = reach is one segment above a reservoir;
+        
         downstream of reservoir (2) = reach is two segments below a reservoir;
+        
         downstream of reservoir (1) = reach is one segment below a reservoir;
+        
         reservoir_inlet_reach = the reach starting point is above a reservoir and the endpoint is within a reservoir;
+        
         reservoir_outlet_reach = the reach starting point is within a reservoir and the endpoint is downstream of a reservoir;
+        
         within_reservoir = the reach is fully contained within a reservoir (both start and end points are within a reservoir);
+        
         contains_reservoir = a reservoir is fully contained within the reach
       data-min: NA
       data-max: NA
@@ -158,7 +166,7 @@ entities:
     -
       attr-label: subseg_id
       attr-def:  >-
-        An alternative unique reach identifier which was created in order to split segments such that 
+        An alternative unique reach identifier which was created in order to split segments such that
         segment start and endpoints were connected by one reach with no intersecting reaches. The ID was created
         using the seg_id from the Geospatial Fabric and an index from one to the number of splits (e.g., {subseg_id}_{index}).
       attr-defs: This data release
@@ -168,7 +176,7 @@ entities:
     -
       attr-label: subseg_seg
       attr-def: >-
-        An alternative reach identifier, which corresponds to seg_id in the Geospatial Fabric. 
+        An alternative reach identifier, which corresponds to seg_id in the Geospatial Fabric.
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: NA
       data-max: NA
@@ -201,9 +209,9 @@ entities:
   -
     data-name: reservoir_features{subset}.csv
     data-description: >-
-      Features of the 17 dam and reservoir systems in the Delaware River Basin. 
-      Data come from the GRaND database, and either represent teh 17 dam and reservoir systems 
-      across the basin (reservoir_features.csv), or the 2 dam and reservoir systems 
+      Features of the 17 dam and reservoir systems in the Delaware River Basin.
+      Data come from the GRaND database, and either represent teh 17 dam and reservoir systems
+      across the basin (reservoir_features.csv), or the 2 dam and reservoir systems
       (Pepacton and Cannonsville) above Lordville, New York (reservoir_features_lordville.csv).
     attributes:
     -
