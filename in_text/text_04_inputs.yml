@@ -823,7 +823,7 @@ entities:
       attr-label: time
       attr-def: >-
         Valid time of the forecast
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: >-
@@ -841,7 +841,7 @@ entities:
       attr-label: E
       attr-def: >-
          NOAA GEFS ensemble member, 0 = control
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: integer
