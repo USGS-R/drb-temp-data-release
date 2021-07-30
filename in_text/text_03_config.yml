@@ -32,7 +32,9 @@ entities:
       attr-label: site-id
       attr-def:  >-
         Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
-      attr-defs: NA
+      
+        nhdhr_120022743 is Cannonsville Reservoir and nhdhr_151957878 is Pepacton Reservoir 
+      attr-defs: http://nhd.usgs.gov/
       data-min: NA
       data-max: NA
       data-units: NA
@@ -155,7 +157,7 @@ entities:
         glm3_cal_nhdhr_{}.nml
       attr-def:  >-
         Configuration file that specifies a GLM run. Formatting of the file, and values within each file, are as specified in the GLM documentation at https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
