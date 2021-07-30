@@ -97,7 +97,7 @@ entities:
       attr-label: date
       attr-def: >-
         Date of temperature measurement
-      attr-defs: NA
+      attr-defs: This data release
       data-min: 1908-08-02
       data-max: 2021-04-08
       data-units: NA
@@ -105,7 +105,7 @@ entities:
       attr-label: mean_temp_c
       attr-def: >-
         Mean daily water temperature
-      attr-defs: NA
+      attr-defs: This data release
       data-min: -0.4
       data-max: 34
       data-units: degrees C
@@ -113,7 +113,7 @@ entities:
       attr-label: min_temp_c
       attr-def: >-
         Minimum daily water temperature
-      attr-defs: NA
+      attr-defs: This data release
       data-min: -0.4
       data-max: 34
       data-units: degrees C
@@ -121,7 +121,7 @@ entities:
       attr-label: max_temp_c
       attr-def: >-
         Maximum daily water temperature
-      attr-defs: NA
+      attr-defs: This data release
       data-min: -0.4
       data-max: 34.9
       data-units: degrees C
@@ -129,7 +129,7 @@ entities:
       attr-label: site_id
       attr-def: >-
         Site identifier from the data provider. For USGS sites, this is the USGS site number with a "USGS-" prefix.
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -137,7 +137,7 @@ entities:
       attr-label: in_time_holdout
       attr-def: >-
         Logical, is the date within the test holdout periods?
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA 
@@ -145,7 +145,7 @@ entities:
       attr-label: in_space_holdout
       attr-def: >-
         Logical, is the site a spatial holdouts?
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA 
@@ -153,7 +153,7 @@ entities:
       attr-label: test
       attr-def: >-
         Logical, should the observation be used for testing (and withheld from training)?
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA 
@@ -195,7 +195,7 @@ entities:
       attr-label: date
       attr-def: >-
         Date of discharge measurement
-      attr-defs: NA
+      attr-defs: This data release
       data-min: 1884-01-01
       data-max: 2021-04-23
       data-units: NA
@@ -203,7 +203,7 @@ entities:
       attr-label: discharge_cms
       attr-def: >-
         River flow or discharge
-      attr-defs: NA
+      attr-defs: This data release
       data-min: -180.3047
       data-max: 7900.4
       data-units: cubic meters per second
@@ -211,7 +211,7 @@ entities:
       attr-label: site_id
       attr-def: >-
         Site identifier from the data provider.
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -219,7 +219,7 @@ entities:
       attr-label: in_time_holdout
       attr-def: >-
         Logical, is the date within the test holdout periods?
-      attr-defs: NA
+      attr-defs: This data release. 
       data-min: NA
       data-max: NA
       data-units: NA 
@@ -227,7 +227,7 @@ entities:
       attr-label: in_space_holdout
       attr-def: >-
         Logical, is the site a spatial holdouts?
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA 
@@ -235,7 +235,7 @@ entities:
       attr-label: test
       attr-def: >-
         Logical, should the observation be used for testing (and withheld from training)?
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA 
@@ -377,7 +377,7 @@ entities:
       attr-label: site_id
       attr-def: >-
         Site identifier from the data provider.
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -385,15 +385,15 @@ entities:
       attr-label: date
       attr-def: >-
         Date of discharge and temperature observations
-      attr-defs: NA
-      data-min: '1934-10-01'
-      data-max: '2020-12-17'
+      attr-defs: This data release
+      data-min: 1934-10-01
+      data-max: 2020-12-17
       data-units: NA
     -
       attr-label: flow_cms
       attr-def: >-
         Discharge, in cubic meters per second
-      attr-defs: NA
+      attr-defs: This data release
       data-min: 0.002831685
       data-max: 784.3767
       data-units: cubic meters per second
@@ -401,7 +401,7 @@ entities:
       attr-label: mean_temp_degC
       attr-def: >-
         Mean daily observed temperature
-      attr-defs: NA
+      attr-defs: This data release
       data-min: 0.1
       data-max: 27
       data-units: degrees C
@@ -409,7 +409,7 @@ entities:
       attr-label: min_temp_degC
       attr-def: >-
         Minimum daily observed temperature
-      attr-defs: NA
+      attr-defs: This data release
       data-min: 0.1
       data-max: 30.5
       data-units: degrees C
@@ -417,7 +417,7 @@ entities:
       attr-label: max_temp_degC
       attr-def: >-
         Maximum daily observed temperature
-      attr-defs: NA
+      attr-defs: This data release
       data-min: 0.1
       data-max: 30.5
       data-units: degrees C
@@ -425,7 +425,7 @@ entities:
       attr-label: location
       attr-def: >-
         Location relative to reservoir flow direction -- inflow or outflow.
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -521,7 +521,7 @@ entities:
       attr-label: source_id
       attr-def: >-
         Site identifier from the data provider.
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -529,7 +529,7 @@ entities:
       attr-label: surface_elevation_m
       attr-def: >-
         Elevation of reservoir surface
-      attr-defs: NA
+      attr-defs: This data release
       data-min: 324.3255
       data-max: 391.0523
       data-units: meters
@@ -537,7 +537,7 @@ entities:
       attr-label: data_type
       attr-def: >-
         Type of data - observed daily value (daily observed) or linearly interpolated daily value (daily interpolated)
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA

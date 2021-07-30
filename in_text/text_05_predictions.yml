@@ -67,7 +67,7 @@ entities:
       attr-label: date
       attr-def: >-
         Date of prediction
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -75,7 +75,7 @@ entities:
       attr-label: seg_outflow
       attr-def:  >-
         Predicted segment outflow.
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: cubic meters per second
@@ -83,7 +83,7 @@ entities:
       attr-label: seg_tave_water
       attr-def: >-
         Predicted water temperature.
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: degrees Celsius
@@ -91,7 +91,7 @@ entities:
       attr-label: direction
       attr-def: >-
         Direction of flow relative to reservoir -- inflow or outflow
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -116,7 +116,7 @@ entities:
       attr-label: time
       attr-def: >-
         Date of prediction
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -124,7 +124,7 @@ entities:
       attr-label: temp
       attr-def: >-
         Predicted water temperature.
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: degrees Celsius
@@ -132,7 +132,7 @@ entities:
       attr-label: flow
       attr-def:  >-
         Predicted outflow.
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: cubic meters per second
@@ -157,7 +157,7 @@ entities:
       attr-label: time
       attr-def: >-
         Date of prediction
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -165,7 +165,7 @@ entities:
       attr-label: temp
       attr-def: >-
         Predicted in-reservoir water temperature at depth of given reservoir outlet.
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: degrees Celsius
@@ -173,7 +173,7 @@ entities:
       attr-label: release_type
       attr-def:  >-
         Type of reservoir releases that occur using given reservoir outlet.
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -181,7 +181,7 @@ entities:
       attr-label: reference
       attr-def:  >-
         Reference location (surface or bottom) for the given reservoir outlet.
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -189,7 +189,7 @@ entities:
       attr-label: z_out
       attr-def:  >-
         Elevation of given outlet as deviation from the defined reference location.
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: meters
@@ -210,7 +210,7 @@ entities:
       attr-label: date
       attr-def: >-
         Date of prediction
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -218,7 +218,7 @@ entities:
       attr-label: dwallin_temp_c
       attr-def: >-
         Predicted stream temperature
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: degrees Celsius
