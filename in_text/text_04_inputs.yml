@@ -134,7 +134,7 @@ entities:
       attr-label: reach_class
       attr-def: >-
         Classification of river reaches relative to reservoirs.
-      attr-defs: >-
+        
         reach = the river reach is > 2 segments away from a reservoir;
         
         upstream of reservoir (2) = reach is two segments above a reservoir;
@@ -152,6 +152,8 @@ entities:
         within_reservoir = the reach is fully contained within a reservoir (both start and end points are within a reservoir);
         
         contains_reservoir = a reservoir is fully contained within the reach
+      attr-defs: >-
+        This data release
       data-min: NA
       data-max: NA
       data-units: NA
@@ -210,7 +212,7 @@ entities:
     data-name: reservoir_features{subset}.csv
     data-description: >-
       Features of the 17 dam and reservoir systems in the Delaware River Basin.
-      Data come from the GRaND database, and either represent teh 17 dam and reservoir systems
+      Data come from the GRaND database, and either represent the 17 dam and reservoir systems
       across the basin (reservoir_features.csv), or the 2 dam and reservoir systems
       (Pepacton and Cannonsville) above Lordville, New York (reservoir_features_lordville.csv).
     attributes:
