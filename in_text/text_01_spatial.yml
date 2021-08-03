@@ -93,6 +93,8 @@ entities:
       attr-def: >-
         Reservoir identification number for this dataset. 
         Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
+      
+        nhdhr_120022743 is Cannonsville Reservoir and nhdhr_151957878 is Pepacton Reservoir
       attr-defs: >-
         http://nhd.usgs.gov/
       data-min: NA
