@@ -15,7 +15,9 @@ larger-cites:
     authors: ["Jacob Zwart", "Samantha Oliver", "David Watkins", "Jeffrey Sadler", "Alison Appling", "Hayley Corson-Dosch", "Xiaowei Jia", "Vipin Kumar", "Jordan Read"]
     title: >-
       Near-term forecasts of stream temperature using process-guided deep learning and data assimilation
+    form: publication
     pubdate: 2021
+    link: XX
 
     
 # ----supporting publications----    
@@ -46,10 +48,6 @@ usage-rules: >-
 
 descgeog: "The Delaware River Basin. River reach polylines as defined by the Geospatial Fabric for National Hydrologic Modeling. Reservoir polygons as defined by the national hydrography dataset high resolution"
 data-publisher: U.S. Geological Survey
-
-indirect-spatial: U.S.A.
-latitude-res: 0.00001
-longitude-res: 0.00001
 
 # ----contacts----
 contact-person: Samantha K. Oliver
@@ -91,5 +89,3 @@ liability-statement: >-
   Although these data and associated metadata have been reviewed for accuracy and completeness and approved for release by the U.S. Geological Survey (USGS),
   no warranty expressed or implied is made regarding the display or utility of the data on any other system or for general or scientific purposes, nor shall
   the act of distribution constitute any such warranty.
-
-

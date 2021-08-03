@@ -16,9 +16,9 @@ targets:
   1_spatial:
     depends:
       - river_metadata
-      - out_data/01_spatial_network.zip
+      - out_data/study_stream_reaches.zip
       - reservoir_metadata
-      - out_data/01_reservoir_polygons.zip
+      - out_data/study_reservoirs.zip
     
   # not sure what this metadata should be, if anything
   # one option is to include a reach to HRU crosswalk
@@ -46,7 +46,10 @@ targets:
   river_metadata:
     command: extract_feature(network_vertices_sf)
     
-  out_data/01_spatial_network.zip:
+  river_metadata2:
+    command: extract_feature(modeled_network_sf)
+    
+  out_data/study_stream_reaches.zip:
     command: sf_to_zip(target_name,
       sf_object = modeled_network_sf,
       layer_name = I('study_stream_reaches'))
@@ -78,6 +81,6 @@ targets:
   reservoir_metadata:
     command: extract_feature(reservoir_polygons)
     
-  out_data/01_reservoir_polygons.zip:
+  out_data/study_reservoirs.zip:
     command: sf_to_zip(zip_filename = target_name, 
       sf_object = reservoir_polygons, layer_name = I('study_reservoirs'))

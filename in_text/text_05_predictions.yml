@@ -42,7 +42,7 @@ cross-cites:
 
 entities:
   -
-    data-name: reservoir_io_sntemp.feather
+    data-name: reservoir_io_sntemp.csv
     data-description: PRMS-SNTemp predictions of water temperature for inflow and outflow reaches of the Pepacton and Cannonsville reservoirs.
     attributes:
     -
