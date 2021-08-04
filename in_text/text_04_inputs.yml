@@ -344,7 +344,7 @@ entities:
       Stream segments that never have streamflow (-99.9) do not have any hydrologic reach units and do not have any upstream segments to produce
       streamflow, and consequently never be able to simulate stream temperature. Segments with
       contributing hydrologic reach units and/or upstream segments can have streamflow but
-      may not have streamflow at the current timestemp (-98.9)
+      may not have streamflow at the current timestep (-98.9)
 
       Very negative groundwater and shallow subsurface water temperatures (e.g. less than -1 C) are
       not error codes, but rather are a product of the way this version of PRMS-SNTemp is coded. However,
