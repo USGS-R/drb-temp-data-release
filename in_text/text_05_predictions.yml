@@ -209,10 +209,10 @@ entities:
       in the network. For segments that weren't impacted by releases from Cannonsville or Pepacton,
       SNTemp predictions were used.
 
-      There a few sites that dates with predicted stream temperatures that have extremely high values.
+      There a few site-dates with extremely high predicted stream temperature values.
       These high values are a product of the way PRMS-SNTemp v5.1.0_rc was coded and are likely
       a result of stream segments with little or no upstream inflow and very little in-stream
-      flow for that particular day leading to extreamly high temperature predictions for those conditions.
+      flow for that particular day leading to extreamly high temperature predictions under those conditions.
       Subsequent versions of PRMS-SNTemp will resolve these extreme values, and we suggest against using
       stream temperature predictions above 35 degrees C, which occurs 7 times in this dataset.
     attributes:
