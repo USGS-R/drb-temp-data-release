@@ -259,6 +259,13 @@ entities:
       and reservoir release scenario (0cfs or 100cfs {scenario}) including a forecast netCDF file (.nc) and metadata file (.xml)
       such that files are named lstm_seg_id_nat_[{seg_id_nat}]_{model}_forecast_[{YYYY-MM-DD}]_release[{scenario}]
 
+      Since observations of daily maximum stream temperature were not available when we issued
+      the forecast, the persistence forecast files have NA's for the daily maximum stream temperature
+      prediction. When evaluating the performance of the persistence forecasts against the
+      deep learning models, we use yesterday's maximum temperature value as the forecast for
+      7 days into the future. See the evaluation code in the "evaluate-forecast" repository in
+      Zwart and others 2021 (https://doi.org/10.5281/zenodo.5120248) for this adjustment.
+
     attributes:
     -
       attr-label: max_temp
