@@ -162,5 +162,6 @@ combine_level_sources <- function(out_csv, nwis_levels, nyc_levels, hist_levels)
     mutate(surface_elevation_m = na.approx(surface_elevation_m)) %>%
     mutate(data_type = ifelse(is.na(data_type), 'daily interpolated', data_type))
 
+  out_dat$surface_elevation_m <- round(out_dat$surface_elevation_m, 2)
   readr::write_csv(out_dat, out_csv)
 }
