@@ -195,7 +195,26 @@ entities:
       data-units: meters
   -
     data-name: dwallin_stream_preds.csv
-    data-description: Stream temperature predictions from the distance-weighted-average lotic-lentic input network (DWALLIN). Predictions were generated from a combination of lotic (from PRMS-SNTemp) and lentic (GLM) models. We assumed that just below the reservoirs, stream temperature would be driven by lentic processes, and therefore GLM outflow temperature predictions received a weight of 1 and SNTemp predictions received a weight of 0. We also assumed that the reservoir weight would exponentially decay with distance, and an exponential decay function was fit to calculated observed weights when stream temperature observations, SNTemp predictions, and GLM predictions were available below Cannonsville and Pepacton reservoirs. The estimated decay rates were 0.0358 and 0.0403 for Cannonsville and Pepacton, respectively. Predicted weights were then used to calculate stream temperature as temperature = res_weight*GLM_prediction + (1-res_weight)*SNTemp prediction for each stream segment in the network. For segments that weren't impacted by releases from Cannonsville or Pepacton, SNTemp predictions were used.
+    data-description: >-
+      Stream temperature predictions from the distance-weighted-average lotic-lentic input network (DWALLIN).
+      Predictions were generated from a combination of lotic (from PRMS-SNTemp) and lentic (GLM) models.
+      We assumed that just below the reservoirs, stream temperature would be driven by lentic processes,
+      and therefore GLM outflow temperature predictions received a weight of 1 and SNTemp predictions received a weight of 0.
+      We also assumed that the reservoir weight would exponentially decay with distance,
+      and an exponential decay function was fit to calculated observed weights when stream temperature
+      observations, SNTemp predictions, and GLM predictions were available below Cannonsville and
+      Pepacton Reservoirs. The estimated decay rates were 0.0358 and 0.0403 for Cannonsville and Pepacton, respectively.
+      Predicted weights were then used to calculate stream temperature as
+      temperature = res_weight*GLM_prediction + (1-res_weight)*SNTemp prediction for each stream segment
+      in the network. For segments that weren't impacted by releases from Cannonsville or Pepacton,
+      SNTemp predictions were used.
+
+      There a few sites that dates with predicted stream temperatures that have extremely high values.
+      These high values are a product of the way PRMS-SNTemp v5.1.0_rc was coded and are likely
+      a result of stream segments with little or no upstream inflow and very little in-stream
+      flow for that particular day leading to extreamly high temperature predictions for those conditions.
+      Subsequent versions of PRMS-SNTemp will resolve these extreme values, and we suggest against using
+      stream temperature predictions above 35 degrees C, which occurs 7 times in this dataset.
     attributes:
     -
       attr-label: seg_id_nat
