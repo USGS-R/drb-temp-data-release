@@ -19,6 +19,7 @@ targets:
       - out_data/study_stream_reaches.zip
       - reservoir_metadata
       - out_data/study_reservoirs.zip
+      - out_data/study_monitoring_sites.zip
     
   # not sure what this metadata should be, if anything
   # one option is to include a reach to HRU crosswalk
@@ -84,3 +85,12 @@ targets:
   out_data/study_reservoirs.zip:
     command: sf_to_zip(zip_filename = target_name, 
       sf_object = reservoir_polygons, layer_name = I('study_reservoirs'))
+      
+  monitoring_sites:
+    command: readRDS(file = '../delaware-model-prep/2_observations/out/drb_filtered_sites.rds')
+    
+  out_data/study_monitoring_sites.zip:
+    command: reduce_and_zip(zip_filename = target_name, 
+      in_dat = monitoring_sites,
+      layer_name = I('study_monitoring_sites'))
+    
