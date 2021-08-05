@@ -73,16 +73,16 @@ cross-cites:
       National Oceanic and Atmospheric Administration Global Ensemble Forecast System
     pubdate: 2020
     link: https://www.emc.ncep.noaa.gov/emc/pages/numerical_forecast_systems/gefs.php
-    
+
 entities:
   -
     data-name: >-
       distance_matrix{_subset}.csv
-    data-description: >- 
+    data-description: >-
       A matrix documenting the upstream (negative numbers) or downstream (positive numbers)
       distances between river reaches. Files are either for all 456 reaches in the Delaware
       River Basin modeling network (distance_matrix.csv),
-      or for a subset of 56 reaches above Lordville, New York (distance_matrix_lordville.csv). 
+      or for a subset of 56 reaches above Lordville, New York (distance_matrix_lordville.csv).
     attributes:
     -
       attr-label: from
@@ -105,7 +105,7 @@ entities:
   -
     data-name: >-
       reach_attributes{subset}.csv
-    data-description: >- 
+    data-description: >-
       Metadata about reaches in the Delaware River Basin, including fields for
       upstream/downstream segments, segment length, and position relative to reservoirs.
       Files either describe all 456 reaches in the Delaware River Basin modeling network, or
@@ -125,7 +125,7 @@ entities:
       attr-label: frac_overlap
       attr-def: >-
         The fraction of stream segment length that overlaps with a reservoir.
-      attr-defs: >- 
+      attr-defs: >-
         NA indicates no overlap with reservoir.
       data-min: 0.01870757
       data-max: 1.0
@@ -134,23 +134,23 @@ entities:
       attr-label: reach_class
       attr-def: >-
         Classification of river reaches relative to reservoirs.
-        
+
         reach = the river reach is > 2 segments away from a reservoir;
-        
+
         upstream of reservoir (2) = reach is two segments above a reservoir;
-        
+
         upstream of reservoir (1) = reach is one segment above a reservoir;
-        
+
         downstream of reservoir (2) = reach is two segments below a reservoir;
-        
+
         downstream of reservoir (1) = reach is one segment below a reservoir;
-        
+
         reservoir_inlet_reach = the reach starting point is above a reservoir and the endpoint is within a reservoir;
-        
+
         reservoir_outlet_reach = the reach starting point is within a reservoir and the endpoint is downstream of a reservoir;
-        
+
         within_reservoir = the reach is fully contained within a reservoir (both start and end points are within a reservoir);
-        
+
         contains_reservoir = a reservoir is fully contained within the reach
       attr-defs: >-
         This data release
@@ -332,11 +332,24 @@ entities:
     data-name: >-
       sntemp_inputs_outputs{subset}.zip
     data-description: >-
-      PRMS-SNTemp inputs and outputs, including weather driver data, intermediate varibles, and 
-      model predictions. Files either contain inputs/outputs from all 456 stream reaches in the 
-      Delaware River Basin modeling network, or for the 56 segments above Lordville, New York. 
-      
+      PRMS-SNTemp inputs and outputs, including weather driver data, intermediate varibles, and
+      model predictions. Files either contain inputs/outputs from all 456 stream reaches in the
+      Delaware River Basin modeling network, or for the 56 segments above Lordville, New York.
+
       Code used to generate these inputs and outputs can be found in the repository "run-prms-sntemp" in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5120248).
+
+      There are two error codes in PRMS-SNTemp v5.1.0_rc that can be present in the
+      seg_tave_water and seg_tave_upstream attributes indicating no streamflow for the current
+      timestep (error code: -98.9) or no streamflow at any timestep (error code: -99.9) of the model run.
+      Stream segments that never have streamflow (-99.9) do not have any hydrologic reach units and do not have any upstream segments to produce
+      streamflow, and consequently never be able to simulate stream temperature. Segments with
+      contributing hydrologic reach units and/or upstream segments can have streamflow but
+      may not have streamflow at the current timestep (-98.9)
+
+      Very negative groundwater and shallow subsurface water temperatures (e.g. less than -1 C) are
+      not error codes, but rather are a product of the way this version of PRMS-SNTemp is coded. However,
+      we advise against using these very low groundwater and shallow subsurface temperature values
+      as they likely are far from actual water temperatures.
     attributes:
     -
       attr-label: seg_id_nat
@@ -391,7 +404,7 @@ entities:
     -
       attr-label: seg_rain
       attr-def: >-
-        Area-weighted average rainfall for each segment from HRUs contributing flow to the segment      
+        Area-weighted average rainfall for each segment from HRUs contributing flow to the segment
       attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 0.0
       data-max: 0.160782
@@ -447,7 +460,7 @@ entities:
     -
       attr-label: seg_tave_water
       attr-def: >-
-        Computed daily mean stream temperature for each segment      
+        Computed daily mean stream temperature for each segment
       attr-defs: This data release
       data-min: 0
       data-max: 26.09
@@ -456,7 +469,7 @@ entities:
       attr-label: seg_upstream_inflow
       attr-def: >-
         Sum of inflow from upstream segments
-      attr-defs: This data release 
+      attr-defs: This data release
       data-min: 0
       data-max: 841.5766
       data-units: cubic meters per second
@@ -535,9 +548,9 @@ entities:
   -
     data-name: reservoir_interpolated_daily_water_budget_components.csv
     data-description: >-
-      Daily reservoir water budget components calculated for Pepacton and Cannonsville Reservoirs. 
+      Daily reservoir water budget components calculated for Pepacton and Cannonsville Reservoirs.
       When monthly values were available, we interpolated down to daily values which is tracked in
-      the column named data_type. Data were compiled from USGS New York Water Data Reports (e.g., https://ny.water.usgs.gov/pubs/wdr/wdrny051/) and 
+      the column named data_type. Data were compiled from USGS New York Water Data Reports (e.g., https://ny.water.usgs.gov/pubs/wdr/wdrny051/) and
       reservoir operation data from the Office of the Delaware River Master (e.g., https://webapps.usgs.gov/odrm/documents/tables/jun2013.pdf).
     attributes:
     -
@@ -747,12 +760,12 @@ entities:
       NOAA Global Ensemble Forecasting System v12.0 0.25-degree operational model output for the 00 UTC forecast cycle from 2021-04-15 to 2021-07-16.
       These data are aggregated to the daily scale and NOAA GEFS grid cells are matched to the centroid of the target stream segment. The target stream segment
       seg_id_nat (National Geospatial Fabric segment code) is used as the location identifier for these data.
-      
-      The zipped folder contains one netCDF file per forecast issue date evaluated in Zwart and others 2021, such 
-      that the file name is final_noaa_gefs_{extent}_{YYYY-MM-DD}_00_forecast_segments.segments.nc. Archiving of the NOAA GEFS 
+
+      The zipped folder contains one netCDF file per forecast issue date evaluated in Zwart and others 2021, such
+      that the file name is final_noaa_gefs_{extent}_{YYYY-MM-DD}_00_forecast_segments.segments.nc. Archiving of the NOAA GEFS
       product was changed from USGS NGWOS priority basins early in the record (extent = NGWOS) to the continental U.S. starting
       on 2021-05-26 which is reflected in the name change (extent = CONUS).
-      
+
       Example code for how read the NOAA GEFS .nc files can be found in the "forecast-pgdl-da" repository in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5120248).
     attributes:
     -
