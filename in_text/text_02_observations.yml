@@ -63,7 +63,7 @@ entities:
     data-name: temperature_observations{subset}.zip
     data-description: >- 
       Daily water temperature observations with sites matched to model river segments in the Delaware River Basin.
-      Files represent various subsets of similar data, and are either sites matched to any of the 456 segments (temperature_observations.zip), 
+      Files represent various subsets of similar data, and are either sites matched to any of the 456 segments (temperature_observations_drb.zip), 
       sites matched to a subset of 56 river segments above the
       Delaware River at Lordville, NY (temperature_observations_lordville.zip), or at the 5 priority forecast sites.
       Water temperature observations were compiled from NWIS, EcoSHEDS, and WQP. If multiple sites were matched to a single
@@ -170,7 +170,7 @@ entities:
     data-description: >-
       Daily mean flow observation data with sites matched to model river segments in the Delaware River Basin.
       Data were compiled from the National Water Information System (NWIS). Three subsets of similar data are provided,
-      including sites from any of the 456 segments (flow_observations.zip), sites from a subset of 56 segments above 
+      including sites from any of the 456 segments (flow_observations_drb.zip), sites from a subset of 56 segments above 
       the Delaware River at Lordville, NY (flow_observations_lordville.zip), or the 5 priority forecast sites. 
     attributes:
     -

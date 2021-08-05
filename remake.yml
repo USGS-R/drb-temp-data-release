@@ -70,7 +70,8 @@ targets:
   01_spatial_sb_shp:
     command: sb_replace_files(sbid_01_spatial,
       "out_data/study_stream_reaches.zip",
-      "out_data/study_reservoirs.zip")
+      "out_data/study_reservoirs.zip",
+      "out_data/study_monitoring_sites.zip")
 
   02_observations_sb_xml:
     command: sb_render_post_xml(sbid_02_observations,
