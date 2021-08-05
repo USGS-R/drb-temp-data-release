@@ -101,7 +101,7 @@ entities:
         distance (in meters) between the seg_id_nat in the "from"" column to the {seg_id_nat} in the column name.
         Positive numbers indicate a downstream direction, while positive numbers indicate an upstream direction.
         "Inf" indicates the two segments are not connected by streamflow (e.g., water from two separate
-        branches that share the same mainstem are not connected via streamflow). 
+        branches that share the same mainstem are not connected via streamflow).
       attr-defs: This data release
       data-min: -138821.4
       data-max: 120381.61
@@ -340,7 +340,7 @@ entities:
       model predictions. Files either contain inputs/outputs from all 456 stream reaches in the
       Delaware River Basin modeling network, or for the 56 segments above Lordville, New York.
 
-      Code used to generate these inputs and outputs can be found in the repository "run-prms-sntemp" in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5120248).
+      Code used to generate these inputs and outputs can be found in the repository "run-prms-sntemp" in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910).
 
       There are two error codes in PRMS-SNTemp v5.1.0_rc that can be present in the
       seg_tave_water and seg_tave_upstream attributes indicating no streamflow for the current
@@ -556,8 +556,8 @@ entities:
       When monthly values were available, we interpolated down to daily values which is tracked in
       the column named data_type. Data were compiled from USGS New York Water Data Reports (e.g., https://ny.water.usgs.gov/pubs/wdr/wdrny051/) and
       reservoir operation data from the Office of the Delaware River Master (e.g., https://webapps.usgs.gov/odrm/documents/tables/jun2013.pdf).
-      
-      
+
+
       Note that these data are not collected by USGS, and elevation record and capacity table were provided by New York City Department of Environmental Protection.
     attributes:
     -
@@ -667,7 +667,7 @@ entities:
     -
       attr-label: total_runoff_cms
       attr-def: >-
-        Total runoff contributing to discharge from reservoir. 
+        Total runoff contributing to discharge from reservoir.
       attr-defs: This data release
       data-min: -6.57
       data-max: 789.5826
@@ -773,7 +773,7 @@ entities:
       product was changed from USGS NGWOS priority basins early in the record (extent = NGWOS) to the continental U.S. starting
       on 2021-05-26 which is reflected in the name change (extent = CONUS).
 
-      Example code for how read the NOAA GEFS .nc files can be found in the "forecast-pgdl-da" repository in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5120248).
+      Example code for how read the NOAA GEFS .nc files can be found in the "forecast-pgdl-da" repository in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910).
     attributes:
     -
       attr-label: RH
