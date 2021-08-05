@@ -556,6 +556,9 @@ entities:
       When monthly values were available, we interpolated down to daily values which is tracked in
       the column named data_type. Data were compiled from USGS New York Water Data Reports (e.g., https://ny.water.usgs.gov/pubs/wdr/wdrny051/) and
       reservoir operation data from the Office of the Delaware River Master (e.g., https://webapps.usgs.gov/odrm/documents/tables/jun2013.pdf).
+      
+      
+      Note that these data are not collected by USGS, and elevation record and capacity table were provided by New York City Department of Environmental Protection.
     attributes:
     -
       attr-label: reservoir
@@ -664,7 +667,7 @@ entities:
     -
       attr-label: total_runoff_cms
       attr-def: >-
-        Total runoff contributing to discharge from reservoir
+        Total runoff contributing to discharge from reservoir. 
       attr-defs: This data release
       data-min: -6.57
       data-max: 789.5826
