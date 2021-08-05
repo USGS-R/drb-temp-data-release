@@ -97,7 +97,11 @@ entities:
       attr-label: >-
         {seg_id_nat}
       attr-def: >-
-        Distance (in meters) between the seg_id_nat in the from column to the {seg_id_nat} in the column name. Positive numbers indicate a downstream direction, while positive numbers indicate an upstream direction.
+        All columns other than the "from" column are named with a seg_id_nat value, where the column values correspond to the
+        distance (in meters) between the seg_id_nat in the "from"" column to the {seg_id_nat} in the column name.
+        Positive numbers indicate a downstream direction, while positive numbers indicate an upstream direction.
+        "Inf" indicates the two segments are not connected by streamflow (e.g., water from two separate
+        branches that share the same mainstem are not connected via streamflow). 
       attr-defs: This data release
       data-min: -138821.4
       data-max: 120381.61
@@ -188,8 +192,8 @@ entities:
       attr-def: >-
         Length of stream reach.
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: 108.8776
-      data-max: 31063.61
+      data-min: 47.24
+      data-max: 36592.38
       data-units: meters
     -
       attr-label: from_segs
@@ -653,13 +657,13 @@ entities:
       data-max: 789.5826
       data-units: cubic meters per second
     -
-      attr-label: storage_above_sill_cms
+      attr-label: storage_above_sill_m3
       attr-def: >-
         Storage above the reservoir sill
       attr-defs: This data release
       data-min: 243625103
       data-max: 636738619
-      data-units: cubic meters per second
+      data-units: cubic meters
     -
       attr-label: source_file
       attr-def: >-

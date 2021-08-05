@@ -56,7 +56,7 @@ targets:
     
   # get GRAND IDs of reservoirs above Lordville
   reservoir_lordville:
-    command: get_grands(in_file = 'out_data/reservoir_releases_lordville.csv')
+    command: c(I(c('1550', '2192')))
     
   out_data/reservoir_realsat_monthly_surface_area.csv:
     command: file.copy(from = '../delaware-model-prep/2_observations/out/realsat_monthly_surface_area.csv', to = target_name)

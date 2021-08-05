@@ -50,7 +50,9 @@ extract_reach_attributes <- function(res_file, attr_file, out_file) {
   attr <- readRDS(attr_file)
   attr <- attr$edges %>% st_drop_geometry()
 
-  out <- left_join(res, select(attr, -subseg_updown, -start_pt, -end_pt, -to_subseg))
+  out <- left_join(res, select(attr, -subseg_updown, -start_pt, -end_pt, -to_subseg)) %>%
+    mutate(subseg_length = round(subseg_length, 2))
+    
 
   readr::write_csv(out, out_file)
 
