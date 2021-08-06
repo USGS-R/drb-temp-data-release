@@ -19,15 +19,15 @@ larger-cites:
     pubdate: 2021
     link: XX
 
-    
-# ----supporting publications----    
+
+# ----supporting publications----
 cross-cites:
   -
     authors: ["Jacob A. Zwart", "Samantha K. Oliver", "David D. Watkins", "Jeffrey Sadler", "Alison P. Appling", "Hayley Corson-Dosch", "Xiaowei Jia", "Vipin Kumar", "Jordan Read"]
     title: >-
       Source code: Near-term forecasts of stream temperature using process-guided deep learning and data assimilation
     pubdate: 2021
-    link: https://doi.org/10.5281/zenodo.5120248
+    link: https://doi.org/10.5281/zenodo.5164910
   -
     authors: ["Xiaowei Jia", "Jacob Zwart", "Jeffrey Sadler", 'Alison Appling', 'Samantha Oliver', 'Steven Markstrom', "Jared Willard", 'Shaoming Xu', 'Michael Steinbach', "Jordan Read", 'Vipin Kumar']
     title: >-

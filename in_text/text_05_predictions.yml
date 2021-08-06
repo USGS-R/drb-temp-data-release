@@ -16,7 +16,7 @@ abstract: >-
   reservoir processes that affect temperature dynamics. These weighted values were then used to pre-train the deep learning
   models that were used to forecast temperature. More details on these methods can be found in Zwart and others 2021.
 
-  <p>Code that generated these results can be found in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5120248).
+  <p>Code that generated these results can be found in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910).
 
 cross-cites:
   -
@@ -101,7 +101,7 @@ entities:
       Predictions of outflow and water temperature for outflow reaches of the Pepacton and
       Cannonsville reservoirs, generated from calibrated reservoir models built with GLM v3.1.
       Code used to generate these predictions can be found in the "res-temperature-process-models"
-      in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5120248).
+      in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910).
     attributes:
     -
       attr-label: res_id
@@ -142,7 +142,7 @@ entities:
       In-reservoir predictions of water temperature at the depth of reservoir outlets on all days
       (regardless of release volumes), generated from calibrated reservoir models built with GLM v3.1.
       Code used to generate these predictions can be found in the "res-temperature-process-models"
-      in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5120248).
+      in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910).
     attributes:
     -
       attr-label: res_id
@@ -253,7 +253,7 @@ entities:
       Forecasts were generated with a 1) persistence model that used the most recent observed daily
       maximum temperature as the 7-day ahead forecast, 2) a deep learning model, and a 3) deep learning
       model with data assimilation. Code that trained the deep learning models can be found in the "run-pgdl-da " repository,
-      and code that generated the forecasts can be found in the "forecast-pgdl-da" repository in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5120248).
+      and code that generated the forecasts can be found in the "forecast-pgdl-da" repository in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910).
 
       
       The zipped file contains one zipped folder per issue date named forecast[{YYYY-MM-DD}]_files.zip.
@@ -268,7 +268,7 @@ entities:
       prediction. When evaluating the performance of the persistence forecasts against the
       deep learning models, we use yesterday's maximum temperature value as the forecast for
       7 days into the future. See the evaluation code in the "evaluate-forecast" repository in
-      Zwart and others 2021 (https://doi.org/10.5281/zenodo.5120248) for this adjustment.
+      Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910) for this adjustment.
 
     attributes:
     -
