@@ -60,7 +60,7 @@ cross-cites:
 
 entities:
   -
-    data-name: temperature_observations{subset}.zip
+    data-name: temperature_observations_{subset}.zip
     data-description: >- 
       Daily water temperature observations with sites matched to model river segments in the Delaware River Basin.
       Files represent various subsets of similar data, and are either sites matched to any of the 456 segments (temperature_observations_drb.zip), 
@@ -166,7 +166,7 @@ entities:
       data-units: NA 
       
   -
-    data-name: flow_observations{subset}.zip
+    data-name: flow_observations_{subset}.zip
     data-description: >-
       Daily mean flow observation data with sites matched to model river segments in the Delaware River Basin.
       Data were compiled from the National Water Information System (NWIS). Three subsets of similar data are provided,
@@ -249,7 +249,7 @@ entities:
       data-units: NA 
 
   -
-    data-name: reservoir_releases_by_type{_subset}.csv
+    data-name: reservoir_releases_by_type_{subset}.csv
     data-description: >-
       Daily reservoir releases from the Pepacton, Neversink, and Cannonsville reservoirs (reservoir_releases_by_type.csv) or
       from only those reservoirs above the Delaware River at Lordville, NY (reservoir_releases_by_type_lordville.csv).
@@ -554,4 +554,8 @@ entities:
       data-units: NA
 
 process-date: !expr format(Sys.time(),'%Y%m%d')
-file-format: comma-delimited files (some compressed into zip files), rds files, feather files.
+file-format: comma-delimited files (some compressed into zip files)
+
+indirect-spatial: U.S.A.
+latitude-res: 0.1
+longitude-res: 0.1

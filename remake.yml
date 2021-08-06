@@ -97,7 +97,7 @@ targets:
       "out_data/flow_observations_lordville.zip",
       "out_data/flow_observations_forecast_sites.zip",
       "out_data/reservoir_releases_total.csv",
-      "out_data/reservoir_releases_by_type.csv",
+      "out_data/reservoir_releases_by_type_drb.csv",
       "out_data/reservoir_releases_by_type_lordville.csv",
       "out_data/reservoir_realsat_monthly_surface_area.csv",
       "out_data/reservoir_io_obs.csv",
