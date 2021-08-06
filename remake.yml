@@ -173,7 +173,8 @@ targets:
       "out_data/reservoir_downstream_preds.csv",
       "out_data/reservoir_outlet_depth_preds.csv",
       "out_data/dwallin_stream_preds.csv", 
-      "out_data/forecast[2021-04-16_2021-07-16]_files.zip")
+      "out_data/forecast[2021-04-16_2021-07-16]_files.zip",
+      "in_data/dwallin_functions.R")
 
   # ------ SB IDs --------
 
