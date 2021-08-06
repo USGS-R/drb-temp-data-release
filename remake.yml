@@ -51,12 +51,14 @@ targets:
 
   00_parent_sb_xml:
     command: sb_render_post_xml(sbid_00_parent,
+      xml_file = I('00_parent.xml'),
       "in_text/text_SHARED.yml",
       "in_text/text_00_parent.yml",
       river_metadata2)
 
   01_spatial_sb_xml:
     command: sb_render_post_xml(sbid_01_spatial,
+      xml_file = I('01_spatial.xml'),
       "in_text/text_SHARED.yml",
       "in_text/text_01_spatial.yml",
       river_metadata2)
@@ -75,6 +77,7 @@ targets:
 
   02_observations_sb_xml:
     command: sb_render_post_xml(sbid_02_observations,
+      xml_file = I('02_observations.xml'),
       "in_text/text_SHARED.yml",
       "in_text/text_02_observations.yml",
       river_metadata2)
@@ -103,6 +106,7 @@ targets:
 
   03_config_sb_xml:
     command: sb_render_post_xml(sbid_03_config,
+      xml_file = I('03_config.xml'),
       "in_text/text_SHARED.yml",
       "in_text/text_03_config.yml",
       reservoir_metadata)
@@ -120,19 +124,20 @@ targets:
 
   04_inputs_sb_xml:
     command: sb_render_post_xml(sbid_04_inputs,
+      xml_file = I('04_inputs.xml'),
       "in_text/text_SHARED.yml",
       "in_text/text_04_inputs.yml",
       river_metadata2)
 
   04_inputs_sb_data:
     command: sb_replace_files(sbid_04_inputs,
-      "out_data/distance_matrix.csv",
+      "out_data/distance_matrix_drb.csv",
       "out_data/distance_matrix_lordville.csv",
-      "out_data/reservoir_features.csv",
+      "out_data/reservoir_features_drb.csv",
       "out_data/reservoir_features_lordville.csv",
-      "out_data/sntemp_inputs_outputs.zip",
+      "out_data/sntemp_inputs_outputs_drb.zip",
       "out_data/sntemp_inputs_outputs_lordville.zip",
-      "out_data/reach_attributes.csv",
+      "out_data/reach_attributes_drb.csv",
       "out_data/reach_attributes_lordville.csv",
       "out_data/reservoir_interpolated_daily_water_budget_components.csv",
       "out_data/noaagefs_meteo_files.zip")
@@ -151,6 +156,7 @@ targets:
 
   05_predictions_sb_xml:
     command: sb_render_post_xml(sbid_05_predictions,
+      xml_file = I('05_predictions.xml'),
       "in_text/text_SHARED.yml",
       "in_text/text_05_predictions.yml",
       river_metadata2)
