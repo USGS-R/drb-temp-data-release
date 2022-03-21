@@ -3,10 +3,10 @@ title: >-
 
 
 abstract: >-
-  <p>Daily temperature predictions in the Delaware River Basin (DRB) can inform decision makers who can use cold-water 
+  <p>Daily temperature predictions in the Delaware River Basin (DRB) can inform decision makers who can use cold-water
   reservoir releases to maintain thermal habitat for sensitive fish and mussel species.
-  This data release supports a variety of flow and water temperature modeling efforts and provides the inputs and outputs of 
-  both machine learning and process-based modeling methods across 456 river 
+  This data release supports a variety of flow and water temperature modeling efforts and provides the inputs and outputs of
+  both machine learning and process-based modeling methods across 456 river
   reaches and 2 reservoirs in the DRB.
 
   <br/>The data are organized into these items:</p>
@@ -25,7 +25,12 @@ process-date: !expr format(Sys.time(),'%Y%m%d')
 indirect-spatial: U.S.A.
 latitude-res: 0.1
 longitude-res: 0.1
-data-name: Full data release
 data-description: >-
   This is the landing page for the other data release units, described in the attributes section
 file-format: parent data item for released data products
+
+entities:
+  -
+    data-name: Parent metadata landing page
+    data-description: >-
+      This is the landing page for 5 other data release units, described in the attributes section

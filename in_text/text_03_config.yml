@@ -32,7 +32,9 @@ entities:
       attr-label: site-id
       attr-def:  >-
         Reservoir identification number for this dataset. Is the Prmnn_I from NHD high-res prefixed with source, as "nhdhr_{Prmnn_I}"
-      attr-defs: NA
+      
+        nhdhr_120022743 is Cannonsville Reservoir and nhdhr_151957878 is Pepacton Reservoir 
+      attr-defs: http://nhd.usgs.gov/
       data-min: NA
       data-max: NA
       data-units: NA
@@ -42,8 +44,8 @@ entities:
         Bulk aerodynamic transfer coefficient for momentum
       attr-defs: >-
         https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
-      data-min: NA
-      data-max: NA
+      data-min: 0.001398495
+      data-max: 0.001399558
       data-units: NA
     -
       attr-label: longitude
@@ -51,8 +53,8 @@ entities:
         Longitude, positive East
       attr-defs:  >-
         https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
-      data-min: NA
-      data-max: NA
+      data-min: -75.30163
+      data-max: -74.85719
       data-units: decimal degrees
     -
       attr-label: latitude
@@ -60,8 +62,8 @@ entities:
         Latitude, positive North
       attr-defs:  >-
         https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
-      data-min: NA
-      data-max: NA
+      data-min: 42.09106
+      data-max: 42.09674
       data-units: decimal degrees
     -
       attr-label: bsn_wid
@@ -69,8 +71,8 @@ entities:
         Width of the lake basin, at crest height
       attr-defs:  >-
         https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
-      data-min: NA
-      data-max: NA
+      data-min: 4930.446
+      data-max: 5432.168
       data-units: meters
     -
       attr-label: bsn_len
@@ -78,8 +80,8 @@ entities:
         Length of the lake basin, at crest height
       attr-defs: >-
         https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
-      data-min: NA
-      data-max: NA
+      data-min: 4930.446
+      data-max: 5432.168
       data-units: meters
     -
       attr-label: lake_depth
@@ -87,8 +89,8 @@ entities:
         Initial lake height/depth
       attr-defs:  >-
         https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
-      data-min: NA
-      data-max: NA
+      data-min: 48.7619
+      data-max: 60.62472
       data-units: meters
     -
       attr-label: max_layer_thick
@@ -96,8 +98,8 @@ entities:
         Maximum thickness of a layer
       attr-defs: >-
         https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
-      data-min: NA
-      data-max: NA
+      data-min: 1.5
+      data-max: 1.5
       data-units: meters
     -
       attr-label: min_layer_thick
@@ -105,8 +107,8 @@ entities:
         Minimum thickness of a layer
       attr-defs: >-
         https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
-      data-min: NA
-      data-max: NA
+      data-min: 0.2
+      data-max: 0.2
       data-units: meters
     -
       attr-label: meteo_fl
@@ -123,8 +125,8 @@ entities:
         Light extinction coefficient
       attr-defs: >-
         https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
-      data-min: NA
-      data-max: NA
+      data-min: 0.4613866
+      data-max: 0.7610733
       data-units: per meter
     -
       attr-label: A
@@ -132,30 +134,30 @@ entities:
         Comma-separated list of lake areas
       attr-defs:  >-
         https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
-      data-min: NA
-      data-max: NA
-      data-units: NA
+      data-min: 11.0551
+      data-max: 25219560
+      data-units: square meters
     -
       attr-label: H
       attr-def: >-
         Comma-separated list of lake elevations
       attr-defs:  >-
         https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
-      data-min: NA
-      data-max: NA
-      data-units: NA
+      data-min: 306.2021
+      data-max: 394.3533
+      data-units: meters
   -
     data-name: reservoir_nml_files.zip
     data-description: >-
       zip file of complete .nml files, with calculated and calibrated parameters, as input to the 
-      GLM runs that were used to produce the DWALLIN dataset.
+      GLM runs that were used to produce the reservoir outlet predictions and DWALLIN dataset.
     attributes:
     -
       attr-label: >-
         glm3_cal_nhdhr_{}.nml
       attr-def:  >-
         Configuration file that specifies a GLM run. Formatting of the file, and values within each file, are as specified in the GLM documentation at https://aed.see.uwa.edu.au/research/models/GLM/configuration.html
-      attr-defs: NA
+      attr-defs: This data release
       data-min: NA
       data-max: NA
       data-units: NA

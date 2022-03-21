@@ -50,7 +50,9 @@ extract_reach_attributes <- function(res_file, attr_file, out_file) {
   attr <- readRDS(attr_file)
   attr <- attr$edges %>% st_drop_geometry()
 
-  out <- left_join(res, select(attr, -subseg_updown, -start_pt, -end_pt, -to_subseg))
+  out <- left_join(res, select(attr, -subseg_updown, -start_pt, -end_pt, -to_subseg)) %>%
+    mutate(subseg_length = round(subseg_length, 2))
+    
 
   readr::write_csv(out, out_file)
 
@@ -162,5 +164,6 @@ combine_level_sources <- function(out_csv, nwis_levels, nyc_levels, hist_levels)
     mutate(surface_elevation_m = na.approx(surface_elevation_m)) %>%
     mutate(data_type = ifelse(is.na(data_type), 'daily interpolated', data_type))
 
+  out_dat$surface_elevation_m <- round(out_dat$surface_elevation_m, 2)
   readr::write_csv(out_dat, out_csv)
 }
