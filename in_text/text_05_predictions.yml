@@ -243,9 +243,9 @@ entities:
       in order to create a distance-weighted-average lotic-lentic input network (DWALLIN)
       daily stream temperature estimate for the Delaware River Basin modeling network.
   -
-    data-name: forecast[2021-04-16_2021-07-16]_files.zip
+    data-name: forecast[2021-04-16_2021-09-30]_files.zip
     data-description: >-
-      Forecasts of daily maximum stream temperature for five select locations in the Delaware River Basin issued from 2021-04-15 to 2021-07-16.
+      Forecasts of daily maximum stream temperature for five select locations in the Delaware River Basin issued from 2021-04-16 to 2021-09-30.
       The target stream segment seg_id_nat (National Geospatial Fabric segment code) is used as the location identifier for these data.
 
       
@@ -255,11 +255,11 @@ entities:
       and code that generated the forecasts can be found in the "forecast-pgdl-da" repository in Zwart and others 2021 (https://doi.org/10.5281/zenodo.5164910).
 
       
-      The zipped file contains one zipped folder per issue date named forecast[{YYYY-MM-DD}]_files.zip.
-      Each issue date zipped folder contains two files for each model (DA, no_DA, persistence {model}),
-      stream segment (1571, 1573, 1641, 1565, 1450 {seg_id_nat}),
-      and reservoir release scenario (0cfs or 100cfs {scenario}) including a forecast netCDF file (.nc) and metadata file (.xml)
-      such that files are named lstm_seg_id_nat_[{seg_id_nat}]_{model}_forecast_[{YYYY-MM-DD}]_release[{scenario}]
+      The zipped folder contains 60 files per issue date named forecast[{YYYY-MM-DD}]_files.zip.
+      Each issue date has two file types (a forecast .nc netCDF file and a .xml metadata file) for each model 
+      (DA, no_DA, persistence {model}), stream segment (1571, 1573, 1641, 1565, 1450 {seg_id_nat}),
+      and reservoir release scenario (0cfs or 100cfs {scenario}) such that files are named
+      lstm_seg_id_nat_[{seg_id_nat}]_{model}_forecast_[{YYYY-MM-DD}]_release[{scenario}].
 
       
       Since observations of daily maximum stream temperature were not available when we issued
@@ -323,5 +323,8 @@ entities:
 build-environment: Multiple computer systems were used to generate these data, including Windows, OSX, and linux. The open source languages R and Python was used on all systems.
 
 process-date: !expr format(Sys.time(),'%Y%m%d')
+indirect-spatial: U.S.A.
+latitude-res: 0.1
+longitude-res: 0.1
 
 file-format: comma-delimited files (some compressed into zip files) and netCDF files

@@ -765,7 +765,7 @@ entities:
       seg_id_nat (National Geospatial Fabric segment code) is used as the location identifier for these data.
 
       
-      The zipped folder contains one netCDF file per forecast issue date evaluated in Zwart and others 2021, such
+      The zipped folder contains one NetCDF file per forecast issue date evaluated in Zwart and others 2021, such
       that the file name is final_noaa_gefs_{extent}_{YYYY-MM-DD}_00_forecast_segments.segments.nc. Archiving of the NOAA GEFS
       product was changed from USGS NGWOS priority basins early in the record (extent = NGWOS) to the continental U.S. starting
       on 2021-05-26 which is reflected in the name change (extent = CONUS).
@@ -872,4 +872,4 @@ indirect-spatial: U.S.A.
 latitude-res: 0.1
 longitude-res: 0.1
 
-file-format: comma-delimited files (some compressed into zip files) and netCDF files
+file-format: comma-delimited files (some compressed into zip files) and NetCDF files compressed into a zip file
