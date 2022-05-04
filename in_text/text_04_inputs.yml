@@ -352,6 +352,7 @@ entities:
       as they likely are far from actual water temperatures.
     attributes:
     -
+      # present
       attr-label: seg_id_nat
       attr-def: >-
         Stream reach identification number for this dataset. This is the ID named seg_id_nat from the Geospatial Fabric for National Hydrologic Modeling.
@@ -361,15 +362,17 @@ entities:
       data-max: NA
       data-units: NA
     -
-      attr-label: model_idx
-      attr-def: >-
-        Unique river segment identifier from the model cutout.
-      attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: NA
-      data-max: NA
-      data-units: NA
+      ## not present in '22 dataset 
+      # attr-label: model_idx
+      # attr-def: >-
+      #   Unique river segment identifier from the model cutout.
+      # attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
+      # data-min: NA
+      # data-max: NA
+      # data-units: NA
 
     -
+      # Not relevant
       attr-label: date
       attr-def: >-
         Date of the observation or prediction.
@@ -378,28 +381,30 @@ entities:
       data-max: 2020-07-31
       data-units: NA
     -
+      # 
       attr-label: seg_ccov
       attr-def: >-
         Area-weighted average cloud cover fraction for each segment from HRUs contributing flow to the segment.
       attr-defs: https://doi.org/10.1002/joc.3413
-      data-min: 0.2565
-      data-max: 0.8
+      data-min: 0.2542
+      data-max: 7667
       data-units: decimal fraction
     -
+      #
       attr-label: seg_humid
       attr-def: >-
         Area-weighted average relative humidity for each segment from HRUs contributing flow to the segment
       attr-defs: https://doi.org/10.1002/joc.3413
-      data-min: 0.7
-      data-max: 0.7
+      data-min: 0
+      data-max: 0
       data-units: decimal fraction
     -
       attr-label: seg_outflow
       attr-def: >-
         Streamflow leaving a segment
       attr-defs: This data release
-      data-min: 1.50589e-05
-      data-max: 838.4617
+      data-min: 0
+      data-max: 3086.53
       data-units: cubic meters per second
     -
       attr-label: seg_rain
@@ -407,47 +412,47 @@ entities:
         Area-weighted average rainfall for each segment from HRUs contributing flow to the segment
       attr-defs: https://doi.org/10.1002/joc.3413
       data-min: 0.0
-      data-max: 0.160782
+      data-max: 1587.5
       data-units: meters
     -
       attr-label: seg_shade
       attr-def: >-
         Area-weighted average shade fraction for each segment
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: 0
-      data-max: 0
+      data-min: 0 # same
+      data-max: 0 # same
       data-units: decimal fraction
     -
       attr-label: seg_tave_air
       attr-def: >-
          Area-weighted average air temperature for each segment from HRUs contributing flow to the segment
       attr-defs: https://doi.org/10.1002/joc.3413
-      data-min: -25.44
-      data-max: 28.22
+      data-min: -174400
+      data-max: 313400
       data-units: degrees Celsius
     -
       attr-label: seg_tave_gw
       attr-def: >-
         Groundwater temperature.
       attr-defs: This data release
-      data-min: -12.49
-      data-max: 23.46
+      data-min: -13.26
+      data-max: 28.32
       data-units: degrees Celsius
     -
       attr-label: seg_tave_sroff
       attr-def: >-
         Surface runoff temperature.
       attr-defs: This data release
-      data-min: 0
-      data-max: 0
+      data-min: 0 # same
+      data-max: 0 # same
       data-units: degrees Celsius
     -
       attr-label: seg_tave_ss
       attr-def: >-
         Subsurface temperature.
       attr-defs: This data release
-      data-min: -19.29
-      data-max: 26.08
+      data-min: -21.41
+      data-max: 31.36
       data-units: degrees Celsius
     -
       attr-label: seg_tave_upstream
@@ -455,15 +460,15 @@ entities:
         Temperature of streamflow entering each segment.
       attr-defs: This data release
       data-min: -98.9
-      data-max: 26.09
+      data-max: 37.42
       data-units: degrees Celsius
     -
       attr-label: seg_tave_water
       attr-def: >-
         Computed daily mean stream temperature for each segment
       attr-defs: This data release
-      data-min: 0
-      data-max: 26.09
+      data-min: -99.9
+      data-max: 43.18
       data-units: degrees Celsius
     -
       attr-label: seg_upstream_inflow
@@ -471,15 +476,15 @@ entities:
         Sum of inflow from upstream segments
       attr-defs: This data release
       data-min: 0
-      data-max: 841.5766
+      data-max: 3080.872
       data-units: cubic meters per second
     -
       attr-label: seg_width
       attr-def: >-
         Width of each segment.
       attr-defs: This data release.
-      data-min: 1.622
-      data-max: 93.45
+      data-min: 0.2542
+      data-max: 125.7
       data-units: meters
     -
       attr-label: seginc_gwflow
@@ -487,15 +492,15 @@ entities:
           Area-weighted average groundwater discharge for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
       data-min: 0
-      data-max: 12.46791
+      data-max: 30.044
       data-units: cubic meters per second
     -
       attr-label: seginc_potet
       attr-def: >-
         Area-weighted average potential ET for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
-      data-min: 4.146e-08
-      data-max: 0.3052
+      data-min: 2.12e-08
+      data-max: 0.3562
       data-units: meters
     -
       attr-label: seginc_sroff
@@ -503,7 +508,7 @@ entities:
         Area-weighted average surface runoff for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
       data-min: 0
-      data-max: 88.00875
+      data-max: 362.17
       data-units: cubic meters per second
     -
       attr-label: seginc_ssflow
@@ -511,23 +516,23 @@ entities:
         Area-weighted average interflow for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
       data-min: 0
-      data-max: 147.5874
+      data-max: 260.46
       data-units: cubic meters per second
     -
       attr-label: seginc_swrad
       attr-def: >-
         Area-weighted average solar radiation for each segment from HRUs contributing flow to the segment.
       attr-defs: This data release
-      data-min: 0.0009744971
-      data-max: 341.4374
+      data-min: 0.00054031
+      data-max: 344.39
       data-units: watts per square meter
     -
       attr-label: seg_length
       attr-def: >-
         Length of stream segment.
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: 108.8776
-      data-max: 31063.61
+      data-min: 47.24
+      data-max: 36592.38
       data-units: meters
     -
       attr-label: seg_slope
@@ -535,15 +540,15 @@ entities:
         Stream segment slope.
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
       data-min: 2e-06
-      data-max: 0.04883
+      data-max: 0.185536
       data-units: NA
     -
       attr-label: seg_elev
       attr-def: >-
         Stream segment average elevation above mean sea level.
       attr-defs: https://www.sciencebase.gov/catalog/item/535eda80e4b08e65d60fc834
-      data-min: 256.44
-      data-max: 618.24
+      data-min: -1.2
+      data-max: 787.33
       data-units: meters
   -
     data-name: reservoir_interpolated_daily_water_budget_components.csv
